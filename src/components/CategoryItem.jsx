@@ -29,9 +29,22 @@ const Info = styled.div`
 `;
 
 const Title = styled.h1`
-    color:white;
-    margin-bottom: 20px;
+  color: black;
+  background-color: white;
+  padding: 5px 10px; /* Marginesy wewnętrzne */
+  margin-bottom: 20px;
+  display: inline-block;
+  border-radius: 5px;
+  max-width: 90%; /* Ograniczenie szerokości na mniejszych ekranach */
+  word-wrap: break-word; /* Łamanie długich słów */
+
+  @media (max-width: 768px) {
+    font-size: 18px; /* Zmniejszenie rozmiaru tekstu */
+    padding: 3px 8px; /* Mniejsze marginesy wewnętrzne */
+    max-width: 100%; /* Pełna szerokość w obrębie kontenera */
+  }
 `;
+
 
 const Button = styled.button`
     border:none;
@@ -48,7 +61,7 @@ const CategoryItem = ({ item }) => {
       <Image src={item.img} />
       <Info>
         <Title>{item.title}</Title>
-        <Button>KUP TERAZ</Button>
+        <Button>EKSPLORUJ</Button>
       </Info>
     </Container>
   );

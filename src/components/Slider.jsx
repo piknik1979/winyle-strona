@@ -47,30 +47,54 @@ const Slide = styled.div`
   background-color: #${(props) => props.bg};
 `;
 
+// const ImgContainer = styled.div`
+//   height: 100%;
+//   flex: 1;
+// `;
+
+
+// const Image = styled.img`
+//   height: 80%;
+// `;
+
 const ImgContainer = styled.div`
   height: 100%;
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  ${mobile({ height: "50vh" })} /* Wysokość kontenera na mobilnych */
 `;
 
 const Image = styled.img`
-  height: 80%;
+  width: 100%; /* Użycie pełnej szerokości */
+  height: 100%; /* Dopasowanie do kontenera */
+  object-fit: contain; /* Wyświetl obrazek w całości bez przycinania */
+  ${mobile({ width: "auto", height: "100%" })} /* Na mobilnych obrazek zachowuje proporcje */
 `;
+
 
 const InfoContainer = styled.div`
   flex: 1;
-  padding: 50px;
+  padding: 10px;
+  ${mobile({ padding: "20px" })} /* Zmniejszenie odstępów na mobilnych */
 `;
 
 const Title = styled.h1`
   font-size: 70px;
+  ${mobile({ fontSize: "24px", textAlign: "center" })}; /* Poprawiona składnia */
 `;
+
+
 
 const Desc = styled.p`
   margin: 50px 0px;
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 3px;
+  ${mobile({ fontSize: "16px", margin: "20px 0px", textAlign: "center" })}; /* Poprawiona składnia */
 `;
+
 
 const Button = styled.button`
   padding: 10px;

@@ -1,23 +1,24 @@
 export const sliderItems = [
   {
     id: 1,
-    img: "https://i.discogs.com/upcBp93lcoOfWUHbp2Idp9wJ3j8XSgEaaAzXW0SVZmU/rs:fit/g:sm/q:90/h:476/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTUzMDY4/ODUtMTM5MzU4OTI3/MC03ODA3LmpwZWc.jpeg",
-    title: "HAWKWIND!!!",
+    img: "https://i.discogs.com/TjduV57Rd-RjXuGgk0LyOL9jZ_xL-sxYGsyTI0i2aHI/rs:fit/g:sm/q:90/h:593/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMzOTAx/OS0xNDI3NzgzNzM2/LTEyMDQuanBlZw.jpeg",
+    title: "Janet Jackson",
     link: "https://www.discogs.com/sell/item/3331621044?ev=bp_img",
-    desc: "Hawkwind - Sonic Attack",
+    desc: "Control",
     bg: "f5fafd",
   },
   {
     id: 2,
-    img: "https://images.pexels.com/photos/6827400/pexels-photo-6827400.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    title: "BLUEEES!",
-    desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
+    img: "https://i.discogs.com/kXe5dxTZZmGvaXff3I7fA97JUq-FFpV9SBlfBvDaMcA/rs:fit/g:sm/q:90/h:602/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM4NTg2/My0xMTg4NjY2MjI3/LmpwZWc.jpeg",
+    title: "BLITZ!",
+    desc: "Voice of a Generation",
     bg: "fcf1ed",
   },
   {
     id: 3,
     img: "https://i.discogs.com/rYNfIA9eW_j-ASaP3lHPCAOU0_iujo7347VWgeA5eQM/rs:fit/g:sm/q:90/h:615/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0NjU1/MTMtMTU0NDg3NDk3/Mi0xNzc5LmpwZWc.jpeg",
-    title: "jesus jones!",
+    title: "Jesus Jones",
+    desc: "Real Real Real",
     link: "https://www.discogs.com/sell/item/3381537480",
     bg: "fbf0f4",
   },
@@ -42,6 +43,7 @@ export const categories = [
   {
     id: 4,
     img: "https://i.discogs.com/KAj0qfL9hrHki4UPiPCu8ZzpHr-h7g6qUlNvgFBOLBk/rs:fit/g:sm/q:90/h:601/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTExMDQz/NzA0LTE2OTcyMzIy/NTEtOTYwNi5qcGVn.jpeg",
+    title: "JAZZ",
   },
 ];
 
