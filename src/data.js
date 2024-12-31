@@ -3,7 +3,7 @@ export const sliderItems = [
     id: 1,
     img: "https://i.discogs.com/TjduV57Rd-RjXuGgk0LyOL9jZ_xL-sxYGsyTI0i2aHI/rs:fit/g:sm/q:90/h:593/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMzOTAx/OS0xNDI3NzgzNzM2/LTEyMDQuanBlZw.jpeg",
     title: "Janet Jackson",
-    link: "https://www.discogs.com/sell/item/3331621044?ev=bp_img",
+    link: "https://www.discogs.com/sell/release/339019?seller=piknik1979",
     desc: "Control",
     bg: "f5fafd",
   },

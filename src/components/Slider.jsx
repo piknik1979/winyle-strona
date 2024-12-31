@@ -57,7 +57,7 @@ const ImgContainer = styled.div`
 `;
 
 const Image = styled.img`
-  width: 50%; /* Dla desktopu obrazek zajmuje 50% szerokości kontenera */
+  width: 70%; /* Dla desktopu obrazek zajmuje 50% szerokości kontenera */
   height: auto; /* Zachowanie proporcji na desktopie */
   object-fit: contain; /* Zapewnienie, że obrazek nie jest przycinany */
   
@@ -74,7 +74,7 @@ const InfoContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 70px;
+  font-size: 55px;
   ${mobile({ fontSize: "24px", textAlign: "center" })}; /* Poprawiona składnia */
 `;
 
