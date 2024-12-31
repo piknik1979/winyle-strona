@@ -47,31 +47,24 @@ const Slide = styled.div`
   background-color: #${(props) => props.bg};
 `;
 
-// const ImgContainer = styled.div`
-//   height: 100%;
-//   flex: 1;
-// `;
-
-
-// const Image = styled.img`
-//   height: 80%;
-// `;
-
 const ImgContainer = styled.div`
   height: 100%;
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  ${mobile({ height: "50vh" })} /* Wysokość kontenera na mobilnych */
+  ${mobile({ height: "auto", width: "60%" })} /* Na urządzeniach mobilnych obrazek dostosowuje się do szerokości */
 `;
 
 const Image = styled.img`
-  width: 100%; /* Użycie pełnej szerokości */
-  height: 100%; /* Dopasowanie do kontenera */
-  object-fit: contain; /* Wyświetl obrazek w całości bez przycinania */
-  ${mobile({ width: "auto", height: "100%" })} /* Na mobilnych obrazek zachowuje proporcje */
+  width: 50%; /* Dla desktopu obrazek zajmuje 50% szerokości kontenera */
+  height: auto; /* Zachowanie proporcji na desktopie */
+  object-fit: contain; /* Zapewnienie, że obrazek nie jest przycinany */
+  
+  /* Na mobilnych urządzeniach dostosowujemy szerokość do 100% kontenera */
+  ${mobile({ width: "100%", height: "auto" })} /* Na mobilnych szerokość 100% z zachowaniem proporcji */
 `;
+
 
 
 const InfoContainer = styled.div`
