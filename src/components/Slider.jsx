@@ -10,7 +10,7 @@ const Container = styled.div`
   display: flex;
   position: relative;
   overflow: hidden;
-  ${mobile({ display: "none" })}
+  ${mobile({ height: "auto" })}; /* Wersja mobilna: dostosowanie wysokości */
 `;
 
 const Arrow = styled.div`
@@ -30,6 +30,9 @@ const Arrow = styled.div`
   cursor: pointer;
   opacity: 0.5;
   z-index: 2;
+
+  /* Na wersji mobilnej zmniejszamy wielkość strzałek */
+  ${mobile({ width: "40px", height: "40px" })};
 `;
 
 const Wrapper = styled.div`
@@ -45,6 +48,9 @@ const Slide = styled.div`
   display: flex;
   align-items: center;
   background-color: #${(props) => props.bg};
+
+  /* Na urządzeniach mobilnych dostosowujemy wysokość */
+  ${mobile({ height: "auto" })};
 `;
 
 const ImgContainer = styled.div`
@@ -53,7 +59,7 @@ const ImgContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  ${mobile({ height: "auto", width: "60%" })} /* Na urządzeniach mobilnych obrazek dostosowuje się do szerokości */
+  ${mobile({ height: "auto", width: "60%" })}; /* Na urządzeniach mobilnych obrazek dostosowuje się do szerokości */
 `;
 
 const Image = styled.img`
@@ -62,32 +68,27 @@ const Image = styled.img`
   object-fit: contain; /* Zapewnienie, że obrazek nie jest przycinany */
   
   /* Na mobilnych urządzeniach dostosowujemy szerokość do 100% kontenera */
-  ${mobile({ width: "100%", height: "auto" })} /* Na mobilnych szerokość 100% z zachowaniem proporcji */
+  ${mobile({ width: "100%", height: "auto" })}; /* Na mobilnych szerokość 100% z zachowaniem proporcji */
 `;
-
-
 
 const InfoContainer = styled.div`
   flex: 1;
   padding: 10px;
-  ${mobile({ padding: "20px" })} /* Zmniejszenie odstępów na mobilnych */
+  ${mobile({ padding: "20px", textAlign: "center" })}; /* Zmniejszenie odstępów na mobilnych */
 `;
 
 const Title = styled.h1`
   font-size: 55px;
-  ${mobile({ fontSize: "24px", textAlign: "center" })}; /* Poprawiona składnia */
+  ${mobile({ fontSize: "24px" })}; /* Poprawiona składnia */
 `;
-
-
 
 const Desc = styled.p`
   margin: 50px 0px;
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 3px;
-  ${mobile({ fontSize: "16px", margin: "20px 0px", textAlign: "center" })}; /* Poprawiona składnia */
+  ${mobile({ fontSize: "16px", margin: "20px 0px" })}; /* Poprawiona składnia */
 `;
-
 
 const Button = styled.button`
   padding: 10px;
@@ -98,6 +99,7 @@ const Button = styled.button`
 
 const Slider = () => {
   const [slideIndex, setSlideIndex] = useState(0);
+
   const handleClick = (direction) => {
     if (direction === "left") {
       setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2);
@@ -121,8 +123,8 @@ const Slider = () => {
               <Title>{item.title}</Title>
               <Desc>{item.desc}</Desc>
               <a href={item.link} target="_blank" rel="noopener noreferrer">
-  <Button>WEŹ POKAŻ</Button>
-</a>
+                <Button>WEŹ POKAŻ</Button>
+              </a>
             </InfoContainer>
           </Slide>
         ))}
