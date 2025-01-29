@@ -1,16 +1,23 @@
 import styled from "styled-components";
 import { categories } from "../data";
-import { mobile } from "../responsive";
 import CategoryItem from "./CategoryItem";
 
 const Container = styled.div`
-  display: flex;
+  display: grid;
+  gap: 10px;
   padding: 40px;
-  justify-content: space-between;
-  ${mobile({ padding: "0px", flexDirection:"column" })}
+  grid-template-columns: repeat(4, 1fr); // 4 kolumny na dużych ekranach
 
+  @media (max-width: 1200px) { 
+    grid-template-columns: repeat(3, 1fr); // 3 kolumny na laptopach
+  }
+
+  @media (max-width: 768px) { 
+    grid-template-columns: repeat(2, 1fr); // 2 kolumny na telefonach
+    padding: 10px;
+  }
 `;
-  
+
 const Categories = () => {
   return (
     <Container>
