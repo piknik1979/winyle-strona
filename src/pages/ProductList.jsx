@@ -1,11 +1,13 @@
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import Announcement from "../components/Announcement";
-import Products from "../components/Products";
-import Newsletter from "../components/Newsletter";
-import Footer from "../components/Footer";
-import { mobile } from "../responsive";
+import { popularProducts } from "../data"; // Importujemy dane
+import Products from "../components/Products"; // Importujemy komponent Products
+import { mobile } from "../responsive"; // Style mobilne
 
-const Container = styled.div``;
+const Container = styled.div`
+  padding: 20px;
+  margin-top: 100px;  /* Zwiększ margines górny, aby oddzielić filtr od produktów */
+`;
 
 const Title = styled.h1`
   margin: 20px;
@@ -14,11 +16,13 @@ const Title = styled.h1`
 const FilterContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;  /* Oddziela filtr od produktów */
+  ${mobile({ flexDirection: "column", alignItems: "flex-start" })}
 `;
 
 const Filter = styled.div`
-  margin: 20px;
-  ${mobile({ width: "0px 20px", display: "flex", flexDirection: "column" })}
+  margin: 10px;
+  ${mobile({ width: "100%", display: "flex", flexDirection: "column", alignItems: "flex-start" })}
 `;
 
 const FilterText = styled.span`
@@ -37,47 +41,43 @@ const Select = styled.select`
 const Option = styled.option``;
 
 const ProductList = () => {
+  const [filteredProducts, setFilteredProducts] = useState(popularProducts);
+  const [selectedGenre, setSelectedGenre] = useState("");
+
+  // Obsługa filtrowania
+  useEffect(() => {
+    let products = [...popularProducts];
+
+    if (selectedGenre) {
+      products = products.filter((product) => product.genre === selectedGenre);
+    }
+
+    setFilteredProducts(products);
+  }, [selectedGenre]);
+
   return (
     <Container>
-      <Announcement />
       <Title>Albumy</Title>
       <FilterContainer>
+        {/* Filtrowanie według gatunku */}
         <Filter>
-          <FilterText>Filter Products:</FilterText>
-          <Select>
-            <Option disabled selected>
-              Color
-            </Option>
-            <Option>White</Option>
-            <Option>Black</Option>
-            <Option>Red</Option>
-            <Option>Blue</Option>
-            <Option>Yellow</Option>
-            <Option>Green</Option>
-          </Select>
-          <Select>
-            <Option disabled selected>
-              Size
-            </Option>
-            <Option>XS</Option>
-            <Option>S</Option>
-            <Option>M</Option>
-            <Option>L</Option>
-            <Option>XL</Option>
-          </Select>
-        </Filter>
-        <Filter>
-          <FilterText>Sort Products:</FilterText>
-          <Select>
-            <Option selected>Newest</Option>
-            <Option>Price (asc)</Option>
-            <Option>Price (desc)</Option>
+          <FilterText>Filtruj według gatunku:</FilterText>
+          <Select onChange={(e) => setSelectedGenre(e.target.value)}>
+            <Option value="">Wszystkie</Option>
+            <Option value="BLUES">Blues</Option>
+            <Option value="POPROCK">Poprock</Option>
+            <Option value="STAGE & SCREEN">Stage and Screen</Option>
+            <Option value="ELECTRONIC">Electronic</Option>
+            <Option value="JAZZ">Jazz</Option>
+            <Option value="PUNK & OI">Punk & Oi</Option>
+            <Option value="CLASSIC ROCK">Classic Rock</Option>
+            <Option value="COUNTRY">Country</Option>
           </Select>
         </Filter>
       </FilterContainer>
-      <Products />
-      <Newsletter />
-      <Footer />
+
+      {/* Wyświetlanie przefiltrowanych produktów */}
+      <Products products={filteredProducts} />
     </Container>
   );
 };

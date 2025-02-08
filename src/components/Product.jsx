@@ -1,11 +1,9 @@
-import {
-  FavoriteBorderOutlined,
-  SearchOutlined,
-  ShoppingCartOutlined,
-} from "@material-ui/icons";
+import React from "react";
+import { FavoriteBorderOutlined, SearchOutlined, ShoppingCartOutlined } from "@material-ui/icons";
 import styled from "styled-components";
 
-// Stylowanie komponentów
+// Sekcja stylowania
+
 const Info = styled.div`
   opacity: 0;
   width: 100%;
@@ -22,19 +20,25 @@ const Info = styled.div`
   cursor: pointer;
 `;
 
+const Circle = styled.div`
+  opacity: 0;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  transition: all 0.5s ease;
+`;
+
 const Container = styled.div`
   flex: 1;
-  margin: 5px;
-  min-width: 280px;
-  max-width: 300px;  /* Ograniczamy maksymalną szerokość */
+  margin: 10px;
   height: 350px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #f5fbfd;
   position: relative;
-  border-radius: 0px;  /* Usuwamy zaokrąglenia rogów */
-  overflow: hidden; /* Ukrywa elementy wychodzące poza kontener */
 
   &:hover ${Info} {
     opacity: 1;
@@ -42,9 +46,9 @@ const Container = styled.div`
 `;
 
 const Image = styled.img`
-  width: 100%;    /* Obrazek wypełnia całą szerokość kontenera */
-  height: 100%;   /* Obrazek wypełnia całą wysokość kontenera */
-  object-fit: contain; /* Obrazek nie będzie przycinany, zachowa proporcje */
+  height: 100%;  /* Dopasowanie obrazu do wysokości */
+  width: 100%;  /* Wymuszenie pełnej szerokości obrazu */
+  object-fit: cover;  /* Zapewnienie, że obrazek nie będzie się rozciągał */
   z-index: 2;
 `;
 
@@ -58,6 +62,7 @@ const Icon = styled.div`
   justify-content: center;
   margin: 10px;
   transition: all 0.5s ease;
+
   &:hover {
     background-color: #e9f5f5;
     transform: scale(1.1);
@@ -66,11 +71,13 @@ const Icon = styled.div`
 
 const Product = ({ item }) => {
   return (
-    // Zmieniamy tu link na kontener, aby całość była klikalna
-    <a href={item.link} target="_blank" rel="noopener noreferrer">
-      <Container>
+    <Container>
+      {/* Link prowadzący do Discogs, otwierany w nowej karcie */}
+      <a href={item.link} target="_blank" rel="noopener noreferrer">
         <Image src={item.img} alt={item.title} />
+        {/* Sekcja z ikonami, która pojawia się po najechaniu na produkt */}
         <Info>
+          <Circle />
           <Icon>
             <ShoppingCartOutlined />
           </Icon>
@@ -81,8 +88,8 @@ const Product = ({ item }) => {
             <FavoriteBorderOutlined />
           </Icon>
         </Info>
-      </Container>
-    </a>
+      </a>
+    </Container>
   );
 };
 
