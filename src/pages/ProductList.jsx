@@ -65,13 +65,16 @@ const ProductList = () => {
           <Select onChange={(e) => setSelectedGenre(e.target.value)}>
             <Option value="">Wszystkie</Option>
             <Option value="BLUES">Blues</Option>
-            <Option value="POPROCK">Poprock</Option>
-            <Option value="STAGE & SCREEN">Stage and Screen</Option>
-            <Option value="ELECTRONIC">Electronic</Option>
-            <Option value="JAZZ">Jazz</Option>
-            <Option value="PUNK & OI">Punk & Oi</Option>
             <Option value="CLASSIC ROCK">Classic Rock</Option>
             <Option value="COUNTRY">Country</Option>
+            <Option value="ELECTRONIC">Electronic</Option>
+            <Option value="JAZZ">Jazz</Option>
+            <Option value="PUNK">Punk & Oi</Option>
+            <Option value="POPROCK">Pop Rock</Option>
+            <Option value="ROCK N ROLL">Rock & Roll</Option>
+            <Option value="STAGE & SCREEN">Stage & Screen</Option>
+            <Option value="SYNTHPOP">Synth Pop</Option>
+            <Option value="SOUL & FUNK">Soul & Funk</Option>
           </Select>
         </Filter>
       </FilterContainer>
