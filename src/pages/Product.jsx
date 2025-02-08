@@ -127,7 +127,11 @@ const Product = () => {
         <InfoContainer>
           <Title>Denim Jumpsuit</Title>
           <Desc>
-            Denim Suit cos stam cos tam, cost tam i tak dalej!
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at
+            iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget
+            tristique tortor pretium ut. Curabitur elit justo, consequat id
+            condimentum ac, volutpat ornare.
           </Desc>
           <Price>$ 20</Price>
           <FilterContainer>

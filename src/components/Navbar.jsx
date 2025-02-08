@@ -1,12 +1,13 @@
 import { Badge } from "@material-ui/core";
 import { Search, ShoppingCartOutlined } from "@material-ui/icons";
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   height: 60px;
-  ${mobile({ height: "50px" })};
+  ${mobile({ height: "50px" })}
 `;
 
 const Wrapper = styled.div`
@@ -14,7 +15,7 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  ${mobile({ padding: "10px 0px" })};
+  ${mobile({ padding: "10px 0px" })}
 `;
 
 const Left = styled.div`
@@ -26,7 +27,7 @@ const Left = styled.div`
 const Language = styled.span`
   font-size: 14px;
   cursor: pointer;
-  ${mobile({ display: "none" })};
+  ${mobile({ display: "none" })}
 `;
 
 const SearchContainer = styled.div`
@@ -39,7 +40,7 @@ const SearchContainer = styled.div`
 
 const Input = styled.input`
   border: none;
-  ${mobile({ width: "50px" })};
+  ${mobile({ width: "50px" })}
 `;
 
 const Center = styled.div`
@@ -49,78 +50,24 @@ const Center = styled.div`
 
 const Logo = styled.h1`
   font-weight: bold;
-  ${mobile({ fontSize: "24px" })};
+  ${mobile({ fontSize: "24px" })}
 `;
-
 const Right = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  ${mobile({ flex: 2, justifyContent: "center" })};
+  ${mobile({ flex: 2, justifyContent: "center" })}
 `;
 
 const MenuItem = styled.div`
   font-size: 14px;
   cursor: pointer;
   margin-left: 25px;
-  position: relative;
-  ${mobile({ fontSize: "12px", marginLeft: "10px" })};
-`;
-
-const Dropdown = styled.div`
-  position: absolute;
-  top: 30px;
-  left: 0;
-  background-color: white;
-  border: 1px solid lightgray;
-  border-radius: 5px;
-  padding: 10px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-`;
-
-const DropdownItem = styled.a`
-  font-size: 14px;
-  padding: 5px 10px;
-  cursor: pointer;
-  text-decoration: none;
-  color: black;
-  &:hover {
-    background-color: #f0f0f0;
-  }
+  ${mobile({ fontSize: "12px", marginLeft: "10px" })}
 `;
 
 const Navbar = () => {
-  const [isCatalogOpen, setIsCatalogOpen] = useState(false);
-  const [isCatalogHovered, setIsCatalogHovered] = useState(false);
-
-  const handleMouseEnter = () => {
-    setIsCatalogOpen(true);
-    setIsCatalogHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    // Delay the closing of the dropdown
-    setTimeout(() => {
-      if (!isCatalogHovered) {
-        setIsCatalogOpen(false);
-      }
-    }, 200); // 200ms delay
-    setIsCatalogHovered(false);
-  };
-
-  const handleDropdownHover = () => {
-    setIsCatalogHovered(true); // Prevent closing while hovering over the dropdown
-  };
-
-  const handleDropdownLeave = () => {
-    // Close the dropdown when mouse leaves the dropdown
-    setIsCatalogOpen(false);
-  };
-
   return (
     <Container>
       <Wrapper>
@@ -132,27 +79,14 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>WINYLE.CO.UK</Logo>
+          <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+            <Logo>WINYLE.CO.UK</Logo>
+          </Link>
         </Center>
         <Right>
-          <MenuItem
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-          >
-            KATALOG
-            {isCatalogOpen && (
-              <Dropdown
-                onMouseEnter={handleDropdownHover}
-                onMouseLeave={handleDropdownLeave} // Close on mouse leave
-              >
-                <DropdownItem href="#blues">Blues</DropdownItem>
-                <DropdownItem href="#rock">Rock</DropdownItem>
-                <DropdownItem href="#poprock">Pop Rock</DropdownItem>
-                <DropdownItem href="#classic">Classic</DropdownItem>
-                <DropdownItem href="#electronic">Electronic</DropdownItem>
-              </Dropdown>
-            )}
-          </MenuItem>
+          <Link to="/catalog" style={{ textDecoration: "none", color: "inherit" }}>
+            <MenuItem>KATALOG</MenuItem>
+          </Link>
           <MenuItem>REGISTER</MenuItem>
           <MenuItem>SIGN IN</MenuItem>
           <MenuItem>

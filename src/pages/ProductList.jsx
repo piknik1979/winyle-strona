@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Navbar from "../components/Navbar";
 import Announcement from "../components/Announcement";
 import Products from "../components/Products";
 import Newsletter from "../components/Newsletter";
@@ -34,12 +33,12 @@ const Select = styled.select`
   margin-right: 20px;
   ${mobile({ margin: "10px 0px" })}
 `;
+
 const Option = styled.option``;
 
 const ProductList = () => {
   return (
     <Container>
-      <Navbar />
       <Announcement />
       <Title>Dresses</Title>
       <FilterContainer>

@@ -1,4 +1,8 @@
-import { FavoriteBorderOutlined, SearchOutlined, ShoppingCartOutlined } from "@material-ui/icons";
+import {
+  FavoriteBorderOutlined,
+  SearchOutlined,
+  ShoppingCartOutlined,
+} from "@material-ui/icons";
 import styled from "styled-components";
 
 const Info = styled.div`
@@ -28,7 +32,7 @@ const Container = styled.div`
   background-color: #f5fbfd;
   position: relative;
 
-  &:hover ${Info} {
+  &:hover ${Info}{
     opacity: 1;
   }
 `;
@@ -66,7 +70,7 @@ const Product = ({ item }) => {
   return (
     <Container>
       <Circle />
-      <Image src={item.img} alt={item.title} />
+      <Image src={item.img} />
       <Info>
         <Icon>
           <ShoppingCartOutlined />

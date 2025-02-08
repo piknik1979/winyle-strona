@@ -10,7 +10,7 @@ const Container = styled.div`
   display: flex;
   position: relative;
   overflow: hidden;
-  ${mobile({ height: "auto" })}; /* Wersja mobilna: dostosowanie wysokości */
+  ${mobile({ display: "none" })}
 `;
 
 const Arrow = styled.div`
@@ -30,9 +30,6 @@ const Arrow = styled.div`
   cursor: pointer;
   opacity: 0.5;
   z-index: 2;
-
-  /* Na wersji mobilnej zmniejszamy wielkość strzałek */
-  ${mobile({ width: "40px", height: "40px" })};
 `;
 
 const Wrapper = styled.div`
@@ -48,38 +45,24 @@ const Slide = styled.div`
   display: flex;
   align-items: center;
   background-color: #${(props) => props.bg};
-
-  /* Na urządzeniach mobilnych dostosowujemy wysokość */
-  ${mobile({ height: "auto" })};
 `;
 
 const ImgContainer = styled.div`
   height: 100%;
   flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  ${mobile({ height: "auto", width: "60%" })}; /* Na urządzeniach mobilnych obrazek dostosowuje się do szerokości */
 `;
 
 const Image = styled.img`
-  width: 70%; /* Dla desktopu obrazek zajmuje 50% szerokości kontenera */
-  height: auto; /* Zachowanie proporcji na desktopie */
-  object-fit: contain; /* Zapewnienie, że obrazek nie jest przycinany */
-  
-  /* Na mobilnych urządzeniach dostosowujemy szerokość do 100% kontenera */
-  ${mobile({ width: "100%", height: "auto" })}; /* Na mobilnych szerokość 100% z zachowaniem proporcji */
+  height: 80%;
 `;
 
 const InfoContainer = styled.div`
   flex: 1;
-  padding: 10px;
-  ${mobile({ padding: "20px", textAlign: "center" })}; /* Zmniejszenie odstępów na mobilnych */
+  padding: 50px;
 `;
 
 const Title = styled.h1`
-  font-size: 55px;
-  ${mobile({ fontSize: "24px" })}; /* Poprawiona składnia */
+  font-size: 70px;
 `;
 
 const Desc = styled.p`
@@ -87,7 +70,6 @@ const Desc = styled.p`
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 3px;
-  ${mobile({ fontSize: "16px", margin: "20px 0px" })}; /* Poprawiona składnia */
 `;
 
 const Button = styled.button`
@@ -99,7 +81,6 @@ const Button = styled.button`
 
 const Slider = () => {
   const [slideIndex, setSlideIndex] = useState(0);
-
   const handleClick = (direction) => {
     if (direction === "left") {
       setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2);
@@ -122,9 +103,7 @@ const Slider = () => {
             <InfoContainer>
               <Title>{item.title}</Title>
               <Desc>{item.desc}</Desc>
-              <a href={item.link} target="_blank" rel="noopener noreferrer">
-                <Button>WEŹ POKAŻ</Button>
-              </a>
+              <Button>SHOW NOW</Button>
             </InfoContainer>
           </Slide>
         ))}

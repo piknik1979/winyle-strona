@@ -1,4 +1,3 @@
-
 import { Send } from "@material-ui/icons";
 import styled from "styled-components";
 import { mobile } from "../responsive";
