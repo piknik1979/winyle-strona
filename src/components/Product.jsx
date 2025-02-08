@@ -5,6 +5,7 @@ import {
 } from "@material-ui/icons";
 import styled from "styled-components";
 
+// Stylowanie komponentów
 const Info = styled.div`
   opacity: 0;
   width: 100%;
@@ -25,28 +26,25 @@ const Container = styled.div`
   flex: 1;
   margin: 5px;
   min-width: 280px;
+  max-width: 300px;  /* Ograniczamy maksymalną szerokość */
   height: 350px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #f5fbfd;
   position: relative;
+  border-radius: 0px;  /* Usuwamy zaokrąglenia rogów */
+  overflow: hidden; /* Ukrywa elementy wychodzące poza kontener */
 
-  &:hover ${Info}{
+  &:hover ${Info} {
     opacity: 1;
   }
 `;
 
-const Circle = styled.div`
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background-color: white;
-  position: absolute;
-`;
-
 const Image = styled.img`
-  height: 75%;
+  width: 100%;    /* Obrazek wypełnia całą szerokość kontenera */
+  height: 100%;   /* Obrazek wypełnia całą wysokość kontenera */
+  object-fit: contain; /* Obrazek nie będzie przycinany, zachowa proporcje */
   z-index: 2;
 `;
 
@@ -68,21 +66,23 @@ const Icon = styled.div`
 
 const Product = ({ item }) => {
   return (
-    <Container>
-      <Circle />
-      <Image src={item.img} />
-      <Info>
-        <Icon>
-          <ShoppingCartOutlined />
-        </Icon>
-        <Icon>
-          <SearchOutlined />
-        </Icon>
-        <Icon>
-          <FavoriteBorderOutlined />
-        </Icon>
-      </Info>
-    </Container>
+    // Zmieniamy tu link na kontener, aby całość była klikalna
+    <a href={item.link} target="_blank" rel="noopener noreferrer">
+      <Container>
+        <Image src={item.img} alt={item.title} />
+        <Info>
+          <Icon>
+            <ShoppingCartOutlined />
+          </Icon>
+          <Icon>
+            <SearchOutlined />
+          </Icon>
+          <Icon>
+            <FavoriteBorderOutlined />
+          </Icon>
+        </Info>
+      </Container>
+    </a>
   );
 };
 

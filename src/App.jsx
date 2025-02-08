@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Switch, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import ProductList from "./pages/ProductList";
@@ -10,10 +10,10 @@ const Layout = () => {
   return (
     <>
       {showNavbar && <Navbar />}
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/catalog" component={ProductList} />
-      </Switch>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/catalog" element={<ProductList />} />
+      </Routes>
     </>
   );
 };
