@@ -10,7 +10,7 @@ const Container = styled.div`
   display: flex;
   position: relative;
   overflow: hidden;
-  ${mobile({ display: "none" })}
+  ${mobile({ height: "50vh" })} /* Wersja mobilna */
 `;
 
 const Arrow = styled.div`
@@ -22,47 +22,64 @@ const Arrow = styled.div`
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 0;
-  bottom: 0;
+  top: 50%;
+  transform: translateY(-50%);
   left: ${(props) => props.direction === "left" && "10px"};
   right: ${(props) => props.direction === "right" && "10px"};
-  margin: auto;
   cursor: pointer;
   opacity: 0.5;
   z-index: 2;
 `;
 
 const Wrapper = styled.div`
-  height: 100%;
   display: flex;
-  transition: all 1.5s ease;
-  transform: translateX(${(props) => props.slideIndex * -100}vw);
+  height: 100%;
+  transition: transform 1.5s ease-in-out;
+  transform: translateX(${(props) => props.slideIndex * -100}vw); /* Przesuwamy cały slajd */
 `;
 
 const Slide = styled.div`
   width: 100vw;
   height: 100vh;
   display: flex;
+  justify-content: center;
   align-items: center;
   background-color: #${(props) => props.bg};
+  ${mobile({ height: "50vh" })}
 `;
 
 const ImgContainer = styled.div`
-  height: 100%;
-  flex: 1;
+  width: 50vw; /* Zmniejszamy do 50% szerokości ekranu */
+  height: 75%; /* Teraz 1/6 mniej - zmniejszamy obraz o 1/6 wysokości */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px; /* Dodajemy odstęp, aby nie przylegał do krawędzi */
+  ${mobile({
+    width: "66.66vw", /* Na mobilnych zostawiamy 2/3 szerokości */
+    height: "80%", /* Zmniejszamy wysokość */
+    padding: "10px", /* Mały odstęp */
+  })}
+  margin-bottom: 20px; /* Dodajemy margines dolny, aby obrazek nie przylegał do krawędzi ekranu */
 `;
 
 const Image = styled.img`
-  height: 80%;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  margin: auto; /* Zapobiega przyleganiu */
 `;
 
 const InfoContainer = styled.div`
   flex: 1;
   padding: 50px;
+  ${mobile({ padding: "15px" })}
 `;
 
 const Title = styled.h1`
   font-size: 70px;
+  ${mobile({ fontSize: "30px" })}
 `;
 
 const Desc = styled.p`
@@ -70,6 +87,7 @@ const Desc = styled.p`
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 3px;
+  ${mobile({ fontSize: "14px", margin: "15px 0" })}
 `;
 
 const Button = styled.button`
@@ -111,9 +129,8 @@ const Slider = () => {
               <Title>{item.title}</Title>
               <Desc>{item.desc}</Desc>
               <Button onClick={() => window.open(item.link, "_blank")}>
-  KUP TERAZ
-</Button>
-
+                KUP TERAZ
+              </Button>
             </InfoContainer>
           </Slide>
         ))}
