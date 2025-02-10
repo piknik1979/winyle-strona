@@ -37,7 +37,8 @@ const styles = {
     justifyContent: "center",
     cursor: "pointer",
     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
-    zIndex: 10,
+    zIndex: 10, // Wysoki z-index, żeby przycisk był na wierzchu
+    transition: "all 0.3s ease", // Dodanie animacji przycisku
   },
   backToTopText: {
     color: "#d9e0de", // Zmieniony kolor na ciemnoszary
