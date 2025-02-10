@@ -2,7 +2,7 @@ export const sliderItems = [
   {
     id: 1,
     img: "https://i.discogs.com/TjduV57Rd-RjXuGgk0LyOL9jZ_xL-sxYGsyTI0i2aHI/rs:fit/g:sm/q:90/h:593/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMzOTAx/OS0xNDI3NzgzNzM2/LTEyMDQuanBlZw.jpeg",
-    genre: "Janet Jackson",
+    artist: "Janet Jackson",
     link: "https://www.discogs.com/sell/release/339019?seller=piknik1979",
     desc: "Control",
     bg: "f5fafd",
@@ -10,14 +10,14 @@ export const sliderItems = [
   {
     id: 2,
     img: "https://i.discogs.com/kXe5dxTZZmGvaXff3I7fA97JUq-FFpV9SBlfBvDaMcA/rs:fit/g:sm/q:90/h:602/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM4NTg2/My0xMTg4NjY2MjI3/LmpwZWc.jpeg",
-    genre: "BLITZ!",
+    artist: "BLITZ!",
     desc: "Voice of a Generation",
     bg: "fcf1ed",
   },
   {
     id: 3,
     img: "https://i.discogs.com/rYNfIA9eW_j-ASaP3lHPCAOU0_iujo7347VWgeA5eQM/rs:fit/g:sm/q:90/h:615/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0NjU1/MTMtMTU0NDg3NDk3/Mi0xNzc5LmpwZWc.jpeg",
-    genre: "Jesus Jones",
+    artist: "Jesus Jones",
     desc: "Real Real Real",
     link: "https://www.discogs.com/sell/item/3381537480",
     bg: "fbf0f4",

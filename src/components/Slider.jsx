@@ -45,7 +45,7 @@ const Slide = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #${(props) => props.bg};
-  ${mobile({ height: "50vh" })}
+  ${mobile({ height: "50vh" })} /* Wersja mobilna */
 `;
 
 const ImgContainer = styled.div`
@@ -80,6 +80,13 @@ const InfoContainer = styled.div`
 const Title = styled.h1`
   font-size: 70px;
   ${mobile({ fontSize: "30px" })}
+`;
+
+const Artist = styled.h2` /* Nowy komponent dla artysty */
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  ${mobile({ fontSize: "20px" })} /* Zmniejszamy font w wersji mobilnej */
 `;
 
 const Desc = styled.p`
@@ -127,6 +134,7 @@ const Slider = () => {
             </ImgContainer>
             <InfoContainer>
               <Title>{item.title}</Title>
+              <Artist>{item.artist}</Artist> {/* Wyświetlamy artystę */}
               <Desc>{item.desc}</Desc>
               <Button onClick={() => window.open(item.link, "_blank")}>
                 KUP TERAZ
