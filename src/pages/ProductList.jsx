@@ -64,17 +64,24 @@ const ProductList = () => {
           <FilterText>Filtruj według gatunku:</FilterText>
           <Select onChange={(e) => setSelectedGenre(e.target.value)}>
             <Option value="">Wszystkie</Option>
-            <Option value="BLUES">Blues</Option>
-            <Option value="CLASSIC ROCK">Classic Rock</Option>
-            <Option value="COUNTRY">Country</Option>
-            <Option value="ELECTRONIC">Electronic</Option>
-            <Option value="JAZZ">Jazz</Option>
-            <Option value="PUNK">Punk & Oi</Option>
-            <Option value="POPROCK">Pop Rock</Option>
-            <Option value="ROCK N ROLL">Rock & Roll</Option>
-            <Option value="STAGE & SCREEN">Stage & Screen</Option>
-            <Option value="SYNTHPOP">Synth Pop</Option>
-            <Option value="SOUL & FUNK">Soul & Funk</Option>
+            <Option value="Blues">Blues</Option>
+            <Option value="Classic Rock">Classic Rock</Option>
+            <Option value="Country">Country</Option>
+            <Option value="Electronic">Electronic</Option>
+            <Option value="Jazz">Jazz</Option>
+            <Option value="Punk">Punk & Oi</Option>
+            <Option value="Pop Rock">Pop Rock</Option>
+            <Option value="Rock & Roll">Rock & Roll</Option>
+            <Option value="Stage & Screen">Stage & Screen</Option>
+            <Option value="Synth Pop">Synth Pop</Option>
+            <Option value="Funk & Soul">Funk & Soul</Option>
+            <Option value="Hard Rock">Hard Rock</Option>
+            <Option value="Disco">Disco</Option>
+            <Option value="Ska & Raggae">Ska & Reggae</Option>
+            <Option value="Psychodelic Rock">Psychodelic Rock</Option>
+            <Option value="Folk">Folk</Option>
+            <Option value="Glam Rock">Glam Rock</Option>
+            <Option value="Heavy Metal">Heavy Metal</Option>
           </Select>
         </Filter>
       </FilterContainer>
