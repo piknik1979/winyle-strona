@@ -33,22 +33,33 @@ const Circle = styled.div`
 const Container = styled.div`
   flex: 1;
   margin: 10px;
-  height: 350px;
+  height: 400px; /* Zwiększona wysokość na potrzeby opisu */
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #f5fbfd;
   position: relative;
+  padding: 10px;
 
   &:hover ${Info} {
     opacity: 1;
   }
 `;
 
+const ImageWrapper = styled.div`
+  width: 100%;
+  height: 80%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
 const Image = styled.img`
-  height: 100%;  /* Dopasowanie obrazu do wysokości */
-  width: 100%;  /* Wymuszenie pełnej szerokości obrazu */
-  object-fit: cover;  /* Zapewnienie, że obrazek nie będzie się rozciągał */
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
   z-index: 2;
 `;
 
@@ -69,26 +80,35 @@ const Icon = styled.div`
   }
 `;
 
+const Description = styled.p`
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+  max-width: 90%;
+`;
+
 const Product = ({ item }) => {
   return (
     <Container>
-      {/* Link prowadzący do Discogs, otwierany w nowej karcie */}
-      <a href={item.link} target="_blank" rel="noopener noreferrer">
-        <Image src={item.img} alt={item.title} />
-        {/* Sekcja z ikonami, która pojawia się po najechaniu na produkt */}
-        <Info>
-          <Circle />
-          <Icon>
-            <ShoppingCartOutlined />
-          </Icon>
-          <Icon>
-            <SearchOutlined />
-          </Icon>
-          <Icon>
-            <FavoriteBorderOutlined />
-          </Icon>
-        </Info>
-      </a>
+      <ImageWrapper>
+        <a href={item.link} target="_blank" rel="noopener noreferrer">
+          <Image src={item.img} alt={item.title} />
+          <Info>
+            <Circle />
+            <Icon>
+              <ShoppingCartOutlined />
+            </Icon>
+            <Icon>
+              <SearchOutlined />
+            </Icon>
+            <Icon>
+              <FavoriteBorderOutlined />
+            </Icon>
+          </Info>
+        </a>
+      </ImageWrapper>
+      <Description>{item.desc}</Description>
     </Container>
   );
 };
