@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes, useLocation } from "react-route
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import ProductList from "./pages/ProductList";
+import Product from "./pages/Product";  // Import strony szczegółów produktu
 
 const Layout = () => {
   const location = useLocation();
@@ -13,6 +14,7 @@ const Layout = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/catalog" element={<ProductList />} />
+        <Route path="/product/:id" element={<Product />} /> {/* Nowa trasa dla produktu */}
       </Routes>
     </>
   );

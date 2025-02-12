@@ -1,8 +1,7 @@
 import React from "react";
 import { FavoriteBorderOutlined, SearchOutlined, ShoppingCartOutlined } from "@material-ui/icons";
 import styled from "styled-components";
-
-// Sekcja stylowania
+import { useNavigate } from "react-router-dom";
 
 const Info = styled.div`
   opacity: 0;
@@ -20,20 +19,10 @@ const Info = styled.div`
   cursor: pointer;
 `;
 
-const Circle = styled.div`
-  opacity: 0;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background-color: white;
-  position: absolute;
-  transition: all 0.5s ease;
-`;
-
 const Container = styled.div`
   flex: 1;
   margin: 10px;
-  height: 400px; /* Zwiększona wysokość na potrzeby opisu */
+  height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -73,6 +62,7 @@ const Icon = styled.div`
   justify-content: center;
   margin: 10px;
   transition: all 0.5s ease;
+  cursor: pointer;
 
   &:hover {
     background-color: #e9f5f5;
@@ -89,24 +79,27 @@ const Description = styled.p`
 `;
 
 const Product = ({ item }) => {
+  const navigate = useNavigate();
+
+  const handleSearchClick = () => {
+    navigate(`/product/${item.id}`, { state: { product: item } });
+  };
+
   return (
     <Container>
       <ImageWrapper>
-        <a href={item.link} target="_blank" rel="noopener noreferrer">
-          <Image src={item.img} alt={item.title} />
-          <Info>
-            <Circle />
-            <Icon>
-              <ShoppingCartOutlined />
-            </Icon>
-            <Icon>
-              <SearchOutlined />
-            </Icon>
-            <Icon>
-              <FavoriteBorderOutlined />
-            </Icon>
-          </Info>
-        </a>
+        <Image src={item.img} alt={item.desc} />
+        <Info>
+          <Icon>
+            <ShoppingCartOutlined />
+          </Icon>
+          <Icon onClick={handleSearchClick}>
+            <SearchOutlined />
+          </Icon>
+          <Icon>
+            <FavoriteBorderOutlined />
+          </Icon>
+        </Info>
       </ImageWrapper>
       <Description>{item.desc}</Description>
     </Container>
