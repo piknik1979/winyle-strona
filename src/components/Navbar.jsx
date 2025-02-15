@@ -1,12 +1,13 @@
 import { Badge } from "@material-ui/core";
-import { Search, ShoppingCartOutlined } from "@material-ui/icons";
+import { Search, ShoppingCartOutlined, Menu as MenuIcon, Close as CloseIcon } from "@material-ui/icons";
 import React, { useState } from "react";
 import styled from "styled-components";
-import { mobile } from "../responsive";
+import { mobile } from "../responsive"; // Media queries dla wersji mobilnej
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   height: 60px;
-  ${mobile({ height: "50px" })};
+  ${mobile({ height: "50px" })} /* Dostosowanie wysokości w wersji mobilnej */
 `;
 
 const Wrapper = styled.div`
@@ -14,7 +15,7 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  ${mobile({ padding: "10px 0px" })};
+  ${mobile({ padding: "10px 0px" })} /* Dostosowanie paddingu w wersji mobilnej */
 `;
 
 const Left = styled.div`
@@ -26,7 +27,7 @@ const Left = styled.div`
 const Language = styled.span`
   font-size: 14px;
   cursor: pointer;
-  ${mobile({ display: "none" })};
+  ${mobile({ display: "none" })} /* Ukrycie języka w wersji mobilnej */
 `;
 
 const SearchContainer = styled.div`
@@ -39,7 +40,7 @@ const SearchContainer = styled.div`
 
 const Input = styled.input`
   border: none;
-  ${mobile({ width: "50px" })};
+  ${mobile({ width: "50px" })} /* Dostosowanie rozmiaru pola wyszukiwania w wersji mobilnej */
 `;
 
 const Center = styled.div`
@@ -49,7 +50,7 @@ const Center = styled.div`
 
 const Logo = styled.h1`
   font-weight: bold;
-  ${mobile({ fontSize: "24px" })};
+  ${mobile({ fontSize: "24px" })} /* Zmniejszenie rozmiaru logo w wersji mobilnej */
 `;
 
 const Right = styled.div`
@@ -57,69 +58,62 @@ const Right = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  ${mobile({ flex: 2, justifyContent: "center" })};
+
+  /* Ukrywamy Right w wersji mobilnej */
+  ${mobile({ display: "none" })}
 `;
 
 const MenuItem = styled.div`
   font-size: 14px;
   cursor: pointer;
   margin-left: 25px;
-  position: relative;
-  ${mobile({ fontSize: "12px", marginLeft: "10px" })};
+  ${mobile({ fontSize: "12px", marginLeft: "10px" })} /* Dostosowanie rozmiaru i marginesu w wersji mobilnej */
 `;
 
-const Dropdown = styled.div`
-  position: absolute;
-  top: 30px;
-  left: 0;
-  background-color: white;
-  border: 1px solid lightgray;
-  border-radius: 5px;
-  padding: 10px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 10;
+/* Hamburger Menu Icon */
+const Hamburger = styled.div`
+  display: none; /* Ukryty na desktopie */
+  ${mobile({ display: "block", cursor: "pointer", zIndex: 2 })} /* Widoczny tylko w wersji mobilnej */
+`;
+
+const Menu = styled.div`
   display: flex;
   flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.9); /* Czarne półprzezroczyste tło */
+  width: 100%; /* Pełna szerokość */
+  height: 100vh; /* Pełna wysokość */
+  z-index: 1000;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out;
+  transform: ${(props) => (props.menuOpen ? "translateX(0)" : "translateX(100%)")}; /* Wysuwanie menu */
 `;
 
-const DropdownItem = styled.a`
-  font-size: 14px;
-  padding: 5px 10px;
+const MenuItemMobile = styled.div`
+  margin: 15px 0;
+  font-size: 18px;
   cursor: pointer;
-  text-decoration: none;
-  color: black;
-  &:hover {
-    background-color: #f0f0f0;
-  }
+  text-align: center;
+  font-weight: 500;
+  color: white; /* Białe elementy menu */
+`;
+
+const CloseButton = styled.div`
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 30px;
+  color: white; /* Biały kolor ikony zamykania */
+  z-index: 1001;
 `;
 
 const Navbar = () => {
-  const [isCatalogOpen, setIsCatalogOpen] = useState(false);
-  const [isCatalogHovered, setIsCatalogHovered] = useState(false);
-
-  const handleMouseEnter = () => {
-    setIsCatalogOpen(true);
-    setIsCatalogHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    // Delay the closing of the dropdown
-    setTimeout(() => {
-      if (!isCatalogHovered) {
-        setIsCatalogOpen(false);
-      }
-    }, 200); // 200ms delay
-    setIsCatalogHovered(false);
-  };
-
-  const handleDropdownHover = () => {
-    setIsCatalogHovered(true); // Prevent closing while hovering over the dropdown
-  };
-
-  const handleDropdownLeave = () => {
-    // Close the dropdown when mouse leaves the dropdown
-    setIsCatalogOpen(false);
-  };
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <Container>
@@ -131,28 +125,18 @@ const Navbar = () => {
             <Search style={{ color: "gray", fontSize: 16 }} />
           </SearchContainer>
         </Left>
+
         <Center>
-          <Logo>WINYLE.CO.UK</Logo>
+          <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+            <Logo>WINYLE.CO.UK</Logo>
+          </Link>
         </Center>
+
+        {/* Prawa strona menu widoczna tylko na desktopie */}
         <Right>
-          <MenuItem
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-          >
-            KATALOG
-            {isCatalogOpen && (
-              <Dropdown
-                onMouseEnter={handleDropdownHover}
-                onMouseLeave={handleDropdownLeave} // Close on mouse leave
-              >
-                <DropdownItem href="#blues">Blues</DropdownItem>
-                <DropdownItem href="#rock">Rock</DropdownItem>
-                <DropdownItem href="#poprock">Pop Rock</DropdownItem>
-                <DropdownItem href="#classic">Classic</DropdownItem>
-                <DropdownItem href="#electronic">Electronic</DropdownItem>
-              </Dropdown>
-            )}
-          </MenuItem>
+          <Link to="/catalog" style={{ textDecoration: "none", color: "inherit" }}>
+            <MenuItem>KATALOG</MenuItem>
+          </Link>
           <MenuItem>REGISTER</MenuItem>
           <MenuItem>SIGN IN</MenuItem>
           <MenuItem>
@@ -161,7 +145,29 @@ const Navbar = () => {
             </Badge>
           </MenuItem>
         </Right>
+
+        {/* Hamburger Menu - widoczny tylko w wersji mobilnej */}
+        <Hamburger onClick={() => setMenuOpen(true)}>
+          <MenuIcon style={{ fontSize: 30 }} />
+        </Hamburger>
       </Wrapper>
+
+      {/* Mobile Menu */}
+      <Menu menuOpen={menuOpen}>
+        <CloseButton onClick={() => setMenuOpen(false)}>
+          <CloseIcon />
+        </CloseButton>
+        <Link to="/catalog" style={{ textDecoration: "none", color: "inherit" }}>
+          <MenuItemMobile>KATALOG</MenuItemMobile>
+        </Link>
+        <MenuItemMobile>REGISTER</MenuItemMobile>
+        <MenuItemMobile>SIGN IN</MenuItemMobile>
+        <MenuItemMobile>
+          <Badge badgeContent={4} color="primary">
+            <ShoppingCartOutlined />
+          </Badge>
+        </MenuItemMobile>
+      </Menu>
     </Container>
   );
 };

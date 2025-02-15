@@ -1,23 +1,23 @@
+import React from "react";
 import styled from "styled-components";
-import Product from "./Product";
-import { popularProducts } from "../data"; // Zakładamy, że dane są w pliku data.js
+import Product from "./Product"; // Import komponentu pojedynczego produktu
 
 const Container = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Dynamiczne tworzenie kolumn */
+  gap: 20px;
+  margin-top: 20px;  /* Oddzielamy produkty od filtrów */
 `;
 
-const Products = () => {
+const Products = ({ products }) => {
+  if (!products || products.length === 0) {
+    return <div>No products available.</div>; // Komunikat, jeśli brak produktów
+  }
+
   return (
     <Container>
-      {popularProducts.map((item) => (
-        <div key={item.id} style={{ textAlign: "center", marginBottom: "20px" }}>
-          {/* Link otaczający cały produkt */}
-          <a href={item.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
-            <Product item={item} />
-          </a>
-        </div>
+      {products.map((item) => (
+        <Product item={item} key={item.id} />
       ))}
     </Container>
   );
