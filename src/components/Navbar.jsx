@@ -7,15 +7,17 @@ import { Link } from "react-router-dom";
 
 const Container = styled.div`
   height: 60px;
-  ${mobile({ height: "50px" })} /* Dostosowanie wysokości w wersji mobilnej */
+  ${mobile({ height: "50px", marginTop: "20px" })} /* 5mm odstępu od góry w wersji mobilnej */
 `;
+
 
 const Wrapper = styled.div`
   padding: 10px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  ${mobile({ padding: "10px 0px" })} /* Dostosowanie paddingu w wersji mobilnej */
+  position: relative;
+  ${mobile({ padding: "10px 0px" })}
 `;
 
 const Left = styled.div`
@@ -27,7 +29,7 @@ const Left = styled.div`
 const Language = styled.span`
   font-size: 14px;
   cursor: pointer;
-  ${mobile({ display: "none" })} /* Ukrycie języka w wersji mobilnej */
+  ${mobile({ display: "none" })}
 `;
 
 const SearchContainer = styled.div`
@@ -40,17 +42,24 @@ const SearchContainer = styled.div`
 
 const Input = styled.input`
   border: none;
-  ${mobile({ width: "50px" })} /* Dostosowanie rozmiaru pola wyszukiwania w wersji mobilnej */
+  ${mobile({ width: "50px" })}
 `;
 
 const Center = styled.div`
   flex: 1;
   text-align: center;
+
+  /* Logo idealnie na środku w wersji mobilnej */
+  ${mobile({
+    position: "absolute",
+    left: "50%",
+    transform: "translateX(-50%)",
+  })}
 `;
 
 const Logo = styled.h1`
   font-weight: bold;
-  ${mobile({ fontSize: "24px" })} /* Zmniejszenie rozmiaru logo w wersji mobilnej */
+  ${mobile({ fontSize: "24px" })}
 `;
 
 const Right = styled.div`
@@ -58,8 +67,6 @@ const Right = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-
-  /* Ukrywamy Right w wersji mobilnej */
   ${mobile({ display: "none" })}
 `;
 
@@ -67,13 +74,18 @@ const MenuItem = styled.div`
   font-size: 14px;
   cursor: pointer;
   margin-left: 25px;
-  ${mobile({ fontSize: "12px", marginLeft: "10px" })} /* Dostosowanie rozmiaru i marginesu w wersji mobilnej */
+  ${mobile({ fontSize: "12px", marginLeft: "10px" })}
 `;
 
-/* Hamburger Menu Icon */
 const Hamburger = styled.div`
-  display: none; /* Ukryty na desktopie */
-  ${mobile({ display: "block", cursor: "pointer", zIndex: 2 })} /* Widoczny tylko w wersji mobilnej */
+  display: none;
+  ${mobile({
+    display: "block",
+    position: "absolute",
+    right: "20px", // Hamburger przesunięty o 5mm od krawędzi ekranu (~10px)
+    cursor: "pointer",
+    zIndex: 2,
+  })}
 `;
 
 const Menu = styled.div`
@@ -82,15 +94,15 @@ const Menu = styled.div`
   position: fixed;
   top: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.9); /* Czarne półprzezroczyste tło */
-  width: 100%; /* Pełna szerokość */
-  height: 100vh; /* Pełna wysokość */
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100vh;
   z-index: 1000;
   padding: 20px;
   align-items: center;
   justify-content: center;
   transition: transform 0.3s ease-in-out;
-  transform: ${(props) => (props.menuOpen ? "translateX(0)" : "translateX(100%)")}; /* Wysuwanie menu */
+  transform: ${(props) => (props.menuOpen ? "translateX(0)" : "translateX(100%)")};
 `;
 
 const MenuItemMobile = styled.div`
@@ -99,7 +111,7 @@ const MenuItemMobile = styled.div`
   cursor: pointer;
   text-align: center;
   font-weight: 500;
-  color: white; /* Białe elementy menu */
+  color: white;
 `;
 
 const CloseButton = styled.div`
@@ -108,7 +120,7 @@ const CloseButton = styled.div`
   right: 20px;
   cursor: pointer;
   font-size: 30px;
-  color: white; /* Biały kolor ikony zamykania */
+  color: white;
   z-index: 1001;
 `;
 
@@ -132,9 +144,8 @@ const Navbar = () => {
           </Link>
         </Center>
 
-        {/* Prawa strona menu widoczna tylko na desktopie */}
         <Right>
-        <MenuItem>HOME</MenuItem>
+          <MenuItem>HOME</MenuItem>
           <Link to="/catalog" style={{ textDecoration: "none", color: "inherit" }}>
             <MenuItem>RECORDS</MenuItem>
           </Link>
@@ -147,13 +158,11 @@ const Navbar = () => {
           </MenuItem>
         </Right>
 
-        {/* Hamburger Menu - widoczny tylko w wersji mobilnej */}
         <Hamburger onClick={() => setMenuOpen(true)}>
           <MenuIcon style={{ fontSize: 30 }} />
         </Hamburger>
       </Wrapper>
 
-      {/* Mobile Menu */}
       <Menu menuOpen={menuOpen}>
         <CloseButton onClick={() => setMenuOpen(false)}>
           <CloseIcon />
