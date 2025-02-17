@@ -71,9 +71,9 @@ const ProductList = () => {
       <FilterContainer>
         {/* Filtrowanie według gatunku */}
         <Filter>
-          <FilterText>Filtruj według gatunku:</FilterText>
+          <FilterText>Filter genre:</FilterText>
           <Select onChange={(e) => setSelectedGenre(e.target.value)}>
-            <Option value="">Wszystkie</Option>
+            <Option value="">All genres</Option>
             <Option value="Blues">Blues</Option>
             <Option value="Classic Rock">Classic Rock</Option>
             <Option value="Country">Country</Option>
@@ -97,7 +97,7 @@ const ProductList = () => {
 
         {/* Sortowanie według nazwy alfabetycznie */}
         <Filter>
-          <FilterText>Sortuj alfabetycznie:</FilterText>
+          <FilterText>Sorting:</FilterText>
           <Select onChange={(e) => setSortOrder(e.target.value)}>
             <Option value="asc">A-Z</Option>
             <Option value="desc">Z-A</Option>

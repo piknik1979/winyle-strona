@@ -56,6 +56,7 @@ export const popularProducts = [
     id: 1,
     img: "https://i.discogs.com/vHguFUhuZFZtnXHg_jE4X3WaFoy1Nkm5wWKjJizAtHQ/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTc3ODc2/Mi0xNDEzMTQ5MjEy/LTg3NTMuanBlZw.jpeg",
     link: "https://www.discogs.com/sell/release/778762?seller=piknik1979",
+    card: "https://www.discogs.com/sell/cart/?add=1322310760&ev=",
     genre: "Pop Rock",
     desc: "10cc - The Original Soundtrack (LP, album, Gat)",
     media: "Very Good+",

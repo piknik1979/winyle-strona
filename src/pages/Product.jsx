@@ -1,17 +1,17 @@
-import { useLocation } from "react-router-dom";
-import { Add, Remove } from "@material-ui/icons";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import { useLocation } from "react-router-dom"; // Import useLocation z react-router-dom
 import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
 import Newsletter from "../components/Newsletter";
-import { mobile } from "../responsive";  // Dodajemy responsywne style
+import { mobile } from "../responsive"; // Responsywne style
 
 const Container = styled.div``;
 
 const Wrapper = styled.div`
   padding: 50px;
   display: flex;
-  ${mobile({ flexDirection: "column", padding: "10px" })}  // Zmieniamy układ na kolumnowy w wersji mobilnej
+  ${mobile({ flexDirection: "column", padding: "10px" })}
 `;
 
 const ImgContainer = styled.div`
@@ -19,22 +19,22 @@ const ImgContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 750px; // Maksymalny rozmiar okładki na desktopie
-  max-height: 750px; // Ustawienie kwadratowego kontenera
-  ${mobile({ width: "100%", maxWidth: "100%", maxHeight: "100%", marginTop: "20px" })} // Wersja mobilna - pełna szerokość
+  max-width: 750px;
+  max-height: 750px;
+  ${mobile({ width: "100%", maxWidth: "100%", maxHeight: "100%" })}
 `;
 
 const Image = styled.img`
   width: 90%;
   height: 90%;
-  object-fit: contain; // Zapewnia, że cały obraz jest widoczny bez przycinania
-  border-radius: 8px; // Opcjonalne zaokrąglenie rogów
+  object-fit: contain;
+  border-radius: 8px;
 `;
 
 const InfoContainer = styled.div`
   flex: 1;
   padding: 0px 50px;
-  ${mobile({ padding: "10px" })}  // Zmniejszamy padding na urządzeniach mobilnych
+  ${mobile({ padding: "10px" })}
 `;
 
 const Title = styled.h1`
@@ -56,7 +56,7 @@ const AddContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  ${mobile({ width: "100%" })}  // Zmienia szerokość na 100% na urządzeniach mobilnych
+  ${mobile({ width: "100%" })}
 `;
 
 const AmountContainer = styled.div`
@@ -94,6 +94,11 @@ const Product = () => {
 
   if (!product) return <p>PRODUCT NOT FOUND</p>;
 
+  // Funkcja obsługująca kliknięcie "Add to Cart"
+  const handleAddToCartClick = () => {
+    window.location.href = product.card; // Przekierowanie na link 'card' produktu na Discogs
+  };
+
   return (
     <Container>
       <Announcement />
@@ -111,11 +116,10 @@ const Product = () => {
           <Price>{product.price}</Price>
           <AddContainer>
             <AmountContainer>
-              <Remove />
+              {/* Przycisk do dodania do koszyka */}
               <Amount>1</Amount>
-              <Add />
             </AmountContainer>
-            <Button>ADD TO CART</Button>
+            <Button onClick={handleAddToCartClick}>ADD TO CART</Button>
           </AddContainer>
         </InfoContainer>
       </Wrapper>
