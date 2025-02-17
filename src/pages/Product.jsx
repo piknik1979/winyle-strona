@@ -19,14 +19,14 @@ const ImgContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 600px; // Maksymalny rozmiar okładki na desktopie
-  max-height: 600px; // Ustawienie kwadratowego kontenera
-  ${mobile({ width: "100%", maxWidth: "100%", maxHeight: "100%" })} // Wersja mobilna - pełna szerokość
+  max-width: 750px; // Maksymalny rozmiar okładki na desktopie
+  max-height: 750px; // Ustawienie kwadratowego kontenera
+  ${mobile({ width: "100%", maxWidth: "100%", maxHeight: "100%", marginTop: "20px" })} // Wersja mobilna - pełna szerokość
 `;
 
 const Image = styled.img`
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   object-fit: contain; // Zapewnia, że cały obraz jest widoczny bez przycinania
   border-radius: 8px; // Opcjonalne zaokrąglenie rogów
 `;

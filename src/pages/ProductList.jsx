@@ -44,17 +44,26 @@ const Option = styled.option``;
 const ProductList = () => {
   const [filteredProducts, setFilteredProducts] = useState(popularProducts);
   const [selectedGenre, setSelectedGenre] = useState("");
+  const [sortOrder, setSortOrder] = useState("asc"); // Domyślny porządek sortowania: A-Z
 
   // Obsługa filtrowania
   useEffect(() => {
     let products = [...popularProducts];
 
+    // Filtrowanie po gatunku
     if (selectedGenre) {
       products = products.filter((product) => product.genre === selectedGenre);
     }
 
+    // Sortowanie alfabetyczne
+    if (sortOrder === "asc") {
+      products.sort((a, b) => a.desc.localeCompare(b.desc)); // A-Z
+    } else {
+      products.sort((a, b) => b.desc.localeCompare(a.desc)); // Z-A
+    }
+
     setFilteredProducts(products);
-  }, [selectedGenre]);
+  }, [selectedGenre, sortOrder]); // Efekt uruchamia się, gdy zmienia się gatunek lub porządek sortowania
 
   return (
     <Container>
@@ -83,6 +92,15 @@ const ProductList = () => {
             <Option value="Folk">Folk</Option>
             <Option value="Glam Rock">Glam Rock</Option>
             <Option value="Heavy Metal">Heavy Metal</Option>
+          </Select>
+        </Filter>
+
+        {/* Sortowanie według nazwy alfabetycznie */}
+        <Filter>
+          <FilterText>Sortuj alfabetycznie:</FilterText>
+          <Select onChange={(e) => setSortOrder(e.target.value)}>
+            <Option value="asc">A-Z</Option>
+            <Option value="desc">Z-A</Option>
           </Select>
         </Filter>
       </FilterContainer>
