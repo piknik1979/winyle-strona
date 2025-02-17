@@ -16,15 +16,19 @@ const Wrapper = styled.div`
 
 const ImgContainer = styled.div`
   flex: 1;
-  margin-right: 20px;
-  ${mobile({ width: "100%", marginRight: "0" })}  // Na urządzeniach mobilnych ustawiamy szerokość na 100%
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px; // Maksymalny rozmiar okładki na desktopie
+  max-height: 600px; // Ustawienie kwadratowego kontenera
+  ${mobile({ width: "100%", maxWidth: "100%", maxHeight: "100%" })} // Wersja mobilna - pełna szerokość
 `;
 
 const Image = styled.img`
   width: 100%;
-  height: 70vh;  // Zmniejszamy wysokość o 1/4 na wersji desktopowej
-  object-fit: cover;
-  ${mobile({ height: "40vh" })}  // W wersji mobilnej obrazek będzie miał wysokość 40vh, będzie widoczny nad danymi
+  height: 100%;
+  object-fit: contain; // Zapewnia, że cały obraz jest widoczny bez przycinania
+  border-radius: 8px; // Opcjonalne zaokrąglenie rogów
 `;
 
 const InfoContainer = styled.div`
@@ -88,11 +92,10 @@ const Product = () => {
   const location = useLocation();
   const product = location.state?.product;
 
-  if (!product) return <p>Produkt nie znaleziony</p>;
+  if (!product) return <p>PRODUCT NOT FOUND</p>;
 
   return (
     <Container>
-      {/* <Navbar /> */}
       <Announcement />
       <Wrapper>
         <ImgContainer>

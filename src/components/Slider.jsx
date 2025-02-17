@@ -137,7 +137,7 @@ const Slider = () => {
               <Artist>{item.artist}</Artist> {/* Wyświetlamy artystę */}
               <Desc>{item.desc}</Desc>
               <Button onClick={() => window.open(item.link, "_blank")}>
-                KUP TERAZ
+                BUY ON DISCOGS
               </Button>
             </InfoContainer>
           </Slide>

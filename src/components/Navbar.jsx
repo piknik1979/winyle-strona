@@ -134,8 +134,9 @@ const Navbar = () => {
 
         {/* Prawa strona menu widoczna tylko na desktopie */}
         <Right>
+        <MenuItem>HOME</MenuItem>
           <Link to="/catalog" style={{ textDecoration: "none", color: "inherit" }}>
-            <MenuItem>KATALOG</MenuItem>
+            <MenuItem>RECORDS</MenuItem>
           </Link>
           <MenuItem>REGISTER</MenuItem>
           <MenuItem>SIGN IN</MenuItem>

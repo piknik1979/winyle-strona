@@ -15,7 +15,7 @@ const BackToTop = () => {
       onClick={scrollToTop}
       style={styles.backToTop}
     >
-      <div style={styles.backToTopText}>DO GÓRY</div> {/* Tekst w przycisku */}
+      <div style={styles.backToTopText}>HOME</div> {/* Tekst w przycisku */}
     </div>
   );
 };

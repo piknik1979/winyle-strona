@@ -12,7 +12,7 @@ const Container = styled.div`
 `;
 
 const Announcement = () => {
-  return <Container>Super Promocja! 2 Płyty w Cenie 1 . Wódka  GRatis od Frajera!</Container>;
+  return <Container> Write to WINYLE.CO.UK directly to get further discount!</Container>;
 };
 
 export default Announcement;
