@@ -50,6 +50,7 @@ const Image = styled.img`
   width: 100%;
   object-fit: cover;
   z-index: 2;
+  cursor: pointer;
 `;
 
 const Icon = styled.div`
@@ -81,6 +82,14 @@ const Description = styled.p`
 const Product = ({ item }) => {
   const navigate = useNavigate();
 
+  // Funkcja obsługująca kliknięcie na koszyk
+  const handleCartClick = () => {
+    console.log("Kliknięto koszyk!");
+    // Kliknięcie na koszyk przenosi do linku 'cart' z data.js
+    window.open(item.cart, "_blank");
+  };
+
+  // Funkcja obsługująca kliknięcie na ikonę lupy
   const handleSearchClick = () => {
     navigate(`/product/${item.id}`, { state: { product: item } });
   };
@@ -88,9 +97,11 @@ const Product = ({ item }) => {
   return (
     <Container>
       <ImageWrapper>
-        <Image src={item.img} alt={item.desc} />
+        <a href={item.link} target="_blank" rel="noopener noreferrer">
+          <Image src={item.img} alt={item.desc} />
+        </a> {/* Kliknięcie na obrazek przekierowuje do linku w data.js */}
         <Info>
-          <Icon>
+          <Icon onClick={handleCartClick}>
             <ShoppingCartOutlined />
           </Icon>
           <Icon onClick={handleSearchClick}>

@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useLocation } from "react-router-dom"; // Import useLocation z react-router-dom
 import Announcement from "../components/Announcement";
@@ -96,7 +95,7 @@ const Product = () => {
 
   // Funkcja obsługująca kliknięcie "Add to Cart"
   const handleAddToCartClick = () => {
-    window.location.href = product.card; // Przekierowanie na link 'card' produktu na Discogs
+    window.location.href = product.cart; // Przekierowanie na link 'card' produktu na Discogs
   };
 
   return (
