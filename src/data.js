@@ -122,6 +122,7 @@ export const popularProducts = [
     id: 7,
     img: "https://i.discogs.com/ZWn5RfkMMWx__31GGexf_cKSq3JJP3-UAEbj6cV8Hyc/rs:fit/g:sm/q:90/h:493/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQwMjU1/NzItMTM1MzkzNjI0/OC05MTM5LmpwZWc.jpeg",
     link: "https://www.discogs.com/sell/item/2984728994?ev=bp_det",
+    cart: "",
     desc: "Guns'n Roses - Rag Doll",
     genre: "Hard Rock",
     media: "Very Good",

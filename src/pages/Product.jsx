@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import { useLocation } from "react-router-dom"; // Import useLocation z react-router-dom
+import { useLocation, useNavigate } from "react-router-dom";
 import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
 import Newsletter from "../components/Newsletter";
-import { mobile } from "../responsive"; // Responsywne style
+import { mobile } from "../responsive";
 
 const Container = styled.div``;
 
@@ -16,7 +16,7 @@ const Wrapper = styled.div`
 const ImgContainer = styled.div`
   flex: 1;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   max-width: 750px;
   max-height: 750px;
@@ -28,6 +28,22 @@ const Image = styled.img`
   height: 90%;
   object-fit: contain;
   border-radius: 8px;
+`;
+
+const BackButton = styled.button`
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 14px;
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: #f5f5f5;
+  }
 `;
 
 const InfoContainer = styled.div`
@@ -89,13 +105,13 @@ const Button = styled.button`
 
 const Product = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const product = location.state?.product;
 
   if (!product) return <p>PRODUCT NOT FOUND</p>;
 
-  // Funkcja obsługująca kliknięcie "Add to Cart"
   const handleAddToCartClick = () => {
-    window.location.href = product.cart; // Przekierowanie na link 'card' produktu na Discogs
+    window.location.href = product.cart;
   };
 
   return (
@@ -104,6 +120,8 @@ const Product = () => {
       <Wrapper>
         <ImgContainer>
           <Image src={product.img} alt={product.desc} />
+          {/* Guzik pod obrazkiem */}
+          <BackButton onClick={() => navigate("/catalog")}>← Back to Records</BackButton>
         </ImgContainer>
         <InfoContainer>
           <Title>{product.desc}</Title>
@@ -115,7 +133,6 @@ const Product = () => {
           <Price>{product.price}</Price>
           <AddContainer>
             <AmountContainer>
-              {/* Przycisk do dodania do koszyka */}
               <Amount>1</Amount>
             </AmountContainer>
             <Button onClick={handleAddToCartClick}>ADD TO CART</Button>
