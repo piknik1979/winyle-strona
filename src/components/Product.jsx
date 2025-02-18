@@ -3,6 +3,7 @@ import { FavoriteBorderOutlined, SearchOutlined, ShoppingCartOutlined } from "@m
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 
+// Stylizacje
 const Info = styled.div`
   opacity: 0;
   width: 100%;
@@ -104,7 +105,6 @@ const Description = styled.p`
 
 const Product = ({ item }) => {
   const navigate = useNavigate();
-
   const [hoveredIcon, setHoveredIcon] = useState(null);
 
   // Kliknięcie na ikonę koszyka -> przekierowanie do zakupu
@@ -125,6 +125,7 @@ const Product = ({ item }) => {
   return (
     <Container>
       <ImageWrapper>
+        {/* Kliknięcie na obrazek przenosi do linku z data.js */}
         <a href={item.link} target="_blank" rel="noopener noreferrer">
           <Image src={item.img} alt={item.desc} />
         </a>
