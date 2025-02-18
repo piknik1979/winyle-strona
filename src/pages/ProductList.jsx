@@ -7,7 +7,7 @@ import BackToTop from "../components/BackToTop"; // Importuj komponent BackToTop
 
 const Container = styled.div`
   padding: 20px;
-  margin-top: 100px;  /* Zwiększ margines górny, aby oddzielić filtr od produktów */
+  margin-top: 40px;  /* Zwiększ margines górny, aby oddzielić filtr od produktów */
 `;
 
 const Title = styled.h1`
@@ -67,7 +67,7 @@ const ProductList = () => {
 
   return (
     <Container>
-      <Title>Albumy</Title>
+      <Title>Records</Title>
       <FilterContainer>
         {/* Filtrowanie według gatunku */}
         <Filter>
