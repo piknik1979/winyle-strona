@@ -82,24 +82,32 @@ const Description = styled.p`
 const Product = ({ item }) => {
   const navigate = useNavigate();
 
-  // Funkcja obsługująca kliknięcie na koszyk
-  const handleCartClick = () => {
-    console.log("Kliknięto koszyk!");
-    // Kliknięcie na koszyk przenosi do linku 'cart' z data.js
+  // Kliknięcie na obrazek - przekierowanie na Discogs
+  const handleImageClick = () => {
+    window.open(item.link, "_blank");
+  };
+
+  // Obsługa kliknięcia na ikony (zapobiega przejęciu kliknięcia przez obrazek)
+  const handleIconClick = (event) => {
+    event.stopPropagation();
+  };
+
+  // Kliknięcie na koszyk
+  const handleCartClick = (event) => {
+    handleIconClick(event);
     window.open(item.cart, "_blank");
   };
 
-  // Funkcja obsługująca kliknięcie na ikonę lupy
-  const handleSearchClick = () => {
+  // Kliknięcie na lupę
+  const handleSearchClick = (event) => {
+    handleIconClick(event);
     navigate(`/product/${item.id}`, { state: { product: item } });
   };
 
   return (
     <Container>
-      <ImageWrapper>
-        <a href={item.link} target="_blank" rel="noopener noreferrer">
-          <Image src={item.img} alt={item.desc} />
-        </a> {/* Kliknięcie na obrazek przekierowuje do linku w data.js */}
+      <ImageWrapper onClick={handleImageClick}> {/* Kliknięcie przekieruje na Discogs */}
+        <Image src={item.img} alt={item.desc} />
         <Info>
           <Icon onClick={handleCartClick}>
             <ShoppingCartOutlined />
@@ -107,7 +115,7 @@ const Product = ({ item }) => {
           <Icon onClick={handleSearchClick}>
             <SearchOutlined />
           </Icon>
-          <Icon>
+          <Icon onClick={handleIconClick}>
             <FavoriteBorderOutlined />
           </Icon>
         </Info>

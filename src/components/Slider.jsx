@@ -100,15 +100,24 @@ const Desc = styled.p`
 const Button = styled.button`
   padding: 10px;
   font-size: 20px;
-  background-color: transparent;
+  background-color: black; /* Czarne tło */
+  color: white; /* Białe napisy */
   cursor: pointer;
   border: 2px solid black;
+  border-radius: 25px; /* Bardziej zaokrąglony */
   transition: 0.3s ease;
+  
   &:hover {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
   }
+
+  ${mobile({
+    fontSize: "15px", /* Mniejsza czcionka na mobile */
+    padding: "7px 14px", /* Mniejszy guzik */
+  })}
 `;
+
 
 const Slider = () => {
   const [slideIndex, setSlideIndex] = useState(0);
