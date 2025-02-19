@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { popularProducts } from "../data"; // Importujemy dane
-import Products from "../components/Products"; // Importujemy komponent Products
-import { mobile } from "../responsive"; // Style mobilne
-import BackToTop from "../components/BackToTop"; // Importuj komponent BackToTop
+import { popularProducts } from "../data";
+import Products from "../components/Products";
+import { mobile } from "../responsive";
+import BackToTop from "../components/BackToTop";
 
 const Container = styled.div`
   padding: 20px;
-  margin-top: 40px;  /* Zwiększ margines górny, aby oddzielić filtr od produktów */
+  margin-top: 40px;
 `;
 
 const Title = styled.h1`
@@ -17,7 +17,7 @@ const Title = styled.h1`
 const FilterContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;  /* Oddziela filtr od produktów */
+  margin-bottom: 20px;
   ${mobile({ flexDirection: "column", alignItems: "flex-start" })}
 `;
 
@@ -39,40 +39,59 @@ const Select = styled.select`
   ${mobile({ margin: "10px 0px" })}
 `;
 
-const Option = styled.option``;
+const Option = styled.option``;  // <==== DODAŁEM TO
 
-const ProductList = () => {
+// const Button = styled.button`
+//   padding: 10px;
+//   background-color: red;
+//   color: white;
+//   border: none;
+//   cursor: pointer;
+//   font-weight: bold;
+//   border-radius: 5px;
+//   margin-left: 20px;
+// `;
+
+const ProductList = ({ searchQuery }) => {
   const [filteredProducts, setFilteredProducts] = useState(popularProducts);
   const [selectedGenre, setSelectedGenre] = useState("");
-  const [sortOrder, setSortOrder] = useState("asc"); // Domyślny porządek sortowania: A-Z
+  const [sortOrder, setSortOrder] = useState("asc");
 
-  // Obsługa filtrowania
   useEffect(() => {
     let products = [...popularProducts];
 
-    // Filtrowanie po gatunku
     if (selectedGenre) {
       products = products.filter((product) => product.genre === selectedGenre);
     }
 
-    // Sortowanie alfabetyczne
+    if (searchQuery) {
+      products = products.filter((product) =>
+        product.desc.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+    }
+
     if (sortOrder === "asc") {
-      products.sort((a, b) => a.desc.localeCompare(b.desc)); // A-Z
+      products.sort((a, b) => a.desc.localeCompare(b.desc));
     } else {
-      products.sort((a, b) => b.desc.localeCompare(a.desc)); // Z-A
+      products.sort((a, b) => b.desc.localeCompare(a.desc));
     }
 
     setFilteredProducts(products);
-  }, [selectedGenre, sortOrder]); // Efekt uruchamia się, gdy zmienia się gatunek lub porządek sortowania
+  }, [selectedGenre, sortOrder, searchQuery]);
+
+  // const resetFilters = () => {
+  //   setSelectedGenre("");
+  //   setSortOrder("asc");
+  //   setFilteredProducts(popularProducts);
+  // };
 
   return (
     <Container>
       <Title>Records</Title>
       <FilterContainer>
-        {/* Filtrowanie według gatunku */}
         <Filter>
           <FilterText>Filter genre:</FilterText>
-          <Select onChange={(e) => setSelectedGenre(e.target.value)}>
+          <Select value={selectedGenre} onChange={(e) => setSelectedGenre(e.target.value)}>
             <Option value="">All genres</Option>
             <Option value="Blues">Blues</Option>
             <Option value="Classic Rock">Classic Rock</Option>
@@ -82,33 +101,22 @@ const ProductList = () => {
             <Option value="Punk">Punk & Oi</Option>
             <Option value="Pop Rock">Pop Rock</Option>
             <Option value="Rock & Roll">Rock & Roll</Option>
-            <Option value="Stage & Screen">Stage & Screen</Option>
             <Option value="Synth Pop">Synth Pop</Option>
-            <Option value="Funk & Soul">Funk & Soul</Option>
-            <Option value="Hard Rock">Hard Rock</Option>
-            <Option value="Disco">Disco</Option>
-            <Option value="Ska & Raggae">Ska & Reggae</Option>
-            <Option value="Psychodelic Rock">Psychodelic Rock</Option>
-            <Option value="Folk">Folk</Option>
-            <Option value="Glam Rock">Glam Rock</Option>
-            <Option value="Heavy Metal">Heavy Metal</Option>
           </Select>
         </Filter>
 
-        {/* Sortowanie według nazwy alfabetycznie */}
         <Filter>
           <FilterText>Sorting:</FilterText>
-          <Select onChange={(e) => setSortOrder(e.target.value)}>
+          <Select value={sortOrder} onChange={(e) => setSortOrder(e.target.value)}>
             <Option value="asc">A-Z</Option>
             <Option value="desc">Z-A</Option>
           </Select>
         </Filter>
+
+        {/* <Button onClick={resetFilters}>Reset Filters</Button> */}
       </FilterContainer>
 
-      {/* Wyświetlanie przefiltrowanych produktów */}
       <Products products={filteredProducts} />
-
-      {/* Dodaj przycisk 'Back to Top' */}
       <BackToTop />
     </Container>
   );
