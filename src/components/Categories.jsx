@@ -60,8 +60,7 @@ const Categories = () => {
   const navigate = useNavigate();
 
   const handleSeeAllClick = () => {
-    navigate("/catalog");
-    window.location.reload();
+    navigate("/catalog"); // Usunięcie window.location.reload()
   };
 
   return (
