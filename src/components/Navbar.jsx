@@ -94,7 +94,7 @@ const Menu = styled.div`
   position: fixed;
   top: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(24,40,34,0.77); /* Ciemnoszare, półprzezroczyste tło */
   width: 100%;
   height: 100vh;
   z-index: 1000;
@@ -104,6 +104,7 @@ const Menu = styled.div`
   transition: transform 0.3s ease-in-out;
   transform: ${(props) => (props.menuOpen ? "translateX(0)" : "translateX(100%)")};
 `;
+
 
 const MenuItemMobile = styled.div`
   margin: 15px 0;

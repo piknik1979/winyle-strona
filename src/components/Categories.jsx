@@ -1,33 +1,43 @@
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
-import { categories, sliderItems } from "../data"; // Import sliderItems dla tła
+import { categories, sliderItems } from "../data";
 import CategoryItem from "./CategoryItem";
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
   background-color: #${sliderItems[0].bg}; /* Kolor tła z pierwszego slajdu */
   padding: 40px 20px;
 `;
 
+const ButtonWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+`;
+
 const Button = styled.button`
-  padding: 15px 25px;
-  font-size: 18px;
+  padding: 25px 50px; /* 2x większy przycisk */
+  font-size: 24px;
   font-weight: bold;
   border: none;
-  background-color: black; /* Czarne tło */
-  color: white; /* Białe napisy */
+  background-color: black;
+  color: white;
   cursor: pointer;
   transition: all 0.3s ease;
-  border-radius: 25px;
-  margin-bottom: 10px;
+  border-radius: 30px;
 
   &:hover {
     background-color: white;
     color: black;
     border: 2px solid black;
+  }
+
+  @media (max-width: 768px) {
+    padding: 15px 30px;
+    font-size: 18px;
   }
 `;
 
@@ -51,12 +61,14 @@ const Categories = () => {
 
   const handleSeeAllClick = () => {
     navigate("/catalog");
-    window.location.reload(); // Opcjonalne odświeżenie
+    window.location.reload();
   };
 
   return (
     <Wrapper>
-      <Button onClick={handleSeeAllClick}>SEE ALL RECORDS</Button>
+      <ButtonWrapper>
+        <Button onClick={handleSeeAllClick}>SEE ALL RECORDS</Button>
+      </ButtonWrapper>
       <Container>
         {categories.map((item) => (
           <CategoryItem item={item} key={item.id} />
