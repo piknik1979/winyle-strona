@@ -2,14 +2,13 @@ import { Badge } from "@material-ui/core";
 import { Search, ShoppingCartOutlined, Menu as MenuIcon, Close as CloseIcon } from "@material-ui/icons";
 import React, { useState } from "react";
 import styled from "styled-components";
-import { mobile } from "../responsive"; // Media queries dla wersji mobilnej
+import { mobile } from "../responsive";
 import { Link } from "react-router-dom";
 
 const Container = styled.div`
   height: 60px;
-  ${mobile({ height: "50px", marginTop: "20px" })} /* 5mm odstępu od góry w wersji mobilnej */
+  ${mobile({ height: "50px", marginTop: "20px" })}
 `;
-
 
 const Wrapper = styled.div`
   padding: 10px 20px;
@@ -42,19 +41,14 @@ const SearchContainer = styled.div`
 
 const Input = styled.input`
   border: none;
+  outline: none;
   ${mobile({ width: "50px" })}
 `;
 
 const Center = styled.div`
   flex: 1;
   text-align: center;
-
-  /* Logo idealnie na środku w wersji mobilnej */
-  ${mobile({
-    position: "absolute",
-    left: "50%",
-    transform: "translateX(-50%)",
-  })}
+  ${mobile({ position: "absolute", left: "50%", transform: "translateX(-50%)" })}
 `;
 
 const Logo = styled.h1`
@@ -79,13 +73,7 @@ const MenuItem = styled.div`
 
 const Hamburger = styled.div`
   display: none;
-  ${mobile({
-    display: "block",
-    position: "absolute",
-    right: "20px", // Hamburger przesunięty o 5mm od krawędzi ekranu (~10px)
-    cursor: "pointer",
-    zIndex: 2,
-  })}
+  ${mobile({ display: "block", position: "absolute", right: "20px", cursor: "pointer", zIndex: 2 })}
 `;
 
 const Menu = styled.div`
@@ -94,7 +82,7 @@ const Menu = styled.div`
   position: fixed;
   top: 0;
   right: 0;
-  background-color: rgba(24,40,34,0.77); /* Ciemnoszare, półprzezroczyste tło */
+  background-color: rgba(24, 40, 34, 0.77);
   width: 100%;
   height: 100vh;
   z-index: 1000;
@@ -104,7 +92,6 @@ const Menu = styled.div`
   transition: transform 0.3s ease-in-out;
   transform: ${(props) => (props.menuOpen ? "translateX(0)" : "translateX(100%)")};
 `;
-
 
 const MenuItemMobile = styled.div`
   margin: 15px 0;
@@ -125,8 +112,14 @@ const CloseButton = styled.div`
   z-index: 1001;
 `;
 
-const Navbar = () => {
+const Navbar = ({ onSearch = () => {} }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSearchChange = (e) => {
+    setSearchTerm(e.target.value);
+    onSearch(e.target.value);
+  };
 
   return (
     <Container>
@@ -134,7 +127,7 @@ const Navbar = () => {
         <Left>
           <Language>EN</Language>
           <SearchContainer>
-            <Input placeholder="Search" />
+            <Input placeholder="Search" value={searchTerm} onChange={handleSearchChange} />
             <Search style={{ color: "gray", fontSize: 16 }} />
           </SearchContainer>
         </Left>
@@ -160,7 +153,7 @@ const Navbar = () => {
         </Right>
 
         <Hamburger onClick={() => setMenuOpen(true)}>
-          <MenuIcon style={{ fontSize: 30 }} />
+          <MenuIcon style={{ fontSize: 30, color: "black" }} />
         </Hamburger>
       </Wrapper>
 

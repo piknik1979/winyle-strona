@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { popularProducts } from "../data"; // Importujemy dane
-import Products from "../components/Products"; // Importujemy komponent Products
-import { mobile } from "../responsive"; // Style mobilne
-import BackToTop from "../components/BackToTop"; // Importuj komponent BackToTop
+import { popularProducts } from "../data";
+import Products from "../components/Products";
+import { mobile } from "../responsive";
+import BackToTop from "../components/BackToTop";
 
 const Container = styled.div`
   padding: 20px;
-  margin-top: 40px;  /* Zwiększ margines górny, aby oddzielić filtr od produktów */
+  margin-top: 40px;
 `;
 
 const Title = styled.h1`
@@ -17,7 +17,7 @@ const Title = styled.h1`
 const FilterContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;  /* Oddziela filtr od produktów */
+  margin-bottom: 20px;
   ${mobile({ flexDirection: "column", alignItems: "flex-start" })}
 `;
 
@@ -41,12 +41,11 @@ const Select = styled.select`
 
 const Option = styled.option``;
 
-const ProductList = () => {
+const ProductList = ({ searchTerm }) => {
   const [filteredProducts, setFilteredProducts] = useState(popularProducts);
   const [selectedGenre, setSelectedGenre] = useState("");
-  const [sortOrder, setSortOrder] = useState("asc"); // Domyślny porządek sortowania: A-Z
+  const [sortOrder, setSortOrder] = useState("asc");
 
-  // Obsługa filtrowania
   useEffect(() => {
     let products = [...popularProducts];
 
@@ -55,21 +54,27 @@ const ProductList = () => {
       products = products.filter((product) => product.genre === selectedGenre);
     }
 
+    // Filtrowanie po wyszukiwanym opisie
+    if (searchTerm) {
+      products = products.filter((product) =>
+        product.desc.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    }
+
     // Sortowanie alfabetyczne
     if (sortOrder === "asc") {
-      products.sort((a, b) => a.desc.localeCompare(b.desc)); // A-Z
+      products.sort((a, b) => a.desc.localeCompare(b.desc));
     } else {
-      products.sort((a, b) => b.desc.localeCompare(a.desc)); // Z-A
+      products.sort((a, b) => b.desc.localeCompare(a.desc));
     }
 
     setFilteredProducts(products);
-  }, [selectedGenre, sortOrder]); // Efekt uruchamia się, gdy zmienia się gatunek lub porządek sortowania
+  }, [selectedGenre, sortOrder, searchTerm]);
 
   return (
     <Container>
       <Title>Records</Title>
       <FilterContainer>
-        {/* Filtrowanie według gatunku */}
         <Filter>
           <FilterText>Filter genre:</FilterText>
           <Select onChange={(e) => setSelectedGenre(e.target.value)}>
@@ -95,7 +100,6 @@ const ProductList = () => {
           </Select>
         </Filter>
 
-        {/* Sortowanie według nazwy alfabetycznie */}
         <Filter>
           <FilterText>Sorting:</FilterText>
           <Select onChange={(e) => setSortOrder(e.target.value)}>
@@ -105,10 +109,7 @@ const ProductList = () => {
         </Filter>
       </FilterContainer>
 
-      {/* Wyświetlanie przefiltrowanych produktów */}
       <Products products={filteredProducts} />
-
-      {/* Dodaj przycisk 'Back to Top' */}
       <BackToTop />
     </Container>
   );
