@@ -61,7 +61,7 @@ const Categories = () => {
 
   const handleSeeAllClick = () => {
     navigate("/catalog");
-    window.location.reload();
+    // window.location.reload();
   };
 
   return (
