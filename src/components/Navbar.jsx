@@ -1,4 +1,4 @@
-import { Badge } from "@material-ui/core";
+// import { Badge } from "@material-ui/core";
 import { Search, ShoppingCartOutlined, Menu as MenuIcon, Close as CloseIcon } from "@material-ui/icons";
 import React, { useState } from "react";
 import styled from "styled-components";
@@ -145,11 +145,11 @@ const Navbar = ({ onSearch = () => {} }) => {
           </Link>
           <MenuItem>REGISTER</MenuItem>
           <MenuItem>SIGN IN</MenuItem>
-          <MenuItem>
+          {/* <MenuItem>
             <Badge badgeContent={4} color="primary">
               <ShoppingCartOutlined />
             </Badge>
-          </MenuItem>
+          </MenuItem> */}
         </Right>
 
         <Hamburger onClick={() => setMenuOpen(true)}>
@@ -166,11 +166,11 @@ const Navbar = ({ onSearch = () => {} }) => {
         </Link>
         <MenuItemMobile>REGISTER</MenuItemMobile>
         <MenuItemMobile>SIGN IN</MenuItemMobile>
-        <MenuItemMobile>
+        {/* <MenuItemMobile>
           <Badge badgeContent={4} color="primary">
             <ShoppingCartOutlined />
           </Badge>
-        </MenuItemMobile>
+        </MenuItemMobile> */}
       </Menu>
     </Container>
   );
