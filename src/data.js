@@ -404,4 +404,59 @@ export const popularProducts = [
     sleeve: "Very Good+",
     price: "£25.00",
   },
+  {
+    id: 33,
+    img: "https://i.discogs.com/s17Vx7GIAlXlkgZV5yTTmIWJxQ52dJnESCE0xi_CRxY/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQ0ODY1/NS0xNTExNTU3MDQ5/LTQ2MTcuanBlZw.jpeg",
+    link: "https://www.discogs.com/sell/item/3322512705",
+    cart: "https://www.discogs.com/sell/cart/?add=3322512705&ev=",
+    desc: "Various - Hell On Earth",
+    genre: "Heavy Metal",
+    media: "Very Good Plus (VG+)",
+    sleeve: "Very Good (VG)",
+    price: "£15.00"
+  },
+  {
+    id: 34,
+    img: "https://i.discogs.com/OKQX1ZK2lbz1MkTgENJdWPl7nF8-QpsyjyWa1VroyuQ/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTc5NjU5/OC0xNTU4NjYwMzI4/LTUyNTcuanBlZw.jpeg",
+    link: "https://www.discogs.com/sell/item/3322510839",
+    cart: "https://www.discogs.com/sell/cart/?add=3322510839&ev=",
+    desc: "Subhumans - Time Flies... ...But Aeroplanes Crash",
+    genre: "Punk",
+    media: "Very Good Plus (VG+)",
+    sleeve: "Very Good (VG)",
+    price: "£14.99"
+  },
+  {
+    id: 35,
+    img: "https://i.discogs.com/HpTAFNyZbeupZK5o_5WGl_izYFepsYP9dW42xthbxPk/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTUwMjU3/NjgtMTQ1OTg3NTM4/MC00ODE3LmpwZWc.jpeg",
+    link: "https://www.discogs.com/sell/item/3322508457",
+    cart: "https://www.discogs.com/sell/cart/?add=3322508457&ev=",
+    desc: "Suicidal Tendencies - Join The Army",
+    genre: "Heavy Metal",
+    media: "Very Good Plus (VG+)",
+    sleeve: "Very Good (VG)",
+    price: "£30.00"
+  },
+  {
+    id: 36,
+    img: "https://i.discogs.com/8NqnQUfqnQ-sNLR0iB3XT8pFofqQ2dYUgPBFmY0OmAo/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTExOTY5/MTctMTMyMDg2NTc3/OS5qcGVn.jpeg",
+    link: "https://www.discogs.com/sell/item/3322505670",
+    cart: "https://www.discogs.com/sell/cart/?add=3322505670&ev=",
+    desc: "Bryan Ferry - Slave To Love",
+    genre: "Pop rock",
+    media: "Very Good Plus (VG+)",
+    sleeve: "Very Good (VG)",
+    price: "£4.99"
+  },
+  {
+    id: 37,
+    img: "https://i.discogs.com/OzTwcNxYqI7nxTqGDY6RerG940B_HHTYwX4xE_-R3GA/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQ5ODg3/MS0xNDI0ODE2NjI4/LTY0ODYuanBlZw.jpeg",
+    link: "https://www.discogs.com/sell/item/3322482276",
+    cart: "https://www.discogs.com/sell/cart/?add=3322482276&ev=",
+    desc: "Siouxsie And The Banshees* - Candyman",
+    genre: "Psychodelic Rock",
+    media: "Very Good Plus (VG+)",
+    sleeve: "Very Good (VG)",
+    price: "£5.99"
+  }
 ];
