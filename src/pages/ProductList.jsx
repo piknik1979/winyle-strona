@@ -80,23 +80,25 @@ const ProductList = ({ searchTerm }) => {
           <Select onChange={(e) => setSelectedGenre(e.target.value)}>
             <Option value="">All genres</Option>
             <Option value="Blues">Blues</Option>
-            <Option value="Classic Rock">Classic Rock</Option>
-            <Option value="Country">Country</Option>
-            <Option value="Electronic">Electronic</Option>
-            <Option value="Jazz">Jazz</Option>
-            <Option value="Punk">Punk & Oi</Option>
-            <Option value="Pop Rock">Pop Rock</Option>
-            <Option value="Rock & Roll">Rock & Roll</Option>
-            <Option value="Stage & Screen">Stage & Screen</Option>
-            <Option value="Synth Pop">Synth Pop</Option>
-            <Option value="Funk & Soul">Funk & Soul</Option>
-            <Option value="Hard Rock">Hard Rock</Option>
-            <Option value="Disco">Disco</Option>
-            <Option value="Ska & Raggae">Ska & Reggae</Option>
-            <Option value="Psychodelic Rock">Psychodelic Rock</Option>
-            <Option value="Folk">Folk</Option>
-            <Option value="Glam Rock">Glam Rock</Option>
-            <Option value="Heavy Metal">Heavy Metal</Option>
+<Option value="Classic Rock">Classic Rock</Option>
+<Option value="Country">Country</Option>
+<Option value="Disco">Disco</Option>
+<Option value="Electronic">Electronic</Option>
+<Option value="Folk">Folk</Option>
+<Option value="Funk & Soul">Funk & Soul</Option>
+<Option value="Glam Rock">Glam Rock</Option>
+<Option value="Hard Rock">Hard Rock</Option>
+<Option value="Heavy Metal">Heavy Metal</Option>
+<Option value="Jazz">Jazz</Option>
+<Option value="Pop">Pop</Option>
+<Option value="Pop Rock">Pop Rock</Option>
+<Option value="Prog Rock">Progressive Rock</Option>
+<Option value="Punk & Oi">Punk & Oi</Option>
+<Option value="Rock & Roll">Rock & Roll</Option>
+<Option value="Ska & Raggae">Ska & Reggae</Option>
+<Option value="Stage & Screen">Stage & Screen</Option>
+<Option value="Synth Pop">Synth Pop</Option>
+<Option value="Psychodelic Rock">Psychodelic Rock</Option>
           </Select>
         </Filter>
 

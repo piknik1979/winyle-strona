@@ -1,5 +1,5 @@
 // import { Badge } from "@material-ui/core";
-import { Search, ShoppingCartOutlined, Menu as MenuIcon, Close as CloseIcon } from "@material-ui/icons";
+import { Search, Menu as MenuIcon, Close as CloseIcon } from "@material-ui/icons";
 import React, { useState } from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
@@ -14,7 +14,7 @@ const Wrapper = styled.div`
   padding: 10px 20px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; 
   position: relative;
   ${mobile({ padding: "10px 0px" })}
 `;
