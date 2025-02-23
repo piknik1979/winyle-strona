@@ -1,4 +1,3 @@
-// import { Badge } from "@material-ui/core";
 import { Search, Menu as MenuIcon, Close as CloseIcon } from "@material-ui/icons";
 import React, { useState } from "react";
 import styled from "styled-components";
@@ -139,17 +138,14 @@ const Navbar = ({ onSearch = () => {} }) => {
         </Center>
 
         <Right>
-          <MenuItem>HOME</MenuItem>
+          <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+            <MenuItem>HOME</MenuItem>
+          </Link>
           <Link to="/catalog" style={{ textDecoration: "none", color: "inherit" }}>
             <MenuItem>RECORDS</MenuItem>
           </Link>
           <MenuItem>REGISTER</MenuItem>
           <MenuItem>SIGN IN</MenuItem>
-          {/* <MenuItem>
-            <Badge badgeContent={4} color="primary">
-              <ShoppingCartOutlined />
-            </Badge>
-          </MenuItem> */}
         </Right>
 
         <Hamburger onClick={() => setMenuOpen(true)}>
@@ -161,16 +157,14 @@ const Navbar = ({ onSearch = () => {} }) => {
         <CloseButton onClick={() => setMenuOpen(false)}>
           <CloseIcon />
         </CloseButton>
+        <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+          <MenuItemMobile>HOME</MenuItemMobile>
+        </Link>
         <Link to="/catalog" style={{ textDecoration: "none", color: "inherit" }}>
-          <MenuItemMobile>KATALOG</MenuItemMobile>
+          <MenuItemMobile>RECORDS</MenuItemMobile>
         </Link>
         <MenuItemMobile>REGISTER</MenuItemMobile>
         <MenuItemMobile>SIGN IN</MenuItemMobile>
-        {/* <MenuItemMobile>
-          <Badge badgeContent={4} color="primary">
-            <ShoppingCartOutlined />
-          </Badge>
-        </MenuItemMobile> */}
       </Menu>
     </Container>
   );
