@@ -138,9 +138,9 @@ const Product = () => {
           </Details>
           <Price>{product.price}</Price>
           <AddContainer>
-            <AmountContainer>
+            {/* <AmountContainer>
               <Amount>1</Amount>
-            </AmountContainer>
+            </AmountContainer> */}
             <Button onClick={handleAddToCartClick}>ADD TO CART</Button>
           </AddContainer>
         </InfoContainer>
