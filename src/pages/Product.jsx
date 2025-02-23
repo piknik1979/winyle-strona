@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
@@ -10,10 +11,9 @@ const Container = styled.div``;
 const Wrapper = styled.div`
   padding: 40px;
   display: flex;
-  margin-top: 60px;  /* Zwiększyłem odległość o 2 cm (20px) od Announcement */
+  margin-top: 60px;  
   ${mobile({ flexDirection: "column", padding: "10px" })}
 `;
-
 
 const ImgContainer = styled.div`
   flex: 1;
@@ -33,10 +33,10 @@ const Image = styled.img`
 `;
 
 const BackButton = styled.button`
-  margin-top: 20px; /* Zwiększamy odległość od obrazka o 5 mm (20px) */
-  margin-bottom: 25px; /* Zwiększamy odległość od dołu o 5 mm (25px) */
-  padding: 7px 15px;  /* Zmniejszamy padding o 1/4 */
-  font-size: 12px; /* Zmniejszamy font-size o 1/4 */
+  margin-top: 20px; 
+  margin-bottom: 25px; 
+  padding: 7px 15px;  
+  font-size: 12px; 
   border: 2px solid black;
   background-color: white;
   color: black;
@@ -48,7 +48,6 @@ const BackButton = styled.button`
     background-color: #f5f5f5;
   }
 `;
-
 
 const InfoContainer = styled.div`
   flex: 1;
@@ -112,6 +111,10 @@ const Product = () => {
   const navigate = useNavigate();
   const product = location.state?.product;
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   if (!product) return <p>PRODUCT NOT FOUND</p>;
 
   const handleAddToCartClick = () => {
@@ -124,7 +127,6 @@ const Product = () => {
       <Wrapper>
         <ImgContainer>
           <Image src={product.img} alt={product.desc} />
-          {/* Guzik pod obrazkiem */}
           <BackButton onClick={() => navigate("/catalog")}>← Back to Records</BackButton>
         </ImgContainer>
         <InfoContainer>
