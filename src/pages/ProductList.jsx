@@ -94,6 +94,7 @@ const ProductList = ({ searchTerm }) => {
               <Option value="Heavy Metal">Heavy Metal</Option>
               <Option value="Indie Rock">Indie Rock</Option>
               <Option value="Jazz">Jazz</Option>
+              <Option value="New Wave">New Wave</Option>
               <Option value="Pop">Pop</Option>
               <Option value="Pop Rock">Pop Rock</Option>
               <Option value="Prog Rock">Progressive Rock</Option>
