@@ -49,6 +49,41 @@ export const categories = [
     img: "https://i.discogs.com/KAj0qfL9hrHki4UPiPCu8ZzpHr-h7g6qUlNvgFBOLBk/rs:fit/g:sm/q:90/h:601/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTExMDQz/NzA0LTE2OTcyMzIy/NTEtOTYwNi5qcGVn.jpeg",
     genre: "Jazz",
   },
+  {
+    id: 5,
+    img: "https://i.discogs.com/Gel__zzFgrQhs0wo4ltGRzWeSVF4a-le2E3AqtG5cjg/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTc3MzQ1/MS0xNDc2MTg4MTUy/LTk4NTUuanBlZw.jpeg",
+    genre: "Blues",
+  },
+  {
+    id: 6,
+    img: "https://i.discogs.com/P01o_OApCOGcG49_El4StVXjvH_LNMZ37gq74EabXW4/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE1NDE3/MjcyLTE1OTEyMDY5/NTAtOTI0NS5qcGVn.jpeg",
+    genre: "Classic Rock",
+  },
+  {
+    id: 7,
+    img: "https://i.discogs.com/f3oDq0rT9Ktymi4_0eOEDLOxDY79Lwqcos_55dQZ4iI/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM4MTQ5/MDEtMTQxMzkyMzM4/Mi03NjQ5LmpwZWc.jpeg",
+    genre: "Country",
+  },
+  {
+    id: 8,
+    img: "https://i.discogs.com/uMF0FOiy7TLNFZ7U1HFsv80femAebMI54b27zlLPL-I/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI5NjYy/MjU4LTE3MDY3ODky/NDctOTc0NC5qcGVn.jpeg",
+    genre: "Disco",
+  },
+  {
+    id: 9,
+    img: "https://i.discogs.com/DRwG04BJltbySNY51aUPY9oUxq1dnjDqlHyLJ3ULPpA/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0MDEy/Ni0xNzE2NzgwMzQ0/LTExMDAuanBlZw.jpeg",
+    genre: "Electronic",
+  },
+  {
+    id: 10,
+    img: "https://i.discogs.com/g5TIRRYg9Clf8WXCeo1daxl_VazqFmmUz2B9DC-3lCk/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM3OTQ3/MDAtMTYxMzY0NzA0/OS01ODE3LmpwZWc.jpeg",
+    genre: "Folk",
+  },
+  {
+    id: 11,
+    img: "https://i.discogs.com/3DDgXarMNstkclpfMvOTqMVN3LY32pyyTjPPYVV7U_A/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTcxMzM5/OS0xMjU5MzY1NjM0/LmpwZWc.jpeg",
+    genre: "Glam Rock",
+  },
 ];
 
 export const popularProducts = [
@@ -923,7 +958,7 @@ export const popularProducts = [
   },
   {
     id: 80,
-    img: "https://i.discogs.com/f3oDq0rT9Ktymi4_0eOEDLOxDY79Lwqcos_55dQZ4iI/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM4MTQ5/MDEtMTQxMzkyMzM4/Mi03NjQ5LmpwZWc.jpeg",
+    img: "`https://i.discogs.com/f3oDq0rT9Ktymi4_0eOEDLOxDY79Lwqcos_55dQZ4iI/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM4MTQ5/MDEtMTQxMzkyMzM4/Mi03NjQ5LmpwZWc.jpeg`",
     link: "https://www.discogs.com/sell/item/2880794539",
     cart: "https://www.discogs.com/sell/cart/?add=2880794539&ev=",
     desc: "Jim Reeves - The Jim Reeves Collection",

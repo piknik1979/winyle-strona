@@ -1,13 +1,12 @@
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
-import { categories, sliderItems } from "../data";
+import { categories } from "../data";
 import CategoryItem from "./CategoryItem";
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #${sliderItems[0].bg}; /* Kolor tła z pierwszego slajdu */
   padding: 40px 20px;
 `;
 
@@ -19,14 +18,14 @@ const ButtonWrapper = styled.div`
 `;
 
 const Button = styled.button`
-  padding: 25px 50px; /* 2x większy przycisk */
+  padding: 25px 50px;
   font-size: 24px;
   font-weight: bold;
   border: none;
   background-color: black;
   color: white;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: 0.3s;
   border-radius: 30px;
 
   &:hover {
@@ -51,7 +50,7 @@ const Container = styled.div`
   }
 
   @media (max-width: 768px) { 
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr; /* Wszystkie w jednej kolumnie */
     padding: 10px;
   }
 `;
@@ -61,7 +60,6 @@ const Categories = () => {
 
   const handleSeeAllClick = () => {
     navigate("/catalog");
-    // window.location.reload();
   };
 
   return (

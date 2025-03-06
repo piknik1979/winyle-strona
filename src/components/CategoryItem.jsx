@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 import { mobile } from "../responsive";
 
 const Container = styled.div`
@@ -6,14 +7,18 @@ const Container = styled.div`
   margin: 3px;
   height: 70vh;
   position: relative;
+
+  ${mobile({ 
+    width: "100%",
+    height: "50vh",
+    margin: "5px 0"
+  })}
 `;
 
 const Image = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  ${mobile({ height: "20vh" })}
-
 `;
 
 const Info = styled.div`
@@ -26,29 +31,44 @@ const Info = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: rgba(0, 0, 0, 0.3);
 `;
 
 const Title = styled.h1`
-    color:white;
-    margin-bottom: 20px;
+  color: white;
+  margin-bottom: 20px;
+  text-align: center;
 `;
 
 const Button = styled.button`
-    border:none;
-    padding: 10px;
-    background-color: white;
-    color:gray;
-    cursor: pointer;
-    font-weight: 600;
+  border: none;
+  padding: 15px 25px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: black;
+    color: white;
+  }
 `;
 
 const CategoryItem = ({ item }) => {
+  const navigate = useNavigate();
+
+  const handleShopNow = () => {
+    navigate(`/catalog/${item.genre}`);
+    window.location.reload(); // Odswieża stronę, aby pobrać dane na nowo
+  };
+
   return (
     <Container>
-      <Image src={item.img} />
+      <Image src={item.img} alt={item.genre} />
       <Info>
-        <Title>{item.title}</Title>
-        <Button>SHOP NOW</Button>
+        <Title>{item.genre}</Title>
+        <Button onClick={handleShopNow}>SHOP NOW</Button>
       </Info>
     </Container>
   );
