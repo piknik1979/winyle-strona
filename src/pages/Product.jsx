@@ -11,7 +11,7 @@ const Container = styled.div``;
 const Wrapper = styled.div`
   padding: 40px;
   display: flex;
-  margin-top: 60px;  
+  margin-top: 60px;
   ${mobile({ flexDirection: "column", padding: "10px" })}
 `;
 
@@ -33,10 +33,10 @@ const Image = styled.img`
 `;
 
 const BackButton = styled.button`
-  margin-top: 20px; 
-  margin-bottom: 25px; 
-  padding: 7px 15px;  
-  font-size: 12px; 
+  margin-top: 20px;
+  margin-bottom: 25px;
+  padding: 7px 15px;
+  font-size: 12px;
   border: 2px solid black;
   background-color: white;
   color: black;
@@ -77,29 +77,13 @@ const AddContainer = styled.div`
   ${mobile({ width: "100%" })}
 `;
 
-// const AmountContainer = styled.div`
-//   display: flex;
-//   align-items: center;
-//   font-weight: 700;
-// `;
-
-// const Amount = styled.span`
-//   width: 30px;
-//   height: 30px;
-//   border-radius: 10px;
-//   border: 1px solid teal;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   margin: 0px 5px;
-// `;
-
 const Button = styled.button`
   padding: 15px;
   border: 2px solid teal;
   background-color: white;
   cursor: pointer;
   font-weight: 500;
+  transition: all 0.3s ease;
 
   &:hover {
     background-color: #f8f4f4;
@@ -115,10 +99,25 @@ const Product = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  if (!product) return <p>PRODUCT NOT FOUND</p>;
+  if (!product) {
+    return (
+      <Container>
+        <Wrapper>
+          <p style={{ textAlign: "center", fontSize: "20px", color: "red" }}>
+            PRODUCT NOT FOUND
+          </p>
+          <BackButton onClick={() => navigate("/catalog")}>← Back to Records</BackButton>
+        </Wrapper>
+      </Container>
+    );
+  }
 
   const handleAddToCartClick = () => {
-    window.location.href = product.cart;
+    if (product.cart) {
+      navigate(product.cart);
+    } else {
+      alert("This product cannot be added to the cart.");
+    }
   };
 
   return (
@@ -138,9 +137,6 @@ const Product = () => {
           </Details>
           <Price>{product.price}</Price>
           <AddContainer>
-            {/* <AmountContainer>
-              <Amount>1</Amount>
-            </AmountContainer> */}
             <Button onClick={handleAddToCartClick}>ADD TO CART</Button>
           </AddContainer>
         </InfoContainer>

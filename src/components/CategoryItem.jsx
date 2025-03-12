@@ -59,8 +59,7 @@ const CategoryItem = ({ item }) => {
   const navigate = useNavigate();
 
   const handleShopNow = () => {
-    navigate(`/catalog/${item.genre}`);
-    window.location.reload(); // Odswieża stronę, aby pobrać dane na nowo
+    navigate(`/catalog/${encodeURIComponent(item.genre)}`); // Poprawiona ścieżka
   };
 
   return (

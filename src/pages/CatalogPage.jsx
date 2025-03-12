@@ -36,6 +36,8 @@ const ProductCard = styled.div`
   border: 1px solid #ddd;
   border-radius: 5px;
   text-align: center;
+  background: white;
+  max-width: 250px;
 `;
 
 const Image = styled.img`
@@ -43,6 +45,7 @@ const Image = styled.img`
   height: auto;
   max-width: 200px;
   object-fit: cover;
+  border-radius: 8px;
 `;
 
 const Desc = styled.p`
@@ -56,20 +59,28 @@ const Price = styled.span`
 `;
 
 const CatalogPage = () => {
-  const { category } = useParams(); // Pobieramy kategorię z URL
-  const filteredProducts = popularProducts.filter((product) => product.genre === category); // Filtrowanie produktów
+  const { category } = useParams();
+  const decodedCategory = decodeURIComponent(category); // Dekodowanie URL
+
+  const filteredProducts = popularProducts.filter(
+    (product) => product.genre === decodedCategory
+  );
 
   return (
     <Wrapper>
-      <Title>Records in {category}</Title>
+      <Title>Records in {decodedCategory}</Title>
       <Container>
-        {filteredProducts.map((product) => (
-          <ProductCard key={product.id}>
-            <Image src={product.img} alt={product.desc} />
-            <Desc>{product.desc}</Desc>
-            <Price>{product.price}</Price>
-          </ProductCard>
-        ))}
+        {filteredProducts.length > 0 ? (
+          filteredProducts.map((product) => (
+            <ProductCard key={product.id}>
+              <Image src={product.img} alt={product.desc} />
+              <Desc>{product.desc}</Desc>
+              <Price>{product.price}</Price>
+            </ProductCard>
+          ))
+        ) : (
+          <p>No products found in this category.</p>
+        )}
       </Container>
     </Wrapper>
   );

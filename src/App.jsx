@@ -3,7 +3,7 @@ import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import ProductList from "./pages/ProductList";
 import Product from "./pages/Product";
-import CatalogPage from "./pages/CatalogPage"; // Import nowej strony
+import CatalogPage from "./pages/CatalogPage"; // Import poprawionej strony
 import { useState } from "react";
 
 const App = () => {
@@ -17,7 +17,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/catalog" element={<ProductList searchTerm={searchTerm} />} />
-        <Route path="/catalog/:category" element={<CatalogPage />} /> {/* Nowa trasa dla kategorii */}
+        <Route path="/catalog/:category" element={<CatalogPage />} /> {/* Dynamiczna trasa */}
         <Route path="/product/:id" element={<Product />} />
       </Routes>
     </>
