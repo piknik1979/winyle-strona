@@ -27,64 +27,117 @@ export const sliderItems = [
 export const categories = [
   {
     id: 1,
-    img: "https://i.discogs.com/YgdNqtVFodiwBmV8CmLuJoYHo34FIEg9gF5YI7bGWi8/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE3MzQ2/NzItMTM2NTI3MzI4/MC0xNzQ3LmpwZWc.jpeg",
-    genre: "Stage & Screen",
-    desc: "Adele Leigh, Robert Merrill, Kenneth McKellar, Regina Resnik, Ian Wallace (3), Mantovani And His Orchestra With The Sammes Chorus – Kismet",
-    media: "Near Mint",
-    sleeve: "Very Good+",
-    price: "£3.90",
-  },
-  {
-    id: 2,
-    img: "https://i.discogs.com/B31cy3fwI32K4getyz0PtrVb5h2TgOV-AkLf3U4Ui7c/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI5NjYy/MjU4LTE3MDY3ODky/MzYtOTE1Mi5qcGVn.jpeg",
-    genre: "Funk & Soul",
-  },
-  {
-    id: 3,
-    img: "https://i.discogs.com/nep7SameqEH5oVPS4IEOzb1zg0LJ4Zy8e5IbPIVaNvg/rs:fit/g:sm/q:90/h:612/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEwNDQy/NjUtMTQ3NTYwNTU5/OC04ODM5LmpwZWc.jpeg",
-    genre: "Punk",
-  },
-  {
-    id: 4,
-    img: "https://i.discogs.com/KAj0qfL9hrHki4UPiPCu8ZzpHr-h7g6qUlNvgFBOLBk/rs:fit/g:sm/q:90/h:601/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTExMDQz/NzA0LTE2OTcyMzIy/NTEtOTYwNi5qcGVn.jpeg",
-    genre: "Jazz",
-  },
-  {
-    id: 5,
     img: "https://i.discogs.com/Gel__zzFgrQhs0wo4ltGRzWeSVF4a-le2E3AqtG5cjg/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTc3MzQ1/MS0xNDc2MTg4MTUy/LTk4NTUuanBlZw.jpeg",
     genre: "Blues",
   },
   {
-    id: 6,
+    id: 2,
     img: "https://i.discogs.com/P01o_OApCOGcG49_El4StVXjvH_LNMZ37gq74EabXW4/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE1NDE3/MjcyLTE1OTEyMDY5/NTAtOTI0NS5qcGVn.jpeg",
     genre: "Classic Rock",
   },
   {
-    id: 7,
+    id: 3,
     img: "https://i.discogs.com/f3oDq0rT9Ktymi4_0eOEDLOxDY79Lwqcos_55dQZ4iI/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM4MTQ5/MDEtMTQxMzkyMzM4/Mi03NjQ5LmpwZWc.jpeg",
     genre: "Country",
   },
   {
-    id: 8,
+    id: 4,
     img: "https://i.discogs.com/uMF0FOiy7TLNFZ7U1HFsv80femAebMI54b27zlLPL-I/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI5NjYy/MjU4LTE3MDY3ODky/NDctOTc0NC5qcGVn.jpeg",
     genre: "Disco",
   },
   {
-    id: 9,
+    id: 5,
     img: "https://i.discogs.com/DRwG04BJltbySNY51aUPY9oUxq1dnjDqlHyLJ3ULPpA/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0MDEy/Ni0xNzE2NzgwMzQ0/LTExMDAuanBlZw.jpeg",
     genre: "Electronic",
   },
   {
-    id: 10,
+    id: 6,
     img: "https://i.discogs.com/g5TIRRYg9Clf8WXCeo1daxl_VazqFmmUz2B9DC-3lCk/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM3OTQ3/MDAtMTYxMzY0NzA0/OS01ODE3LmpwZWc.jpeg",
     genre: "Folk",
   },
   {
-    id: 11,
+    id: 7,
     img: "https://i.discogs.com/3DDgXarMNstkclpfMvOTqMVN3LY32pyyTjPPYVV7U_A/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTcxMzM5/OS0xMjU5MzY1NjM0/LmpwZWc.jpeg",
+    genre: "Funk & Soul",
+  },
+  {
+    id: 8,
+    img: "https://i.discogs.com/1ZW5ReCIRK6q7D3MLjAxvDMTX6siGS6p8sc9cWK8PKQ/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0NjY4/NjgtMTQzOTU2MTQ0/NC01MjEzLmpwZWc.jpeg",
     genre: "Glam Rock",
   },
+  {
+    id: 9,
+    img: "https://i.discogs.com/KAj0qfL9hrHki4UPiPCu8ZzpHr-h7g6qUlNvgFBOLBk/rs:fit/g:sm/q:90/h:601/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTExMDQz/NzA0LTE2OTcyMzIy/NTEtOTYwNi5qcGVn.jpeg",
+    genre: "Jazz",
+  },
+  {
+    id: 10,
+    img: "https://i.discogs.com/YgdNqtVFodiwBmV8CmLuJoYHo34FIEg9gF5YI7bGWi8/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE3MzQ2/NzItMTM2NTI3MzI4/MC0xNzQ3LmpwZWc.jpeg",
+    genre: "Stage & Screen",
+  },
+  {
+    id: 11,
+    img: "https://i.discogs.com/nep7SameqEH5oVPS4IEOzb1zg0LJ4Zy8e5IbPIVaNvg/rs:fit/g:sm/q:90/h:612/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEwNDQy/NjUtMTQ3NTYwNTU5/OC04ODM5LmpwZWc.jpeg",
+    genre: "Punk",
+  },
+  {
+    id: 12,
+    img: "https://i.discogs.com/rGymouohJXjijtoLRo5ISTMGFF4nQaMHeTzrk-qvMQg/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTYxNzkw/NzctMTQxMzA0NzA2/My02ODIzLmpwZWc.jpeg",
+    genre: "Pop",
+  },
+  {
+    id: 13,
+    img: "https://i.discogs.com/Gw0Dsc2snlKtoDYl1HE6F5KLrO8xsI5FmaCbzvSVus0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTc5Nzkz/NTktMTQ1MjgyNzMy/Ny03Mjg1LmpwZWc.jpeg",
+    genre: "Pop Rock",
+  },
+  {
+    id: 14,
+    img: "https://i.discogs.com/3HEOIqQ_P1BPrmSn9vkI3pMKuRuMQPRCKL7JXLc7HT8/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0NzEw/MzAtMTIyMjE3NjE3/NS5qcGVn.jpeg",
+    genre: "Prog Rock",
+  },
+  {
+    id: 15,
+    img: "https://i.discogs.com/J7s8SPP6m407vLGB7n0xGYF9aRn9xwZ09ChkvVm2g9Q/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTExNDY5/NDk4LTE1MTY4OTA2/NDQtMzE3OS5qcGVn.jpeg",
+    genre: "Ska & Reggae",
+  },
+  {
+    id: 16,
+    img: "https://i.discogs.com/4sc5vxRKd-0Rx4r4odp8VeU43opuKtFcHsFiCVkYW8Y/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE5NzYy/Ny0xNTkwOTE1NzQx/LTgwNjEuanBlZw.jpeg",
+    genre: "Synth Pop",
+  },
+  {
+    id: 17,
+    img: "https://i.discogs.com/s17Vx7GIAlXlkgZV5yTTmIWJxQ52dJnESCE0xi_CRxY/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQ0ODY1/NS0xNTExNTU3MDQ5/LTQ2MTcuanBlZw.jpeg",
+    genre: "Heavy Metal",
+  },
+  {
+    id: 18,
+    img: "https://i.discogs.com/42gLHDmO-7k-R_oo4e5ip8Y79wVSVocTRD5EIsqd9ng/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIxMDA1/NDItMTMwMDMzMTQw/OS5qcGVn.jpeg",
+    genre: "Hard Rock",
+  },
+  {
+    id: 19,
+    img: "https://i.discogs.com/3G7ZmijhMmA0_6hQg-Zg_zBW3qQ9s7zuAaVu2quxkAg/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIxNzgy/NDAtMTQwNTY4ODU4/Ny05OTc1LmpwZWc.jpeg",
+    genre: "Rock & Roll",
+  },
+  {
+    id: 20,
+    img: "https://i.discogs.com/Vz-4AQxpoTseNhCZ_bddFrlfQ1_QaepnOhpcnBZ0P3c/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTU4ODM3/MC0xNDc1NDkzNDU3/LTkwMTYuanBlZw.jpeg",
+    genre: "New Wave",
+  },
+  {
+    id: 21,
+    img: "https://i.discogs.com/RnB3koxVJXtTXjj2I2n7nZpIiw7THB7RPJ_FBmbNt5U/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEyMTA0/ODYtMTIwNTQzNTM5/Mi5qcGVn.jpeg",
+    genre: "Indie Rock",
+  },
+  {
+    id: 22,
+    img: "https://i.discogs.com/FwjichAUJQKBMrxTZJO_qHeCHVlUbUwJR3QjRyEeOxE/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTUzMDY4/ODUtMTM5MzU4OTI3/MC03ODA3LmpwZWc.jpeg",
+    genre: "Psychodelic Rock",
+  },
 ];
+
+export default categories;
 
 export const popularProducts = [
   {
