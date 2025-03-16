@@ -7,6 +7,10 @@ const Container = styled.div`
   margin: 3px;
   height: 70vh;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white !important; /* Użycie !important, aby wymusić biały kolor tła */
 
   ${mobile({ 
     width: "100%",
@@ -18,7 +22,9 @@ const Container = styled.div`
 const Image = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  max-height: 100%;
+  max-width: 100%;
 `;
 
 const Info = styled.div`
