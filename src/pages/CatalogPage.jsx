@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { popularProducts } from "../data";
 
@@ -38,6 +38,12 @@ const ProductCard = styled.div`
   text-align: center;
   background: white;
   max-width: 250px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
 const Image = styled.img`
@@ -60,7 +66,8 @@ const Price = styled.span`
 
 const CatalogPage = () => {
   const { category } = useParams();
-  const decodedCategory = decodeURIComponent(category); // Dekodowanie URL
+  const navigate = useNavigate();
+  const decodedCategory = decodeURIComponent(category);
 
   const filteredProducts = popularProducts.filter(
     (product) => product.genre === decodedCategory
@@ -72,7 +79,10 @@ const CatalogPage = () => {
       <Container>
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product) => (
-            <ProductCard key={product.id}>
+            <ProductCard 
+              key={product.id} 
+              onClick={() => navigate(`/product/${product.id}`, { state: { product } })}
+            >
               <Image src={product.img} alt={product.desc} />
               <Desc>{product.desc}</Desc>
               <Price>{product.price}</Price>
