@@ -1,12 +1,14 @@
 import { useParams, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { popularProducts } from "../data";
+import BackToTop from "../components/BackToTop"; // ✅ Import przycisku
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 40px 20px;
+  position: relative;
 `;
 
 const Title = styled.h1`
@@ -92,6 +94,9 @@ const CatalogPage = () => {
           <p>No products found in this category.</p>
         )}
       </Container>
+
+      {/* ✅ Dodanie przycisku Home (BackToTop) */}
+      <BackToTop />
     </Wrapper>
   );
 };

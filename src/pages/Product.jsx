@@ -106,7 +106,9 @@ const Product = () => {
           <p style={{ textAlign: "center", fontSize: "20px", color: "red" }}>
             PRODUCT NOT FOUND
           </p>
-          <BackButton onClick={() => navigate("/catalog")}>← Back to Records</BackButton>
+          <BackButton onClick={() => navigate("/catalog")}>
+            ← Back to Records
+          </BackButton>
         </Wrapper>
       </Container>
     );
@@ -114,7 +116,11 @@ const Product = () => {
 
   const handleAddToCartClick = () => {
     if (product.cart) {
-      navigate(product.cart);
+      if (product.cart.startsWith("http")) {
+        window.location.href = product.cart; // Przekierowanie na pełny URL
+      } else {
+        navigate(product.cart); // Nawigacja wewnętrzna
+      }
     } else {
       alert("This product cannot be added to the cart.");
     }
@@ -126,14 +132,22 @@ const Product = () => {
       <Wrapper>
         <ImgContainer>
           <Image src={product.img} alt={product.desc} />
-          <BackButton onClick={() => navigate("/catalog")}>← Back to Records</BackButton>
+          <BackButton onClick={() => navigate("/catalog")}>
+            ← Back to Records
+          </BackButton>
         </ImgContainer>
         <InfoContainer>
           <Title>{product.desc}</Title>
           <Details>
-            <p><strong>Genre:</strong> {product.genre}</p>
-            <p><strong>Media rating:</strong> {product.media}</p>
-            <p><strong>Sleeve rating:</strong> {product.sleeve}</p>
+            <p>
+              <strong>Genre:</strong> {product.genre}
+            </p>
+            <p>
+              <strong>Media rating:</strong> {product.media}
+            </p>
+            <p>
+              <strong>Sleeve rating:</strong> {product.sleeve}
+            </p>
           </Details>
           <Price>{product.price}</Price>
           <AddContainer>
