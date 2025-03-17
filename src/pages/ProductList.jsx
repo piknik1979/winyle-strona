@@ -83,6 +83,7 @@ const ProductList = ({ searchTerm }) => {
             <Select onChange={(e) => setSelectedGenre(e.target.value)}>
               <Option value="">All genres</Option>
               <Option value="Blues">Blues</Option>
+              <Option value="Classic">Classical</Option>    
               <Option value="Classic Rock">Classic Rock</Option>
               <Option value="Country">Country</Option>
               <Option value="Disco">Disco</Option>
@@ -99,12 +100,12 @@ const ProductList = ({ searchTerm }) => {
               <Option value="Pop">Pop</Option>
               <Option value="Pop Rock">Pop Rock</Option>
               <Option value="Prog Rock">Progressive Rock</Option>
+              <Option value="Psychodelic Rock">Psychodelic Rock</Option>
               <Option value="Punk">Punk & Oi</Option>
               <Option value="Rock & Roll">Rock & Roll</Option>
               <Option value="Ska & Raggae">Ska & Reggae</Option>
               <Option value="Stage & Screen">Stage & Screen</Option>
-              <Option value="Synth Pop">Synth Pop</Option>
-              <Option value="Psychodelic Rock">Psychodelic Rock</Option>
+              <Option value="Synth Pop">Synth Pop</Option>             
             </Select>
           </Filter>
 
