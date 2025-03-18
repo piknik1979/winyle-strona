@@ -1,7 +1,7 @@
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styled from "styled-components";
-import { sliderItems } from "../data";
+import { popularProducts } from "../data"; // Importujemy popularProducts
 import { mobile } from "../responsive";
 
 const Container = styled.div`
@@ -118,15 +118,26 @@ const Button = styled.button`
   })}
 `;
 
-
 const Slider = () => {
   const [slideIndex, setSlideIndex] = useState(0);
+  const [randomProducts, setRandomProducts] = useState([]);
+
+  // Funkcja do losowego wyboru produktów
+  const getRandomProducts = () => {
+    const shuffled = [...popularProducts].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, 5); // Wybierz 5 losowych płyt
+  };
+
+  // Ustawienie losowych produktów po załadowaniu komponentu
+  useEffect(() => {
+    setRandomProducts(getRandomProducts());
+  }, []);
 
   const handleClick = (direction) => {
     if (direction === "left") {
-      setSlideIndex(slideIndex > 0 ? slideIndex - 1 : sliderItems.length - 1);
+      setSlideIndex(slideIndex > 0 ? slideIndex - 1 : randomProducts.length - 1);
     } else {
-      setSlideIndex(slideIndex < sliderItems.length - 1 ? slideIndex + 1 : 0);
+      setSlideIndex(slideIndex < randomProducts.length - 1 ? slideIndex + 1 : 0);
     }
   };
 
@@ -136,16 +147,16 @@ const Slider = () => {
         <ArrowLeftOutlined />
       </Arrow>
       <Wrapper slideIndex={slideIndex}>
-        {sliderItems.map((item) => (
-          <Slide bg={item.bg} key={item.id}>
+        {randomProducts.map((product) => (
+          <Slide bg={product.bg} key={product.id}>
             <ImgContainer>
-              <Image src={item.img} />
+              <Image src={product.img} />
             </ImgContainer>
             <InfoContainer>
-              <Title>{item.title}</Title>
-              <Artist>{item.artist}</Artist> {/* Wyświetlamy artystę */}
-              <Desc>{item.desc}</Desc>
-              <Button onClick={() => window.open(item.link, "_blank")}>
+              <Title>{product.desc}</Title>
+              <Artist>{product.artist}</Artist>
+              <Desc>{product.genre}</Desc>
+              <Button onClick={() => window.open(product.link, "_blank")}>
                 BUY ON DISCOGS
               </Button>
             </InfoContainer>

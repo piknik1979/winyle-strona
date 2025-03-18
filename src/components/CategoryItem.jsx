@@ -10,8 +10,9 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white !important; /* Użycie !important, aby wymusić biały kolor tła */
-
+  background-color: white !important;
+  background: white !important; /* Druga próba wymuszenia białego tła */
+  
   ${mobile({ 
     width: "100%",
     height: "50vh",
@@ -25,6 +26,7 @@ const Image = styled.img`
   object-fit: contain;
   max-height: 100%;
   max-width: 100%;
+  position: relative; /* Upewniamy się, że nie dziedziczy tła */
 `;
 
 const Info = styled.div`
@@ -37,7 +39,7 @@ const Info = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.3);
+  background: transparent !important; /* Usunięcie szarego tła */
 `;
 
 const Title = styled.h1`
@@ -65,7 +67,7 @@ const CategoryItem = ({ item }) => {
   const navigate = useNavigate();
 
   const handleShopNow = () => {
-    navigate(`/catalog/${encodeURIComponent(item.genre)}`); // Poprawiona ścieżka
+    navigate(`/catalog/${encodeURIComponent(item.genre)}`);
   };
 
   return (

@@ -4,7 +4,6 @@ import { popularProducts } from "../data";
 import Products from "../components/Products";
 import { mobile } from "../responsive";
 import BackToTop from "../components/BackToTop";
-import Announcement from "../components/Announcement"; // Importowanie Announcement
 
 const Container = styled.div`
   padding: 20px;
@@ -74,7 +73,6 @@ const ProductList = ({ searchTerm }) => {
 
   return (
     <>
-      <Announcement /> {/* Dodanie Announcement na górze */}
       <Container>
         <Title>Records</Title>
         <FilterContainer>
