@@ -49,17 +49,18 @@ const Slide = styled.div`
 `;
 
 const ImgContainer = styled.div`
-  width: 50vw; /* Zmniejszamy do 50% szerokości ekranu */
+  width: 25vw; /* Zmniejszamy do 50% szerokości ekranu */
   height: 75%; /* Teraz 1/6 mniej - zmniejszamy obraz o 1/6 wysokości */
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px; /* Dodajemy odstęp, aby nie przylegał do krawędzi */
+  padding: 50px; /* Dodajemy odstęp, aby nie przylegał do krawędzi */
   ${mobile({
     width: "66.66vw", /* Na mobilnych zostawiamy 2/3 szerokości */
     height: "80%", /* Zmniejszamy wysokość */
     padding: "10px", /* Mały odstęp */
   })}
+  margin-top: -180px; /* Podnosimy okładkę o 30px */
   margin-bottom: 20px; /* Dodajemy margines dolny, aby obrazek nie przylegał do krawędzi ekranu */
 `;
 
