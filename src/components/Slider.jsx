@@ -3,6 +3,13 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { popularProducts } from "../data"; // Importujemy popularProducts
 import { mobile } from "../responsive";
+import { useNavigate } from "react-router-dom";
+
+// Funkcja generująca pastelowy kolor HSL
+const generatePastelColor = () => {
+  const hue = Math.floor(Math.random() * 360);
+  return `hsl(${hue}, 50%, 85%)`;
+};
 
 const Container = styled.div`
   width: 100%;
@@ -16,7 +23,7 @@ const Container = styled.div`
 const Arrow = styled.div`
   width: 50px;
   height: 50px;
-  background-color: #fff7f7;
+  background-color: rgb(211, 206, 206);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -27,7 +34,7 @@ const Arrow = styled.div`
   left: ${(props) => props.direction === "left" && "10px"};
   right: ${(props) => props.direction === "right" && "10px"};
   cursor: pointer;
-  opacity: 0.5;
+  opacity: 0.6;
   z-index: 2;
 `;
 
@@ -35,7 +42,7 @@ const Wrapper = styled.div`
   display: flex;
   height: 100%;
   transition: transform 1.5s ease-in-out;
-  transform: translateX(${(props) => props.slideIndex * -100}vw); /* Przesuwamy cały slajd */
+  transform: translateX(${(props) => props.slideIndex * -100}vw);
 `;
 
 const Slide = styled.div`
@@ -44,24 +51,24 @@ const Slide = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #${(props) => props.bg};
-  ${mobile({ height: "50vh" })} /* Wersja mobilna */
+  background-color: ${(props) => props.bg}; /* Używamy losowego pastelowego koloru */
+  ${mobile({ height: "50vh" })}
 `;
 
 const ImgContainer = styled.div`
-  width: 25vw; /* Zmniejszamy do 50% szerokości ekranu */
-  height: 75%; /* Teraz 1/6 mniej - zmniejszamy obraz o 1/6 wysokości */
+  width: 25vw; /* Okładka zajmuje 25% szerokości */
+  height: 75%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 50px; /* Dodajemy odstęp, aby nie przylegał do krawędzi */
+  padding: 50px;
   ${mobile({
-    width: "66.66vw", /* Na mobilnych zostawiamy 2/3 szerokości */
-    height: "80%", /* Zmniejszamy wysokość */
-    padding: "10px", /* Mały odstęp */
+    width: "66.66vw",
+    height: "80%",
+    padding: "10px",
   })}
-  margin-top: -180px; /* Podnosimy okładkę o 30px */
-  margin-bottom: 20px; /* Dodajemy margines dolny, aby obrazek nie przylegał do krawędzi ekranu */
+  margin-top: -180px;
+  margin-bottom: 20px;
 `;
 
 const Image = styled.img`
@@ -69,13 +76,18 @@ const Image = styled.img`
   height: auto;
   max-height: 100%;
   object-fit: contain;
-  margin: auto; /* Zapobiega przyleganiu */
+  margin: auto;
 `;
 
 const InfoContainer = styled.div`
   flex: 1;
   padding: 50px;
   ${mobile({ padding: "15px" })}
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+  height: 100%;
 `;
 
 const Title = styled.h1`
@@ -83,53 +95,90 @@ const Title = styled.h1`
   ${mobile({ fontSize: "30px" })}
 `;
 
-const Artist = styled.h2` /* Nowy komponent dla artysty */
+const Artist = styled.h2`
   font-size: 30px;
   font-weight: 600;
   margin-bottom: 10px;
-  ${mobile({ fontSize: "20px" })} /* Zmniejszamy font w wersji mobilnej */
+  ${mobile({ fontSize: "20px" })}
 `;
 
 const Desc = styled.p`
-  margin: 50px 0px;
+  margin: 0;
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 3px;
-  ${mobile({ fontSize: "14px", margin: "15px 0" })}
+  ${mobile({ fontSize: "14px" })}
 `;
 
-const Button = styled.button`
-  padding: 10px;
+/* Przycisk BUY ON DISCOGS */
+const ButtonDiscogs = styled.button`
+  padding: 10px 20px;
   font-size: 20px;
-  background-color: black; /* Czarne tło */
-  color: white; /* Białe napisy */
+  font-weight: bold;
+  border: none;
+  background-color: black;
+  color: white;
   cursor: pointer;
-  border: 2px solid black;
-  border-radius: 25px; /* Bardziej zaokrąglony */
-  transition: 0.3s ease;
-  
+  transition: 0.3s;
+  border-radius: 20px;
+  position: relative;
+  z-index: 3;
+  width: fit-content;
+
+  &:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+  }
+
+  ${mobile({
+    fontSize: "16px",
+    padding: "8px 16px",
+  })}
+`;
+
+/* Przycisk SEE ALL RECORDS */
+const ButtonSeeAll = styled.button`
+  padding: 25px 50px;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 30px;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+
   &:hover {
     background-color: white;
     color: black;
   }
 
   ${mobile({
-    fontSize: "15px", /* Mniejsza czcionka na mobile */
-    padding: "7px 14px", /* Mniejszy guzik */
+    fontSize: "18px",
+    padding: "10px 25px",
   })}
 `;
 
 const Slider = () => {
   const [slideIndex, setSlideIndex] = useState(0);
   const [randomProducts, setRandomProducts] = useState([]);
+  const navigate = useNavigate();
 
-  // Funkcja do losowego wyboru produktów
   const getRandomProducts = () => {
     const shuffled = [...popularProducts].sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, 5); // Wybierz 5 losowych płyt
+    // Do każdego produktu przypisujemy pastelowy kolor tła
+    return shuffled.slice(0, 5).map((product) => ({
+      ...product,
+      bg: generatePastelColor(),
+    }));
   };
 
-  // Ustawienie losowych produktów po załadowaniu komponentu
   useEffect(() => {
     setRandomProducts(getRandomProducts());
   }, []);
@@ -140,6 +189,10 @@ const Slider = () => {
     } else {
       setSlideIndex(slideIndex < randomProducts.length - 1 ? slideIndex + 1 : 0);
     }
+  };
+
+  const handleSeeAllClick = () => {
+    navigate("/catalog");
   };
 
   return (
@@ -155,11 +208,11 @@ const Slider = () => {
             </ImgContainer>
             <InfoContainer>
               <Title>{product.desc}</Title>
-              <Artist>{product.artist}</Artist>
-              <Desc>{product.genre}</Desc>
-              <Button onClick={() => window.open(product.link, "_blank")}>
+              <ButtonDiscogs onClick={() => window.open(product.link, "_blank")}>
                 BUY ON DISCOGS
-              </Button>
+              </ButtonDiscogs>
+              <Desc>{product.genre}</Desc>
+              <Artist>{product.artist}</Artist>
             </InfoContainer>
           </Slide>
         ))}
@@ -167,6 +220,9 @@ const Slider = () => {
       <Arrow direction="right" onClick={() => handleClick("right")}>
         <ArrowRightOutlined />
       </Arrow>
+      <ButtonSeeAll onClick={handleSeeAllClick}>
+        SEE ALL RECORDS
+      </ButtonSeeAll>
     </Container>
   );
 };
