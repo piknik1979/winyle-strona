@@ -32,7 +32,7 @@ export const categories = [
   },
   {
     id: 2,
-    img: "https://i.discogs.com/P01o_OApCOGcG49_El4StVXjvH_LNMZ37gq74EabXW4/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE1NDE3/MjcyLTE1OTEyMDY5/NTAtOTI0NS5qcGVn.jpeg",
+    img: "https://i.discogs.com/oUc_6ochINMKFywd1kt_f1Rm6HJpCzR7f31MA14-v4E/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTg0Mzg0/NDItMTQ2MTYxMDY3/MS00NTAwLmpwZWc.jpeg",
     genre: "Classic Rock",
   },
   {

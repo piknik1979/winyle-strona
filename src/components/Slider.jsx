@@ -5,7 +5,7 @@ import { popularProducts } from "../data"; // Importujemy popularProducts
 import { mobile } from "../responsive";
 import { useNavigate } from "react-router-dom";
 
-// Funkcja generująca pastelowy kolor HSL
+// Funkcja generująca pastelowy kolor (opcjonalnie, jeśli chcesz losowy pastelowy kolor)
 const generatePastelColor = () => {
   const hue = Math.floor(Math.random() * 360);
   return `hsl(${hue}, 50%, 85%)`;
@@ -51,12 +51,12 @@ const Slide = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${(props) => props.bg}; /* Używamy losowego pastelowego koloru */
+  background-color: ${(props) => props.bg};
   ${mobile({ height: "50vh" })}
 `;
 
 const ImgContainer = styled.div`
-  width: 25vw; /* Okładka zajmuje 25% szerokości */
+  width: 25vw;
   height: 75%;
   display: flex;
   align-items: center;
@@ -66,9 +66,8 @@ const ImgContainer = styled.div`
     width: "66.66vw",
     height: "80%",
     padding: "10px",
+    marginTop: "20px", /* Dodany odstęp od góry */
   })}
-  margin-top: -180px;
-  margin-bottom: 20px;
 `;
 
 const Image = styled.img`
@@ -76,7 +75,6 @@ const Image = styled.img`
   height: auto;
   max-height: 100%;
   object-fit: contain;
-  margin: auto;
 `;
 
 const InfoContainer = styled.div`
@@ -85,32 +83,24 @@ const InfoContainer = styled.div`
   ${mobile({ padding: "15px" })}
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 20px;
-  height: 100%;
 `;
 
 const Title = styled.h1`
-  font-size: 70px;
+  margin-top: 5px;
+  font-size: 35px;
   ${mobile({ fontSize: "30px" })}
-`;
-
-const Artist = styled.h2`
-  font-size: 30px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  ${mobile({ fontSize: "20px" })}
 `;
 
 const Desc = styled.p`
   margin: 0;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 500;
   letter-spacing: 3px;
   ${mobile({ fontSize: "14px" })}
 `;
 
-/* Przycisk BUY ON DISCOGS */
 const ButtonDiscogs = styled.button`
   padding: 10px 20px;
   font-size: 20px;
@@ -121,8 +111,6 @@ const ButtonDiscogs = styled.button`
   cursor: pointer;
   transition: 0.3s;
   border-radius: 20px;
-  position: relative;
-  z-index: 3;
   width: fit-content;
 
   &:hover {
@@ -137,7 +125,6 @@ const ButtonDiscogs = styled.button`
   })}
 `;
 
-/* Przycisk SEE ALL RECORDS */
 const ButtonSeeAll = styled.button`
   padding: 25px 50px;
   font-size: 24px;
@@ -149,20 +136,20 @@ const ButtonSeeAll = styled.button`
   transition: 0.3s;
   border-radius: 30px;
   position: absolute;
-  top: 70%;
-  left: 50%;
+  top: 5%;
+  left: 15%; /* Przesunięcie bardziej w lewo */
   transform: translateX(-50%);
-  z-index: 3;
 
   &:hover {
     background-color: white;
     color: black;
   }
 
-  ${mobile({
-    fontSize: "18px",
-    padding: "10px 25px",
-  })}
+  @media screen and (max-width: 768px) {
+    left: 26%; /* Dostosowanie pozycji w wersji mobilnej */
+    font-size: 18px;
+    padding: 10px 25px;
+  }
 `;
 
 const Slider = () => {
@@ -170,29 +157,15 @@ const Slider = () => {
   const [randomProducts, setRandomProducts] = useState([]);
   const navigate = useNavigate();
 
-  const getRandomProducts = () => {
-    const shuffled = [...popularProducts].sort(() => 0.5 - Math.random());
-    // Do każdego produktu przypisujemy pastelowy kolor tła
-    return shuffled.slice(0, 5).map((product) => ({
+  useEffect(() => {
+    setRandomProducts(popularProducts.map(product => ({
       ...product,
       bg: generatePastelColor(),
-    }));
-  };
-
-  useEffect(() => {
-    setRandomProducts(getRandomProducts());
+    })));
   }, []);
 
   const handleClick = (direction) => {
-    if (direction === "left") {
-      setSlideIndex(slideIndex > 0 ? slideIndex - 1 : randomProducts.length - 1);
-    } else {
-      setSlideIndex(slideIndex < randomProducts.length - 1 ? slideIndex + 1 : 0);
-    }
-  };
-
-  const handleSeeAllClick = () => {
-    navigate("/catalog");
+    setSlideIndex(direction === "left" ? (slideIndex > 0 ? slideIndex - 1 : randomProducts.length - 1) : (slideIndex < randomProducts.length - 1 ? slideIndex + 1 : 0));
   };
 
   return (
@@ -208,11 +181,8 @@ const Slider = () => {
             </ImgContainer>
             <InfoContainer>
               <Title>{product.desc}</Title>
-              <ButtonDiscogs onClick={() => window.open(product.link, "_blank")}>
-                BUY ON DISCOGS
-              </ButtonDiscogs>
+              <ButtonDiscogs onClick={() => window.open(product.link, "_blank")}>BUY ON DISCOGS</ButtonDiscogs>
               <Desc>{product.genre}</Desc>
-              <Artist>{product.artist}</Artist>
             </InfoContainer>
           </Slide>
         ))}
@@ -220,7 +190,7 @@ const Slider = () => {
       <Arrow direction="right" onClick={() => handleClick("right")}>
         <ArrowRightOutlined />
       </Arrow>
-      <ButtonSeeAll onClick={handleSeeAllClick}>
+      <ButtonSeeAll onClick={() => navigate("/catalog")}>
         SEE ALL RECORDS
       </ButtonSeeAll>
     </Container>
