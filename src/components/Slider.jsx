@@ -5,7 +5,7 @@ import { popularProducts } from "../data"; // Importujemy popularProducts
 import { mobile } from "../responsive";
 import { useNavigate } from "react-router-dom";
 
-// Funkcja generująca pastelowy kolor (opcjonalnie, jeśli chcesz losowy pastelowy kolor)
+// Funkcja generująca pastelowy kolor
 const generatePastelColor = () => {
   const hue = Math.floor(Math.random() * 360);
   return `hsl(${hue}, 50%, 85%)`;
@@ -17,7 +17,7 @@ const Container = styled.div`
   display: flex;
   position: relative;
   overflow: hidden;
-  ${mobile({ height: "50vh" })} /* Wersja mobilna */
+  ${mobile({ height: "50vh" })}
 `;
 
 const Arrow = styled.div`
@@ -66,7 +66,7 @@ const ImgContainer = styled.div`
     width: "66.66vw",
     height: "80%",
     padding: "10px",
-    marginTop: "20px", /* Dodany odstęp od góry */
+    marginTop: "20px",
   })}
 `;
 
@@ -137,7 +137,7 @@ const ButtonSeeAll = styled.button`
   border-radius: 30px;
   position: absolute;
   top: 5%;
-  left: 15%; /* Przesunięcie bardziej w lewo */
+  left: 15%;
   transform: translateX(-50%);
 
   &:hover {
@@ -146,7 +146,7 @@ const ButtonSeeAll = styled.button`
   }
 
   @media screen and (max-width: 768px) {
-    left: 26%; /* Dostosowanie pozycji w wersji mobilnej */
+    left: 26%;
     font-size: 18px;
     padding: 10px 25px;
   }
@@ -158,14 +158,20 @@ const Slider = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    setRandomProducts(popularProducts.map(product => ({
-      ...product,
-      bg: generatePastelColor(),
-    })));
+    const shuffledProducts = [...popularProducts]
+      .sort(() => Math.random() - 0.5) // Losowe przemieszanie tablicy
+      .map(product => ({
+        ...product,
+        bg: generatePastelColor(),
+      }));
+
+    setRandomProducts(shuffledProducts);
   }, []);
 
   const handleClick = (direction) => {
-    setSlideIndex(direction === "left" ? (slideIndex > 0 ? slideIndex - 1 : randomProducts.length - 1) : (slideIndex < randomProducts.length - 1 ? slideIndex + 1 : 0));
+    setSlideIndex(direction === "left"
+      ? (slideIndex > 0 ? slideIndex - 1 : randomProducts.length - 1)
+      : (slideIndex < randomProducts.length - 1 ? slideIndex + 1 : 0));
   };
 
   return (
