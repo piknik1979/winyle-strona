@@ -89,18 +89,28 @@ const InfoContainer = styled.div`
 
 const Title = styled.h1`
   margin-top: 5px;
-  font-size: 35px;
-  ${mobile({ fontSize: "30px" })}
+  font-size: 50px; /* Większa czcionka dla dużych ekranów */
+
+  @media screen and (max-width: 1200px) {
+    font-size: 42px; /* Trochę mniejsza dla laptopów */
+  }
+
+  ${mobile({ fontSize: "22px" })} /* Mniejsza dla mobilnych */
 `;
+
 
 const Desc = styled.p`
   margin: 0;
-  font-size: 30px;
+  font-size: 32px; /* Większa czcionka dla desktopów */
   font-weight: 500;
   letter-spacing: 3px;
-  ${mobile({ fontSize: "14px" })}
-`;
 
+  @media screen and (max-width: 1200px) {
+    font-size: 28px; /* Mniejsza dla laptopów */
+  }
+
+  ${mobile({ fontSize: "12px" })} /* Jeszcze mniejsza dla telefonów */
+`;
 const ButtonDiscogs = styled.button`
   padding: 10px 20px;
   font-size: 20px;
@@ -146,7 +156,7 @@ const ButtonSeeAll = styled.button`
   }
 
   @media screen and (max-width: 768px) {
-    left: 26%;
+    left: 33%;
     font-size: 18px;
     padding: 10px 25px;
   }
