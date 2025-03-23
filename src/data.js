@@ -27,113 +27,124 @@ export const sliderItems = [
 export const categories = [
   {
     id: 1,
-    img: "https://i.discogs.com/Gel__zzFgrQhs0wo4ltGRzWeSVF4a-le2E3AqtG5cjg/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTc3MzQ1/MS0xNDc2MTg4MTUy/LTk4NTUuanBlZw.jpeg",
+    img: "https://i.discogs.com/Hj8tdr1hNJDfW7Dr3fflsJFMOVN3cMgHp3sfqJnaK_U/rs:fit/g:sm/q:90/h:590/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTc3MzQ1/MS0xNDc2MTg4MTUy/LTk4NTUuanBlZw.jpeg",
     genre: "Blues",
   },
   {
     id: 2,
-    img: "https://i.discogs.com/oUc_6ochINMKFywd1kt_f1Rm6HJpCzR7f31MA14-v4E/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTg0Mzg0/NDItMTQ2MTYxMDY3/MS00NTAwLmpwZWc.jpeg",
-    genre: "Classic Rock",
+    img: "https://i.discogs.com/5y1J5ERiDFv4qkN5q5jI9Yc1hPBBX9hbLIvbJ18wqv8/rs:fit/g:sm/q:90/h:567/w:563/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTUyNjgx/NjItMTM5MDE2MjE5/NC0xOTI3LmpwZWc.jpeg",
+    genre: "Classic",
   },
   {
     id: 3,
-    img: "https://i.discogs.com/f3oDq0rT9Ktymi4_0eOEDLOxDY79Lwqcos_55dQZ4iI/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM4MTQ5/MDEtMTQxMzkyMzM4/Mi03NjQ5LmpwZWc.jpeg",
-    genre: "Country",
+    img: "https://i.discogs.com/fzhhHx_tLGUDbipyib58_KxZsIfD9fOCxq_nzHggmfE/rs:fit/g:sm/q:90/h:597/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTg0Mzg0/NDItMTQ2MTYxMDY3/MS00NTAwLmpwZWc.jpeg",
+    genre: "Classic Rock",
   },
   {
     id: 4,
-    img: "https://i.discogs.com/uMF0FOiy7TLNFZ7U1HFsv80femAebMI54b27zlLPL-I/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI5NjYy/MjU4LTE3MDY3ODky/NDctOTc0NC5qcGVn.jpeg",
-    genre: "Disco",
+    img: "https://i.discogs.com/ScNMO4I847y_YLiC9CRmB0P0FV4U3-bXF2CnMElT2Ew/rs:fit/g:sm/q:90/h:606/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM4MTQ5/MDEtMTQxMzkyMzM4/Mi03NjQ5LmpwZWc.jpeg",
+    genre: "Country",
   },
   {
     id: 5,
+    img: "https://i.discogs.com/cc_N04MXGhYZQ_E-dGj4UDdVEcWHAuxh4afXIP-WbvU/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI5NjYy/MjU4LTE3MDY3ODky/NDctOTc0NC5qcGVn.jpeg",
+    genre: "Disco",
+  },
+  {
+    id: 6,
     img: "https://i.discogs.com/DRwG04BJltbySNY51aUPY9oUxq1dnjDqlHyLJ3ULPpA/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0MDEy/Ni0xNzE2NzgwMzQ0/LTExMDAuanBlZw.jpeg",
     genre: "Electronic",
   },
   {
-    id: 6,
-    img: "https://i.discogs.com/g5TIRRYg9Clf8WXCeo1daxl_VazqFmmUz2B9DC-3lCk/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM3OTQ3/MDAtMTYxMzY0NzA0/OS01ODE3LmpwZWc.jpeg",
+    id: 7,
+    img: "https://i.discogs.com/1hEOSjMqciR8GuF4eJ2bWm52-tJf7iYPZKMLHLV4Dtc/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEzMTU0/NjkzLTE1NDkxNzgx/NTctNjcxMS5qcGVn.jpeg",
     genre: "Folk",
   },
   {
-    id: 7,
-    img: "https://i.discogs.com/3DDgXarMNstkclpfMvOTqMVN3LY32pyyTjPPYVV7U_A/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTcxMzM5/OS0xMjU5MzY1NjM0/LmpwZWc.jpeg",
+    id: 8,
+    img: "https://i.discogs.com/TjduV57Rd-RjXuGgk0LyOL9jZ_xL-sxYGsyTI0i2aHI/rs:fit/g:sm/q:90/h:593/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMzOTAx/OS0xNDI3NzgzNzM2/LTEyMDQuanBlZw.jpeg",
     genre: "Funk & Soul",
   },
   {
-    id: 8,
-    img: "https://i.discogs.com/1ZW5ReCIRK6q7D3MLjAxvDMTX6siGS6p8sc9cWK8PKQ/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0NjY4/NjgtMTQzOTU2MTQ0/NC01MjEzLmpwZWc.jpeg",
+    id: 9,
+    img: "https://i.discogs.com/YocfkWEMrXHPXIIEbroDzN_QyHIsx5Qjq0vHVw0Ilis/rs:fit/g:sm/q:90/h:607/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0NjY4/NjgtMTQzOTU2MTQ0/NC01MjEzLmpwZWc.jpeg",
     genre: "Glam Rock",
   },
   {
-    id: 9,
+    id: 10,
+    img: "https://i.discogs.com/50FYWn7UK6_KEpMUjNwWqzq2YXhpBlnwwH-DpCJ8nqQ/rs:fit/g:sm/q:90/h:600/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMzNDY3/NjMtMTMyNjc0NDI0/MC5qcGVn.jpeg",
+    genre: "Hard Rock",
+  },
+  {
+    id: 11,
+    img: "https://i.discogs.com/peJNvh2Xx0uf4oTy_I2l3RQZVHXnTDmYTZO8DBFaaXo/rs:fit/g:sm/q:90/h:568/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQ0ODY1/NS0xNTExNTU3MDQ5/LTQ2MTcuanBlZw.jpeg",
+    genre: "Heavy Metal",
+  },
+  {
+    id: 12,
+    img: "https://i.discogs.com/oyBsbsWjg5MZlZkxvNyQ0vGaudMTNrR-G7iaWp9I6V0/rs:fit/g:sm/q:90/h:586/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE5Mjkw/ODEtMTYxOTM5OTIw/MC0zNDM5LmpwZWc.jpeg",
+    genre: "Hip Hop",
+  },
+  {
+    id: 13,
+    img: "https://i.discogs.com/9t52Vz9XpilPH5r3DrBR1fvL7Dby5xMy54gr990Qq4Y/rs:fit/g:sm/q:90/h:597/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEyMTA0/ODYtMTIwNTQzNTM5/Mi5qcGVn.jpeg",
+    genre: "Indie Rock",
+  },
+  {
+    id: 14,
     img: "https://i.discogs.com/KAj0qfL9hrHki4UPiPCu8ZzpHr-h7g6qUlNvgFBOLBk/rs:fit/g:sm/q:90/h:601/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTExMDQz/NzA0LTE2OTcyMzIy/NTEtOTYwNi5qcGVn.jpeg",
     genre: "Jazz",
   },
   {
-    id: 10,
-    img: "https://i.discogs.com/YgdNqtVFodiwBmV8CmLuJoYHo34FIEg9gF5YI7bGWi8/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE3MzQ2/NzItMTM2NTI3MzI4/MC0xNzQ3LmpwZWc.jpeg",
-    genre: "Stage & Screen",
+    id: 15,
+    img: "https://i.discogs.com/brYZxhnw5YMJQhhzv65itF2WBww46Rx50zeGpCdx6W0/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTU4ODM3/MC0xNDc1NDkzNDU3/LTkwMTYuanBlZw.jpeg",
+    genre: "New Wave",
   },
+
   {
-    id: 11,
+    id: 16,
     img: "https://i.discogs.com/nep7SameqEH5oVPS4IEOzb1zg0LJ4Zy8e5IbPIVaNvg/rs:fit/g:sm/q:90/h:612/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEwNDQy/NjUtMTQ3NTYwNTU5/OC04ODM5LmpwZWc.jpeg",
     genre: "Punk",
   },
   {
-    id: 12,
-    img: "https://i.discogs.com/rGymouohJXjijtoLRo5ISTMGFF4nQaMHeTzrk-qvMQg/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTYxNzkw/NzctMTQxMzA0NzA2/My02ODIzLmpwZWc.jpeg",
+    id: 17,
+    img: "https://i.discogs.com/kHr9ErAE4BU43ds7VGcomcC8wZWp-6SvDoMS7FcrwAk/rs:fit/g:sm/q:90/h:593/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTYxNzkw/NzctMTQxMzA0NzA2/My02ODIzLmpwZWc.jpeg",
     genre: "Pop",
   },
   {
-    id: 13,
-    img: "https://i.discogs.com/Gw0Dsc2snlKtoDYl1HE6F5KLrO8xsI5FmaCbzvSVus0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTc5Nzkz/NTktMTQ1MjgyNzMy/Ny03Mjg1LmpwZWc.jpeg",
+    id: 18,
+    img: "https://i.discogs.com/gnWJveb4tFM38Kz3Hm_0xEaKaf1J76CrVhmw0D8zX80/rs:fit/g:sm/q:90/h:598/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTc5Nzkz/NTktMTQ1MjgyNzMy/Ny03Mjg1LmpwZWc.jpeg",
     genre: "Pop Rock",
   },
   {
-    id: 14,
-    img: "https://i.discogs.com/3HEOIqQ_P1BPrmSn9vkI3pMKuRuMQPRCKL7JXLc7HT8/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0NzEw/MzAtMTIyMjE3NjE3/NS5qcGVn.jpeg",
+    id: 19,
+    img: "https://i.discogs.com/teULaxQovt3RPvb37NbuJUMwRR0w2D4SqNe56-0z-S0/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0NzEw/MzAtMTIyMjE3NjE3/NS5qcGVn.jpeg",
     genre: "Prog Rock",
   },
   {
-    id: 15,
-    img: "https://i.discogs.com/J7s8SPP6m407vLGB7n0xGYF9aRn9xwZ09ChkvVm2g9Q/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTExNDY5/NDk4LTE1MTY4OTA2/NDQtMzE3OS5qcGVn.jpeg",
-    genre: "Ska & Reggae",
-  },
-  {
-    id: 16,
-    img: "https://i.discogs.com/4sc5vxRKd-0Rx4r4odp8VeU43opuKtFcHsFiCVkYW8Y/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE5NzYy/Ny0xNTkwOTE1NzQx/LTgwNjEuanBlZw.jpeg",
-    genre: "Synth Pop",
-  },
-  {
-    id: 17,
-    img: "https://i.discogs.com/s17Vx7GIAlXlkgZV5yTTmIWJxQ52dJnESCE0xi_CRxY/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQ0ODY1/NS0xNTExNTU3MDQ5/LTQ2MTcuanBlZw.jpeg",
-    genre: "Heavy Metal",
-  },
-  {
-    id: 18,
-    img: "https://i.discogs.com/42gLHDmO-7k-R_oo4e5ip8Y79wVSVocTRD5EIsqd9ng/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIxMDA1/NDItMTMwMDMzMTQw/OS5qcGVn.jpeg",
-    genre: "Hard Rock",
-  },
-  {
-    id: 19,
-    img: "https://i.discogs.com/3G7ZmijhMmA0_6hQg-Zg_zBW3qQ9s7zuAaVu2quxkAg/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIxNzgy/NDAtMTQwNTY4ODU4/Ny05OTc1LmpwZWc.jpeg",
-    genre: "Rock & Roll",
-  },
-  {
     id: 20,
-    img: "https://i.discogs.com/Vz-4AQxpoTseNhCZ_bddFrlfQ1_QaepnOhpcnBZ0P3c/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTU4ODM3/MC0xNDc1NDkzNDU3/LTkwMTYuanBlZw.jpeg",
-    genre: "New Wave",
+    img: "https://i.discogs.com/upcBp93lcoOfWUHbp2Idp9wJ3j8XSgEaaAzXW0SVZmU/rs:fit/g:sm/q:90/h:476/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTUzMDY4/ODUtMTM5MzU4OTI3/MC03ODA3LmpwZWc.jpeg",
+    genre: "Psychodelic Rock",
   },
   {
     id: 21,
-    img: "https://i.discogs.com/RnB3koxVJXtTXjj2I2n7nZpIiw7THB7RPJ_FBmbNt5U/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEyMTA0/ODYtMTIwNTQzNTM5/Mi5qcGVn.jpeg",
-    genre: "Indie Rock",
+    img: "https://i.discogs.com/kALmg6HxWsQr7yq8nmt-Eg6ymSbaY4sit05MpFodAz0/rs:fit/g:sm/q:90/h:598/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIxNzgy/NDAtMTQwNTY4ODU4/Ny05OTc1LmpwZWc.jpeg",
+    genre: "Rock & Roll",
   },
   {
     id: 22,
-    img: "https://i.discogs.com/FwjichAUJQKBMrxTZJO_qHeCHVlUbUwJR3QjRyEeOxE/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTUzMDY4/ODUtMTM5MzU4OTI3/MC03ODA3LmpwZWc.jpeg",
-    genre: "Psychodelic Rock",
+    img: "https://i.discogs.com/G6unAuKzQ_FmeAnzywO4_GOiaCXH6X67PTRMt9FQNX4/rs:fit/g:sm/q:90/h:623/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTExNDY5/NDk4LTE1MTY4OTA2/NDQtMzE3OS5qcGVn.jpeg",
+    genre: "Ska & Reggae",
+  },
+  {
+    id: 23,
+    img: "https://i.discogs.com/YgdNqtVFodiwBmV8CmLuJoYHo34FIEg9gF5YI7bGWi8/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE3MzQ2/NzItMTM2NTI3MzI4/MC0xNzQ3LmpwZWc.jpeg",
+    genre: "Stage & Screen",
+  },
+  {
+    id: 24,
+    img: "https://i.discogs.com/_FCVLfop5iuRBjb2V_1wnXgSY9wNchwZZliTP2poMcw/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE5NzYy/Ny0xNTkwOTE1NzQx/LTgwNjEuanBlZw.jpeg",
+    genre: "Synth Pop",
   },
 ];
 
@@ -164,7 +175,7 @@ export const popularProducts = [
   },
   {
     id: 3,
-    img: "https://i.discogs.com/oUc_6ochINMKFywd1kt_f1Rm6HJpCzR7f31MA14-v4E/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTg0Mzg0/NDItMTQ2MTYxMDY3/MS00NTAwLmpwZWc.jpeg",
+    img: "https://i.discogs.com/fzhhHx_tLGUDbipyib58_KxZsIfD9fOCxq_nzHggmfE/rs:fit/g:sm/q:90/h:597/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTg0Mzg0/NDItMTQ2MTYxMDY3/MS00NTAwLmpwZWc.jpeg",
     link: "https://www.discogs.com/sell/item/495724727",
     cart: "https://www.discogs.com/sell/cart/?add=495724727&ev=",
     desc: "Nils Lofgren - Cry Tough",
@@ -219,7 +230,7 @@ export const popularProducts = [
   },
   {
     id: 8,
-    img: "https://i.discogs.com/3DDgXarMNstkclpfMvOTqMVN3LY32pyyTjPPYVV7U_A/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTcxMzM5/OS0xMjU5MzY1NjM0/LmpwZWc.jpeg",
+    img: "https://i.discogs.com/cKnEGqcpfQynyvyD6m_iLwWhKYYFGiDy0RQV8AS6Wos/rs:fit/g:sm/q:90/h:577/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTcxMzM5/OS0xMjU5MzY1NjM0/LmpwZWc.jpeg",
     link: "https://www.discogs.com/sell/item/3330968229?ev=bp_det",
     desc: "Gene Loves Jezebel - Discover",
     cart: "https://www.discogs.com/sell/cart/?add=3330968229&ev=",
@@ -307,7 +318,7 @@ export const popularProducts = [
   },
   {
     id: 16,
-    img: "https://i.discogs.com/uMF0FOiy7TLNFZ7U1HFsv80femAebMI54b27zlLPL-I/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI5NjYy/MjU4LTE3MDY3ODky/NDctOTc0NC5qcGVn.jpeg",
+    img: "https://i.discogs.com/cc_N04MXGhYZQ_E-dGj4UDdVEcWHAuxh4afXIP-WbvU/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI5NjYy/MjU4LTE3MDY3ODky/NDctOTc0NC5qcGVn.jpeg",
     link: "https://www.discogs.com/sell/item/3361451739?ev=bp_det",
     cart: "https://www.discogs.com/sell/cart/?add=3348405201&ev=",
     desc: "Donna Summer - Another Place And Time",
@@ -318,7 +329,7 @@ export const popularProducts = [
   },
   {
     id: 17,
-    img: "https://i.discogs.com/4sc5vxRKd-0Rx4r4odp8VeU43opuKtFcHsFiCVkYW8Y/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE5NzYy/Ny0xNTkwOTE1NzQx/LTgwNjEuanBlZw.jpeg",
+    img: "https://i.discogs.com/_FCVLfop5iuRBjb2V_1wnXgSY9wNchwZZliTP2poMcw/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE5NzYy/Ny0xNTkwOTE1NzQx/LTgwNjEuanBlZw.jpeg",
     link: "https://www.discogs.com/sell/cart/?add=3348394464&ev=",
     cart: "https://www.discogs.com/sell/cart/?add=3348394464&ev=",
     desc: "Thompson Twins - Hold Me Now",
@@ -340,7 +351,7 @@ export const popularProducts = [
   },
   {
     id: 19,
-    img: "https://i.discogs.com/JvvNBMzS5NqN1_4RaoMHGh2DZ5Cb0gioNJo3qY8ojoU/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMzOTAx/OS0xNDI3NzgzNzM2/LTEyMDQuanBlZw.jpeg",
+    img: "https://i.discogs.com/TjduV57Rd-RjXuGgk0LyOL9jZ_xL-sxYGsyTI0i2aHI/rs:fit/g:sm/q:90/h:593/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMzOTAx/OS0xNDI3NzgzNzM2/LTEyMDQuanBlZw.jpeg",
     link: "https://www.discogs.com/sell/cart/?add=3336946239&ev=",
     cart: "https://www.discogs.com/sell/cart/?add=3336946239&ev=",
     desc: "Janet Jackson - Control",
@@ -351,7 +362,7 @@ export const popularProducts = [
   },
   {
     id: 20,
-    img: "https://i.discogs.com/sKHGgbwJE2NuK5IZpIdNPPeMu8GlgiyR-xQhRVw2XK8/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE2MDA5/NzIyLTE2MDE4MTk0/NDMtNTQyMi5qcGVn.jpeg",
+    img: "https://i.discogs.com/1uqY31LspAtPfyqx3kokddO3816kh0bklzILMpilpso/rs:fit/g:sm/q:90/h:608/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE2MDA5/NzIyLTE2MDE4MTk0/NDMtNTQyMi5qcGVn.jpeg",
     link: "https://www.discogs.com/sell/cart/?add=3336943359&ev=",
     cart: "https://www.discogs.com/sell/cart/?add=3336943359&ev=",
     desc: "Hoyt Axton - Less Than The Song",
@@ -362,7 +373,7 @@ export const popularProducts = [
   },
   {
     id: 21,
-    img: "https://i.discogs.com/FwjichAUJQKBMrxTZJO_qHeCHVlUbUwJR3QjRyEeOxE/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTUzMDY4/ODUtMTM5MzU4OTI3/MC03ODA3LmpwZWc.jpeg",
+    img: "https://i.discogs.com/upcBp93lcoOfWUHbp2Idp9wJ3j8XSgEaaAzXW0SVZmU/rs:fit/g:sm/q:90/h:476/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTUzMDY4/ODUtMTM5MzU4OTI3/MC03ODA3LmpwZWc.jpeg",
     link: "https://www.discogs.com/sell/cart/?add=3331621044&ev=",
     cart: "https://www.discogs.com/sell/cart/?add=3331621044&ev=",
     desc: "Hawkwind - Sonic Attack",
@@ -461,7 +472,7 @@ export const popularProducts = [
   },
   {
     id: 30,
-    img: "https://i.discogs.com/Gel__zzFgrQhs0wo4ltGRzWeSVF4a-le2E3AqtG5cjg/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTc3MzQ1/MS0xNDc2MTg4MTUy/LTk4NTUuanBlZw.jpeg",
+    img: "https://i.discogs.com/Hj8tdr1hNJDfW7Dr3fflsJFMOVN3cMgHp3sfqJnaK_U/rs:fit/g:sm/q:90/h:590/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTc3MzQ1/MS0xNDc2MTg4MTUy/LTk4NTUuanBlZw.jpeg",
     link: "https://www.discogs.com/sell/cart/?add=3325401075&ev=",
     cart: "https://www.discogs.com/sell/cart/?add=3325401075&ev=",
     desc: "Dr. Feelgood - Stupidity",
@@ -494,7 +505,7 @@ export const popularProducts = [
   },
   {
     id: 33,
-    img: "https://i.discogs.com/s17Vx7GIAlXlkgZV5yTTmIWJxQ52dJnESCE0xi_CRxY/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQ0ODY1/NS0xNTExNTU3MDQ5/LTQ2MTcuanBlZw.jpeg",
+    img: "https://i.discogs.com/peJNvh2Xx0uf4oTy_I2l3RQZVHXnTDmYTZO8DBFaaXo/rs:fit/g:sm/q:90/h:568/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQ0ODY1/NS0xNTExNTU3MDQ5/LTQ2MTcuanBlZw.jpeg",
     link: "https://www.discogs.com/sell/item/3322512705",
     cart: "https://www.discogs.com/sell/cart/?add=3322512705&ev=",
     desc: "Various - Hell On Earth",
@@ -593,7 +604,7 @@ export const popularProducts = [
   },
   {
     id: 42,
-    img: "https://i.discogs.com/g5TIRRYg9Clf8WXCeo1daxl_VazqFmmUz2B9DC-3lCk/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM3OTQ3/MDAtMTYxMzY0NzA0/OS01ODE3LmpwZWc.jpeg",
+    img: "https://i.discogs.com/1hEOSjMqciR8GuF4eJ2bWm52-tJf7iYPZKMLHLV4Dtc/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEzMTU0/NjkzLTE1NDkxNzgx/NTctNjcxMS5qcGVn.jpeg",
     link: "https://www.discogs.com/sell/item/3256160174",
     cart: "https://www.discogs.com/sell/cart/?add=3085506951&ev=",
     desc: "Ray Lema - Gaia",
@@ -648,7 +659,7 @@ export const popularProducts = [
   },
   {
     id: 47,
-    img: "https://i.discogs.com/1ZW5ReCIRK6q7D3MLjAxvDMTX6siGS6p8sc9cWK8PKQ/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0NjY4/NjgtMTQzOTU2MTQ0/NC01MjEzLmpwZWc.jpeg",
+    img: "https://i.discogs.com/YocfkWEMrXHPXIIEbroDzN_QyHIsx5Qjq0vHVw0Ilis/rs:fit/g:sm/q:90/h:607/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0NjY4/NjgtMTQzOTU2MTQ0/NC01MjEzLmpwZWc.jpeg",
     link: "https://www.discogs.com/sell/item/3085472163",
     cart: "https://www.discogs.com/sell/cart/?add=3085472163&ev=",
     desc: "Smokie - Greatest Hits",
@@ -703,7 +714,7 @@ export const popularProducts = [
   },
   {
     id: 52,
-    img: "https://i.discogs.com/cJVscmRGx1KH8TBhl-NA7d6eRGLDtlgCbrC8IsQIWjI/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTg1NjYz/OTAtMTQ2OTk1NzY3/Ny0yOTA0LmpwZWc.jpeg",
+    img: "https://i.discogs.com/R_HOtSR9QOdVQyJEEONz7-3Mz1OxDE6YfJIsQ-79eco/rs:fit/g:sm/q:90/h:602/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTg1NjYz/OTAtMTQ2OTk1NzY3/Ny0yOTA0LmpwZWc.jpeg",
     link: "https://www.discogs.com/sell/item/2903264275",
     cart: "https://www.discogs.com/sell/cart/?add=2903264275&ev=",
     desc: "Frank Sinatra - Portrait Of Sinatra (Forty Songs From The Life Of A Man)",
@@ -747,7 +758,7 @@ export const popularProducts = [
   },
   {
     id: 56,
-    img: "https://i.discogs.com/rGymouohJXjijtoLRo5ISTMGFF4nQaMHeTzrk-qvMQg/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTYxNzkw/NzctMTQxMzA0NzA2/My02ODIzLmpwZWc.jpeg",
+    img: "https://i.discogs.com/kHr9ErAE4BU43ds7VGcomcC8wZWp-6SvDoMS7FcrwAk/rs:fit/g:sm/q:90/h:593/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTYxNzkw/NzctMTQxMzA0NzA2/My02ODIzLmpwZWc.jpeg",
     link: "https://www.discogs.com/sell/item/2903259448",
     cart: "https://www.discogs.com/sell/cart/?add=2903259448&ev=",
     desc: "Julio Iglesias - Begin The Beguine (LP, Comp, RE, Red)",
@@ -780,7 +791,7 @@ export const popularProducts = [
   },
   {
     id: 59,
-    img: "https://i.discogs.com/Gw0Dsc2snlKtoDYl1HE6F5KLrO8xsI5FmaCbzvSVus0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTc5Nzkz/NTktMTQ1MjgyNzMy/Ny03Mjg1LmpwZWc.jpeg",
+    img: "https://i.discogs.com/gnWJveb4tFM38Kz3Hm_0xEaKaf1J76CrVhmw0D8zX80/rs:fit/g:sm/q:90/h:598/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTc5Nzkz/NTktMTQ1MjgyNzMy/Ny03Mjg1LmpwZWc.jpeg",
     link: "https://www.discogs.com/sell/item/2897133037",
     cart: "https://www.discogs.com/sell/cart/?add=2897133037&ev=",
     desc: "Chris de Burgh - The Very Best Of Chris de Burgh",
@@ -868,7 +879,7 @@ export const popularProducts = [
   },
   {
     id: 67,
-    img: "https://i.discogs.com/3HEOIqQ_P1BPrmSn9vkI3pMKuRuMQPRCKL7JXLc7HT8/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0NzEw/MzAtMTIyMjE3NjE3/NS5qcGVn.jpeg",
+    img: "https://i.discogs.com/teULaxQovt3RPvb37NbuJUMwRR0w2D4SqNe56-0z-S0/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0NzEw/MzAtMTIyMjE3NjE3/NS5qcGVn.jpeg",
     link: "https://www.discogs.com/sell/item/2891077837",
     cart: "https://www.discogs.com/sell/cart/?add=2891077837&ev=",
     desc: "The Nice - Nice",
@@ -945,7 +956,7 @@ export const popularProducts = [
   },
   {
     id: 74,
-    img: "https://i.discogs.com/P01o_OApCOGcG49_El4StVXjvH_LNMZ37gq74EabXW4/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE1NDE3/MjcyLTE1OTEyMDY5/NTAtOTI0NS5qcGVn.jpeg",
+    img: "https://i.discogs.com/Fx-3OWtFJBtGpvseTscP33n9ijCiD5D1CcpkAm_VKfY/rs:fit/g:sm/q:90/h:593/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEyOTQ0/NzItMTM0MTc5Nzgw/Ny0yNjAzLmpwZWc.jpeg",
     link: "https://www.discogs.com/sell/item/2889500359",
     cart: "https://www.discogs.com/sell/cart/?add=2889500359&ev=",
     desc: "Styx - Cornerstone",
@@ -1011,7 +1022,7 @@ export const popularProducts = [
   },
   {
     id: 80,
-    img: "https://i.discogs.com/f3oDq0rT9Ktymi4_0eOEDLOxDY79Lwqcos_55dQZ4iI/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM4MTQ5/MDEtMTQxMzkyMzM4/Mi03NjQ5LmpwZWc.jpeg",
+    img: "https://i.discogs.com/ScNMO4I847y_YLiC9CRmB0P0FV4U3-bXF2CnMElT2Ew/rs:fit/g:sm/q:90/h:606/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM4MTQ5/MDEtMTQxMzkyMzM4/Mi03NjQ5LmpwZWc.jpeg",
     link: "https://www.discogs.com/sell/item/2880794539",
     cart: "https://www.discogs.com/sell/cart/?add=2880794539&ev=",
     desc: "Jim Reeves - The Jim Reeves Collection",
@@ -1022,7 +1033,7 @@ export const popularProducts = [
   },
   {
     id: "81",
-    img: "https://i.discogs.com/OJ95MVEHadbrItARXkGylHL3iQlRUy_io0Fb4263WY8/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEyNDc3/MjAtMTI1Mzk3Mjcx/MC5qcGVn.jpeg",
+    img: "https://i.discogs.com/l892tugq_pqA6qE7Z3nUvuqCzUdhCVXQXe1273HTGyo/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEyNDc3/MjAtMTI1Mzk3Mjcx/MC5qcGVn.jpeg",
     link: "https://www.discogs.com/sell/item/2880793354",
     cart: "https://www.discogs.com/sell/cart/?add=2880793354&ev=",
     desc: "Various - Paint Your Wagon (Music From The Soundtrack)",
@@ -1154,7 +1165,7 @@ export const popularProducts = [
   },
   {
     id: 93,
-    img: "https://i.discogs.com/J7s8SPP6m407vLGB7n0xGYF9aRn9xwZ09ChkvVm2g9Q/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTExNDY5/NDk4LTE1MTY4OTA2/NDQtMzE3OS5qcGVn.jpeg",
+    img: "https://i.discogs.com/G6unAuKzQ_FmeAnzywO4_GOiaCXH6X67PTRMt9FQNX4/rs:fit/g:sm/q:90/h:623/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTExNDY5/NDk4LTE1MTY4OTA2/NDQtMzE3OS5qcGVn.jpeg",
     link: "https://www.discogs.com/sell/item/2706448660",
     cart: "https://www.discogs.com/sell/cart/?add=2706448660&ev=",
     desc: "The Selecter - Too Much Pressure",
@@ -1165,7 +1176,7 @@ export const popularProducts = [
   },
   {
     id: 94,
-    img: "https://i.discogs.com/3G7ZmijhMmA0_6hQg-Zg_zBW3qQ9s7zuAaVu2quxkAg/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIxNzgy/NDAtMTQwNTY4ODU4/Ny05OTc1LmpwZWc.jpeg",
+    img: "https://i.discogs.com/kALmg6HxWsQr7yq8nmt-Eg6ymSbaY4sit05MpFodAz0/rs:fit/g:sm/q:90/h:598/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIxNzgy/NDAtMTQwNTY4ODU4/Ny05OTc1LmpwZWc.jpeg",
     link: "https://www.discogs.com/sell/item/2695255426",
     cart: "https://www.discogs.com/sell/cart/?add=2695255426&ev=",
     desc: "Elvis Presley - Elvis Sings 'Flaming Star'",
@@ -1187,7 +1198,7 @@ export const popularProducts = [
   },
   {
     id: 96,
-    img: "https://i.discogs.com/GwjtMC7YqqShXPArTkkH4JL-TnASnv1hMhZmxFkqYio/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMzNDY3/NjMtMTMyNjc0NDI0/MC5qcGVn.jpeg",
+    img: "https://i.discogs.com/50FYWn7UK6_KEpMUjNwWqzq2YXhpBlnwwH-DpCJ8nqQ/rs:fit/g:sm/q:90/h:600/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMzNDY3/NjMtMTMyNjc0NDI0/MC5qcGVn.jpeg",
     link: "https://www.discogs.com/sell/item/2695148464",
     cart: "https://www.discogs.com/sell/cart/?add=2695148464&ev=",
     desc: "Van Halen - When It's Love",
@@ -1462,7 +1473,7 @@ export const popularProducts = [
   },
   {
     id: 121,
-    img: "https://i.discogs.com/Vz-4AQxpoTseNhCZ_bddFrlfQ1_QaepnOhpcnBZ0P3c/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTU4ODM3/MC0xNDc1NDkzNDU3/LTkwMTYuanBlZw.jpeg",
+    img: "https://i.discogs.com/brYZxhnw5YMJQhhzv65itF2WBww46Rx50zeGpCdx6W0/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTU4ODM3/MC0xNDc1NDkzNDU3/LTkwMTYuanBlZw.jpeg",
     link: "https://www.discogs.com/sell/item/391024448",
     cart: "https://www.discogs.com/sell/cart/?add=391024448&ev=",
     desc: "Private Lives - Because You're Young",
@@ -1484,7 +1495,7 @@ export const popularProducts = [
   },
   {
     id: 123,
-    img: "https://i.discogs.com/r6D5ijgC3-pJ4n0HOJPad32VU2dRWKK2ARpF5-KngD4/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI1NjI5/MTctMTM0OTg4Njc2/Mi0zMDMxLmpwZWc.jpeg",
+    img: "https://i.discogs.com/K8oJqg5snvmm81mKirtLboGJYBT2ou9bZlHgjRTr0Gg/rs:fit/g:sm/q:90/h:329/w:329/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI1NjI5/MTctMTM0OTg4Njc2/Mi0zMDMxLmpwZWc.jpeg",
     link: "https://www.discogs.com/sell/item/430018009",
     cart: "https://www.discogs.com/sell/cart/?add=430018009&ev=",
     desc: "Frank Sinatra - Frank Sinatra",
@@ -1517,7 +1528,7 @@ export const popularProducts = [
   },
   {
     id: 126,
-    img: "https://i.discogs.com/5fnyFJlf9xD0hOfiKIl_f623CPvffdS5twlidf_nnXQ/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTkzODU4/NjUtMTQ3OTY1MDg1/Mi0yODMyLmpwZWc.jpeg",
+    img: "https://i.discogs.com/EOU_TWRxK7WUREQUBpV5PIhtf-QrIrZvj5xpok0HGxo/rs:fit/g:sm/q:90/h:602/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTkzODU4/NjUtMTQ3OTY1MDg1/Mi0yODMyLmpwZWc.jpeg",
     link: "https://www.discogs.com/sell/item/456786784",
     cart: "https://www.discogs.com/sell/cart/?add=456786784&ev=",
     desc: "Bucks Fizz - Are You Ready?",
@@ -1825,7 +1836,7 @@ export const popularProducts = [
   },
   {
     id: 154,
-    img: "https://i.discogs.com/K1kXOumX2fGOWQfxomunHVGfZfVfIYtAiNsw_ndXvwY/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE5Mjkw/ODEtMTYxOTM5OTIw/MC0zNDM5LmpwZWc.jpeg",
+    img: "https://i.discogs.com/oyBsbsWjg5MZlZkxvNyQ0vGaudMTNrR-G7iaWp9I6V0/rs:fit/g:sm/q:90/h:586/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE5Mjkw/ODEtMTYxOTM5OTIw/MC0zNDM5LmpwZWc.jpeg",
     link: "https://www.discogs.com/sell/item/1308481291",
     cart: "https://www.discogs.com/sell/cart/?add=1308481291&ev=",
     desc: "Wee Papa Girl Rappers - Be Aware (LP, Album)",
@@ -1869,7 +1880,7 @@ export const popularProducts = [
   },
   {
     id: 158,
-    img: "https://i.discogs.com/RnB3koxVJXtTXjj2I2n7nZpIiw7THB7RPJ_FBmbNt5U/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEyMTA0/ODYtMTIwNTQzNTM5/Mi5qcGVn.jpeg",
+    img: "https://i.discogs.com/9t52Vz9XpilPH5r3DrBR1fvL7Dby5xMy54gr990Qq4Y/rs:fit/g:sm/q:90/h:597/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEyMTA0/ODYtMTIwNTQzNTM5/Mi5qcGVn.jpeg",
     link: "https://www.discogs.com/sell/item/496579283",
     cart: "https://www.discogs.com/sell/cart/?add=496579283&ev=",
     desc: 'Senseless Things - Homophobic Asshole (12", Single)',
@@ -1935,7 +1946,7 @@ export const popularProducts = [
   },
   {
     id: 164,
-    img: "https://i.discogs.com/ll-D0kdyky45BtdiJwbJok7lqoLc6VgdKH1nom_O6Uw/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE5MzI2/OC0xMjcxMzQ2OTcw/LmpwZWc.jpeg",
+    img: "https://i.discogs.com/PnG97jlj2IsjrDkfQE7jKy_n4giw6XS0pKMFOUH29uU/rs:fit/g:sm/q:90/h:614/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE5MzI2/OC0xMjcxMzQ2OTcw/LmpwZWc.jpeg",
     link: "https://www.discogs.com/sell/item/456774230",
     cart: "https://www.discogs.com/sell/cart/?add=456774230&ev=",
     desc: 'Shanice - I Love Your Smile (Driza Bone Remix) (12", Single)',
@@ -2023,7 +2034,7 @@ export const popularProducts = [
   },
   {
     id: 172,
-    img: "https://i.discogs.com/kU75ZNgPhzXJh5_YItS8PZ1Di9HBmWIs7fkcSaUXB6s/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQzNjYy/NzYtMTM2Mjk1NTAx/Mi0xMTMyLmpwZWc.jpeg",
+    img: "https://i.discogs.com/0o9H6fpNNPbWmOYR_XMUTq56Pwn08Db_lCLWkxnXRns/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQzNjYy/NzYtMTM2Mjk1NTAx/Mi0xMTMyLmpwZWc.jpeg",
     link: "https://www.discogs.com/sell/item/346215486",
     cart: "https://www.discogs.com/sell/cart/?add=346215486&ev=",
     desc: "Glenn Miller And His Orchestra - The Legendary Glenn Miller Vol.5",
@@ -2441,7 +2452,7 @@ export const popularProducts = [
   },
   {
     id: 210,
-    img: "https://i.discogs.com/da-NB6s5zJPO5hS7G4NdRhBbkETmI4ywt-bVU2ZtvjA/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTc1NTU4/NjktMTQ0Mzk0NzQ1/My01NjQ1LmpwZWc.jpeg",
+    img: "https://i.discogs.com/ORGr7283gJXg1Gzoszlb9fyQvXJiwagaBMxdbkWepKk/rs:fit/g:sm/q:90/h:601/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTc1NTU4/NjktMTQ0Mzk0NzQ1/My01NjQ1LmpwZWc.jpeg",
     link: "https://www.discogs.com/sell/item/514033447",
     cart: "https://www.discogs.com/sell/cart/?add=514033447&ev=",
     desc: "Sky - Sky (LP, Album, RE)",
@@ -2507,7 +2518,7 @@ export const popularProducts = [
   },
   {
     id: 216,
-    img: "https://i.discogs.com/JnJoi8RG7mGMssAQ3h0WEMIjqLMZ148iyNvWAGwKXLc/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQ1NDUz/NC0xNDcxNzg3MjA5/LTcyNTkuanBlZw.jpeg",
+    img: "https://i.discogs.com/yhTiS8G9c5hd1rQnsImyiUHevUZGB_hA6RWNk84e7o8/rs:fit/g:sm/q:90/h:595/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQ1NDUz/NC0xNDcxNzg3MjA5/LTcyNTkuanBlZw.jpeg",
     link: "https://www.discogs.com/sell/item/1347841756",
     cart: "https://www.discogs.com/sell/cart/?add=1347841756&ev=",
     desc: "Kiss - Alive! (2xLP, RE, Gat)",
@@ -2628,7 +2639,7 @@ export const popularProducts = [
   },
   {
     id: 227,
-    img: "https://i.discogs.com/t_FZpR-ZHrFvuUGZLZMpR0_2rrNK40zc1CFfjknf5g4/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTk2MDY0/MjgtMTQ4MzcyMzg5/NS01MzcxLmpwZWc.jpeg",
+    img: "https://i.discogs.com/NQvqjo8b-e59ETmiNkB8nA6R4aamm6AYzaYyHVhLYnA/rs:fit/g:sm/q:90/h:603/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTk2MDY0/MjgtMTQ4MzcyMzg5/NS01MzcxLmpwZWc.jpeg",
     link: "https://www.discogs.com/sell/item/498752413",
     cart: "https://www.discogs.com/sell/cart/?add=498752413&ev=",
     desc: "The Moody Blues With The London Festival Orchestra Conducted By Peter Knight - Days Of Future Passed",
@@ -2914,7 +2925,7 @@ export const popularProducts = [
   },
   {
     id: 253,
-    img: "https://i.discogs.com/vMmD3w8TYKX_XefYnl7CboM_Ey2_OqKztNMIuujKxlA/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTU5MDU4/MTQtMTQwNTk1OTM0/My0xNDQxLmpwZWc.jpeg",
+    img: "https://i.discogs.com/X6T2H1IZOaRI2sKQpxwISF5lrz9JoNDJ9kpM3_sJ90o/rs:fit/g:sm/q:90/h:592/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTU5MDU4/MTQtMTQwNTk1OTM0/My0xNDQxLmpwZWc.jpeg",
     link: "https://www.discogs.com/sell/item/1303690074",
     cart: "https://www.discogs.com/sell/cart/?add=1303690074&ev=",
     desc: "Fairground Attraction - The First Of A Million Kisses)",
@@ -3189,7 +3200,7 @@ export const popularProducts = [
   },
   {
     id: 278,
-    img: "https://i.discogs.com/PMIFM2cJIvl89V2PH57DhP9tjwIN1GvQJc58UPZ_ex4/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0OTU4/MzYtMTI1NzE5MzU0/Ny5qcGVn.jpeg",
+    img: "https://i.discogs.com/j_terS7Pdwm5vduQro6boa7S32NoBvuZ9aFqyI3yw7U/rs:fit/g:sm/q:90/h:400/w:383/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0OTU4/MzYtMTI1NzE5MzU0/Ny5qcGVn.jpeg",
     link: "https://www.discogs.com/sell/item/1211240467",
     cart: "https://www.discogs.com/sell/cart/?add=1211240467&ev=",
     desc: "Los Lobos - ... And A Time To Dance (LP, MiniAlbum, RE)",
@@ -3255,7 +3266,7 @@ export const popularProducts = [
   },
   {
     id: 284,
-    img: "https://i.discogs.com/nc2GbbpeGU-m_fBujKe8Pk_lzRDwcP5HUsBzrxUEwOE/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI3MTc2/OTYtMTMyNjAxNjcz/MS5qcGVn.jpeg",
+    img: "https://i.discogs.com/LJqit7qVFkiAI01kYPI20vymDmGRnXm_sostiUO-3NY/rs:fit/g:sm/q:90/h:350/w:350/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI3MTc2/OTYtMTMyNjAxNjcz/MS5qcGVn.jpeg",
     link: "https://www.discogs.com/sell/item/381839979",
     cart: "https://www.discogs.com/sell/cart/?add=381839979&ev=",
     desc: "Maurice Larcange And His Accordions* - Avec Moi A Paris",
@@ -3409,7 +3420,7 @@ export const popularProducts = [
   },
   {
     id: 299,
-    img: "https://i.discogs.com/aWwLGnMtOPRaoJZyo9KyIq6mnDwyJMes4eIYSfAsvWM/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQxOTMy/MDQtMTQ0MTc3ODg0/OC03MjQ2LmpwZWc.jpeg",
+    img: "https://i.discogs.com/j0EVbKvd5d1x14JA_UElXMjmVjKKG6Np62GhIWqchXI/rs:fit/g:sm/q:90/h:605/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQxOTMy/MDQtMTQ0MTc3ODg0/OC03MjQ2LmpwZWc.jpeg",
     link: "https://www.discogs.com/sell/item/482179295",
     cart: "https://www.discogs.com/sell/cart/?add=482179295&ev=",
     desc: "George Gershwin, Lawrence Tibbett, Helen Jepson - Porgy & Bess",
@@ -3475,7 +3486,7 @@ export const popularProducts = [
   },
   {
     id: 305,
-    img: "https://i.discogs.com/eN7hiz5-sjxwV7prhdmPCv4rRwzoMC8i7jO3ALyp1zI/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM0MTQ0/ODgtMTMyOTU5MjAz/Mi5qcGVn.jpeg",
+    img: "https://i.discogs.com/3cT9w1Na8mwQ3JDpF3vwcFa_o9Tiv4edvuQK8M-HrOY/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM0MTQ0/ODgtMTMyOTU5MjAz/Mi5qcGVn.jpeg",
     link: "https://www.discogs.com/sell/item/312075555",
     cart: "https://www.discogs.com/sell/cart/?add=312075555&ev=",
     desc: "Everly Brothers - Don & Phil's Fabulous Fifties Treasury",
@@ -3695,7 +3706,7 @@ export const popularProducts = [
   },
   {
     id: 325,
-    img: "https://i.discogs.com/bzMRgskh79Ha85_INK6kHm7OPZytiSOJp-Mm1Xro6gc/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTU4NTE1/OTAtMTQwNDQ2ODI4/MS03NjIwLmpwZWc.jpeg",
+    img: "https://i.discogs.com/8aDOFWfUPE8ddnxhLRTR5RQUm9zcoGulV641eilLYK8/rs:fit/g:sm/q:90/h:602/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTU4NTE1/OTAtMTQwNDQ2ODI4/MS03NjIwLmpwZWc.jpeg",
     link: "https://www.discogs.com/sell/item/343151443",
     cart: "https://www.discogs.com/sell/cart/?add=343151443&ev=",
     desc: "Huey Lewis And The News - Sports (LP, Album)",
