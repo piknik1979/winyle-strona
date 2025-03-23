@@ -6,6 +6,7 @@ import Product from "./pages/Product";
 import CatalogPage from "./pages/CatalogPage";
 import Announcement from "./components/Announcement"; // Import Announcement
 import { useState } from "react";
+import { Helmet } from "react-helmet-async"; // Import React Helmet
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -14,6 +15,19 @@ const App = () => {
 
   return (
     <>
+      {/* Dodanie tagu Google Analytics do nagłówka */}
+      <Helmet>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7W97HTKLSG"></script>
+        <script>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-7W97HTKLSG');
+          `}
+        </script>
+      </Helmet>
+      
       <Announcement /> {/* Teraz zawsze jest na górze */}
       {showNavbar && <Navbar onSearch={setSearchTerm} />}
       <Routes>
