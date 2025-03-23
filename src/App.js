@@ -5,13 +5,22 @@ import ProductList from "./pages/ProductList";
 import Product from "./pages/Product";
 import CatalogPage from "./pages/CatalogPage";
 import Announcement from "./components/Announcement"; // Import Announcement
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async"; // Import React Helmet
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const location = useLocation();
   const showNavbar = location.pathname !== "/";
+
+  useEffect(() => {
+    // Inicjalizowanie Google Analytics przy każdej zmianie ścieżki URL
+    if (window.gtag) {
+      window.gtag('config', 'G-7W97HTKLSG', {
+        page_path: location.pathname,
+      });
+    }
+  }, [location]);
 
   return (
     <>
