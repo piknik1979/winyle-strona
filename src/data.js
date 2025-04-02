@@ -1,150 +1,174 @@
-export const sliderItems = [
-  {
-    id: 1,
-    img: "https://i.discogs.com/TjduV57Rd-RjXuGgk0LyOL9jZ_xL-sxYGsyTI0i2aHI/rs:fit/g:sm/q:90/h:593/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMzOTAx/OS0xNDI3NzgzNzM2/LTEyMDQuanBlZw.jpeg",
-    artist: "Janet Jackson",
-    link: "https://www.discogs.com/sell/release/339019?seller=piknik1979",
-    desc: "Control",
-    bg: "f5fafd",
-  },
-  {
-    id: 2,
-    img: "https://i.discogs.com/kXe5dxTZZmGvaXff3I7fA97JUq-FFpV9SBlfBvDaMcA/rs:fit/g:sm/q:90/h:602/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM4NTg2/My0xMTg4NjY2MjI3/LmpwZWc.jpeg",
-    artist: "BLITZ!",
-    desc: "Voice of a Generation",
-    bg: "fcf1ed",
-  },
-  {
-    id: 3,
-    img: "https://i.discogs.com/rYNfIA9eW_j-ASaP3lHPCAOU0_iujo7347VWgeA5eQM/rs:fit/g:sm/q:90/h:615/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0NjU1/MTMtMTU0NDg3NDk3/Mi0xNzc5LmpwZWc.jpeg",
-    artist: "Jesus Jones",
-    desc: "Real Real Real",
-    link: "https://www.discogs.com/sell/item/3381537480",
-    bg: "fbf0f4",
-  },
-];
+import bluesImage from "./assets/categories/blues.jpg";
+import classicImage from "./assets/categories/Classic.jpg";
+import classicRockImage from "./assets/categories/ClassicRock.jpg";
+import countryImage from "./assets/categories/Country.jpg";
+import discoImage from "./assets/categories/Disco.jpg";
+import electronicImage from "./assets/categories/Electronic.jpg";
+import folkImage from "./assets/categories/Folk.jpg";
+import funkAndSoulImage from "./assets/categories/FunkandSoul.jpg";
+import glamRockImage from "./assets/categories/GlamRock.jpg";
+import popImage from "./assets/categories/Pop.jpg";
+import progRockImage from "./assets/categories/Prog Rock.jpg";
+import psychodelicRockImage from "./assets/categories/Psychodelic Rock.jpg";
+import punkImage from "./assets/categories/Punk.jpg";
+import rockAndRollImage from "./assets/categories/Rock and Roll.jpg";
+import skaAndReggaeImage from "./assets/categories/Ska & Reggae.jpg";
+import stageAndScreenImage from "./assets/categories/Stage & Screen.jpg";
+import synthPopImage from "./assets/categories/Synth Pop.jpg";
+import hardRockImage from "./assets/categories/HardRock.jpg";
+import heavyMetalImage from "./assets/categories/HeavyMetal.jpg";
+import hipHopImage from "./assets/categories/HipHop.jpg";
+import indieRockImage from "./assets/categories/IndieRock.jpg";
+import jazzImage from "./assets/categories/Jazz.jpg";
+import newWaveImage from "./assets/categories/NewWave.jpg";
+import popRockImage from "./assets/categories/Pop Rock.jpg";
+
+// export const sliderItems = [
+//   {
+//     id: 1,
+//     img: "https://i.discogs.com/TjduV57Rd-RjXuGgk0LyOL9jZ_xL-sxYGsyTI0i2aHI/rs:fit/g:sm/q:90/h:593/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMzOTAx/OS0xNDI3NzgzNzM2/LTEyMDQuanBlZw.jpeg",
+//     artist: "Janet Jackson",
+//     link: "https://www.discogs.com/sell/release/339019?seller=piknik1979",
+//     desc: "Control",
+//     bg: "f5fafd",
+//   },
+//   {
+//     id: 2,
+//     img: "https://i.discogs.com/kXe5dxTZZmGvaXff3I7fA97JUq-FFpV9SBlfBvDaMcA/rs:fit/g:sm/q:90/h:602/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM4NTg2/My0xMTg4NjY2MjI3/LmpwZWc.jpeg",
+//     artist: "BLITZ!",
+//     desc: "Voice of a Generation",
+//     bg: "fcf1ed",
+//   },
+//   {
+//     id: 3,
+//     img: "https://i.discogs.com/rYNfIA9eW_j-ASaP3lHPCAOU0_iujo7347VWgeA5eQM/rs:fit/g:sm/q:90/h:615/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0NjU1/MTMtMTU0NDg3NDk3/Mi0xNzc5LmpwZWc.jpeg",
+//     artist: "Jesus Jones",
+//     desc: "Real Real Real",
+//     link: "https://www.discogs.com/sell/item/3381537480",
+//     bg: "fbf0f4",
+//   },
+// ];
 
 export const categories = [
-  // {
-  //   id: 1,
-  //   img: "https://i.discogs.com/Hj8tdr1hNJDfW7Dr3fflsJFMOVN3cMgHp3sfqJnaK_U/rs:fit/g:sm/q:90/h:590/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTc3MzQ1/MS0xNDc2MTg4MTUy/LTk4NTUuanBlZw.jpeg",
-  //   genre: "Blues",
-  // },
+  {
+    id: 1,
+    img: bluesImage,
+    genre: "Blues",
+  },
   {
     id: 2,
-    img: "https://i.discogs.com/5y1J5ERiDFv4qkN5q5jI9Yc1hPBBX9hbLIvbJ18wqv8/rs:fit/g:sm/q:90/h:567/w:563/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTUyNjgx/NjItMTM5MDE2MjE5/NC0xOTI3LmpwZWc.jpeg",
+    img: classicImage,
     genre: "Classic",
   },
   {
     id: 3,
-    img: "https://i.discogs.com/fzhhHx_tLGUDbipyib58_KxZsIfD9fOCxq_nzHggmfE/rs:fit/g:sm/q:90/h:597/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTg0Mzg0/NDItMTQ2MTYxMDY3/MS00NTAwLmpwZWc.jpeg",
+    img: classicRockImage,
     genre: "Classic Rock",
   },
   {
     id: 4,
-    img: "https://i.discogs.com/ScNMO4I847y_YLiC9CRmB0P0FV4U3-bXF2CnMElT2Ew/rs:fit/g:sm/q:90/h:606/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM4MTQ5/MDEtMTQxMzkyMzM4/Mi03NjQ5LmpwZWc.jpeg",
+    img: countryImage,
     genre: "Country",
   },
   {
     id: 5,
-    img: "https://i.discogs.com/cc_N04MXGhYZQ_E-dGj4UDdVEcWHAuxh4afXIP-WbvU/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI5NjYy/MjU4LTE3MDY3ODky/NDctOTc0NC5qcGVn.jpeg",
+    img: discoImage,
     genre: "Disco",
   },
   {
     id: 6,
-    img: "https://i.discogs.com/DRwG04BJltbySNY51aUPY9oUxq1dnjDqlHyLJ3ULPpA/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0MDEy/Ni0xNzE2NzgwMzQ0/LTExMDAuanBlZw.jpeg",
+    img: electronicImage,
     genre: "Electronic",
   },
   {
     id: 7,
-    img: "https://i.discogs.com/1hEOSjMqciR8GuF4eJ2bWm52-tJf7iYPZKMLHLV4Dtc/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEzMTU0/NjkzLTE1NDkxNzgx/NTctNjcxMS5qcGVn.jpeg",
+    img: folkImage,
     genre: "Folk",
   },
   {
     id: 8,
-    img: "https://i.discogs.com/TjduV57Rd-RjXuGgk0LyOL9jZ_xL-sxYGsyTI0i2aHI/rs:fit/g:sm/q:90/h:593/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMzOTAx/OS0xNDI3NzgzNzM2/LTEyMDQuanBlZw.jpeg",
-    genre: "Funk & Soul",
+    img: funkAndSoulImage,
+    genre: "Funk and Soul",
   },
   {
     id: 9,
-    img: "https://i.discogs.com/YocfkWEMrXHPXIIEbroDzN_QyHIsx5Qjq0vHVw0Ilis/rs:fit/g:sm/q:90/h:607/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0NjY4/NjgtMTQzOTU2MTQ0/NC01MjEzLmpwZWc.jpeg",
+    img: glamRockImage,
     genre: "Glam Rock",
   },
   {
     id: 10,
-    img: "https://i.discogs.com/50FYWn7UK6_KEpMUjNwWqzq2YXhpBlnwwH-DpCJ8nqQ/rs:fit/g:sm/q:90/h:600/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMzNDY3/NjMtMTMyNjc0NDI0/MC5qcGVn.jpeg",
-    genre: "Hard Rock",
-  },
-  {
-    id: 11,
-    img: "https://i.discogs.com/peJNvh2Xx0uf4oTy_I2l3RQZVHXnTDmYTZO8DBFaaXo/rs:fit/g:sm/q:90/h:568/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQ0ODY1/NS0xNTExNTU3MDQ5/LTQ2MTcuanBlZw.jpeg",
-    genre: "Heavy Metal",
-  },
-  {
-    id: 12,
-    img: "https://i.discogs.com/oyBsbsWjg5MZlZkxvNyQ0vGaudMTNrR-G7iaWp9I6V0/rs:fit/g:sm/q:90/h:586/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE5Mjkw/ODEtMTYxOTM5OTIw/MC0zNDM5LmpwZWc.jpeg",
-    genre: "Hip Hop",
-  },
-  {
-    id: 13,
-    img: "https://i.discogs.com/9t52Vz9XpilPH5r3DrBR1fvL7Dby5xMy54gr990Qq4Y/rs:fit/g:sm/q:90/h:597/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEyMTA0/ODYtMTIwNTQzNTM5/Mi5qcGVn.jpeg",
-    genre: "Indie Rock",
-  },
-  {
-    id: 14,
-    img: "https://i.discogs.com/KAj0qfL9hrHki4UPiPCu8ZzpHr-h7g6qUlNvgFBOLBk/rs:fit/g:sm/q:90/h:601/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTExMDQz/NzA0LTE2OTcyMzIy/NTEtOTYwNi5qcGVn.jpeg",
-    genre: "Jazz",
-  },
-  {
-    id: 15,
-    img: "https://i.discogs.com/brYZxhnw5YMJQhhzv65itF2WBww46Rx50zeGpCdx6W0/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTU4ODM3/MC0xNDc1NDkzNDU3/LTkwMTYuanBlZw.jpeg",
-    genre: "New Wave",
-  },
-
-  {
-    id: 16,
-    img: "https://i.discogs.com/nep7SameqEH5oVPS4IEOzb1zg0LJ4Zy8e5IbPIVaNvg/rs:fit/g:sm/q:90/h:612/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEwNDQy/NjUtMTQ3NTYwNTU5/OC04ODM5LmpwZWc.jpeg",
-    genre: "Punk",
-  },
-  {
-    id: 17,
-    img: "https://i.discogs.com/kHr9ErAE4BU43ds7VGcomcC8wZWp-6SvDoMS7FcrwAk/rs:fit/g:sm/q:90/h:593/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTYxNzkw/NzctMTQxMzA0NzA2/My02ODIzLmpwZWc.jpeg",
+    img: popImage,
     genre: "Pop",
   },
   {
-    id: 18,
-    img: "https://i.discogs.com/gnWJveb4tFM38Kz3Hm_0xEaKaf1J76CrVhmw0D8zX80/rs:fit/g:sm/q:90/h:598/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTc5Nzkz/NTktMTQ1MjgyNzMy/Ny03Mjg1LmpwZWc.jpeg",
-    genre: "Pop Rock",
-  },
-  {
-    id: 19,
-    img: "https://i.discogs.com/teULaxQovt3RPvb37NbuJUMwRR0w2D4SqNe56-0z-S0/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0NzEw/MzAtMTIyMjE3NjE3/NS5qcGVn.jpeg",
+    id: 11,
+    img: progRockImage,
     genre: "Prog Rock",
   },
   {
-    id: 20,
-    img: "https://i.discogs.com/upcBp93lcoOfWUHbp2Idp9wJ3j8XSgEaaAzXW0SVZmU/rs:fit/g:sm/q:90/h:476/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTUzMDY4/ODUtMTM5MzU4OTI3/MC03ODA3LmpwZWc.jpeg",
+    id: 12,
+    img: psychodelicRockImage,
     genre: "Psychodelic Rock",
   },
   {
-    id: 21,
-    img: "https://i.discogs.com/kALmg6HxWsQr7yq8nmt-Eg6ymSbaY4sit05MpFodAz0/rs:fit/g:sm/q:90/h:598/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIxNzgy/NDAtMTQwNTY4ODU4/Ny05OTc1LmpwZWc.jpeg",
-    genre: "Rock & Roll",
+    id: 13,
+    img: punkImage,
+    genre: "Punk",
   },
   {
-    id: 22,
-    img: "https://i.discogs.com/G6unAuKzQ_FmeAnzywO4_GOiaCXH6X67PTRMt9FQNX4/rs:fit/g:sm/q:90/h:623/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTExNDY5/NDk4LTE1MTY4OTA2/NDQtMzE3OS5qcGVn.jpeg",
+    id: 14,
+    img: rockAndRollImage,
+    genre: "Rock and Roll",
+  },
+  {
+    id: 15,
+    img: skaAndReggaeImage,
     genre: "Ska & Reggae",
   },
   {
-    id: 23,
-    img: "https://i.discogs.com/YgdNqtVFodiwBmV8CmLuJoYHo34FIEg9gF5YI7bGWi8/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE3MzQ2/NzItMTM2NTI3MzI4/MC0xNzQ3LmpwZWc.jpeg",
+    id: 16,
+    img: stageAndScreenImage,
     genre: "Stage & Screen",
   },
   {
-    id: 24,
-    img: "https://i.discogs.com/_FCVLfop5iuRBjb2V_1wnXgSY9wNchwZZliTP2poMcw/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE5NzYy/Ny0xNTkwOTE1NzQx/LTgwNjEuanBlZw.jpeg",
+    id: 17,
+    img: synthPopImage,
     genre: "Synth Pop",
+  },
+  {
+    id: 18,
+    img: hardRockImage,
+    genre: "Hard Rock",
+  },
+  {
+    id: 19,
+    img: heavyMetalImage,
+    genre: "Heavy Metal",
+  },
+  {
+    id: 20,
+    img: hipHopImage,
+    genre: "Hip Hop",
+  },
+  {
+    id: 21,
+    img: indieRockImage,
+    genre: "Indie Rock",
+  },
+  {
+    id: 22,
+    img: jazzImage,
+    genre: "Jazz",
+  },
+  {
+    id: 23,
+    img: newWaveImage,
+    genre: "New Wave",
+  },
+  {
+    id: 24,
+    img: popRockImage,
+    genre: "Pop Rock",
   },
 ];
 
