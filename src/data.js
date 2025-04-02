@@ -25,11 +25,11 @@ export const sliderItems = [
 ];
 
 export const categories = [
-  {
-    id: 1,
-    img: "https://i.discogs.com/Hj8tdr1hNJDfW7Dr3fflsJFMOVN3cMgHp3sfqJnaK_U/rs:fit/g:sm/q:90/h:590/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTc3MzQ1/MS0xNDc2MTg4MTUy/LTk4NTUuanBlZw.jpeg",
-    genre: "Blues",
-  },
+  // {
+  //   id: 1,
+  //   img: "https://i.discogs.com/Hj8tdr1hNJDfW7Dr3fflsJFMOVN3cMgHp3sfqJnaK_U/rs:fit/g:sm/q:90/h:590/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTc3MzQ1/MS0xNDc2MTg4MTUy/LTk4NTUuanBlZw.jpeg",
+  //   genre: "Blues",
+  // },
   {
     id: 2,
     img: "https://i.discogs.com/5y1J5ERiDFv4qkN5q5jI9Yc1hPBBX9hbLIvbJ18wqv8/rs:fit/g:sm/q:90/h:567/w:563/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTUyNjgx/NjItMTM5MDE2MjE5/NC0xOTI3LmpwZWc.jpeg",
@@ -1715,7 +1715,7 @@ export const popularProducts = [
   },
   {
     id: 143,
-    img: "https://i.discogs.com/eQNfSEu0LqQEWHStHgOkzjEtDcZg8AYxrTyFcdT6yT0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTcyOTIw/MTktMTQzODE2MzIy/MC03NzIwLmpwZWc.jpeg",
+    img: "https://i.discogs.com/3A5Z8FQVDDYM3sKlkUaQrDPPypiRGYW0fWZ1AZVBtPc/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTcyOTIw/MTktMTQzODE2MzIy/MC03NzIwLmpwZWc.jpeg",
     link: "https://www.discogs.com/sell/item/503817491",
     cart: "https://www.discogs.com/sell/cart/?add=503817491&ev=",
     desc: "Elvis* - Separate Ways",
