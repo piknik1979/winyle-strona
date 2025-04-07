@@ -3771,17 +3771,6 @@ export const popularProducts = [
     price: "£2.90",
   },
   {
-    id: 332,
-    img: "https://i.discogs.com/uoHy6KdERA83A9LWZ0FLXCtXT60cmDcYtIG0NFUoOAc/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTgzNDEw/NzEtMTQ1OTcwMzEy/MC00ODQ3LmpwZWc.jpeg",
-    link: "https://www.discogs.com/sell/item/1028357608",
-    cart: "https://www.discogs.com/sell/cart/?add=1028357608&ev=",
-    desc: "James Last & His Hammond Bar Combo - Hammond À GoGo 3",
-    genre: "Jazz",
-    media: "Near Mint (NM or M-)",
-    sleeve: "Very Good (VG)",
-    price: "£5.00",
-  },
-  {
     id: 333,
     img: "https://i.discogs.com/91ZenqXvcGMsteF0aJxfzElJ70LFL5AdTusmdL93UuU/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0ODA2/MTItMTIzNjA3NDMz/My5qcGVn.jpeg",
     link: "https://www.discogs.com/sell/item/327275869",
