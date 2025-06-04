@@ -812,17 +812,6 @@ export const popularProducts = [
     price: "£5.49",
   },
   {
-    id: 62,
-    img: "https://i.discogs.com/Jcn2nRN7K9LuxP2fEgY1dcLw3ogGnYRJDc3sdnn-6jM/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTcyMjc4/NDgtMTY5MDM5NTA1/NC0zNzg2LmpwZWc.jpeg",
-    link: "https://www.discogs.com/sell/item/2893288156",
-    cart: "https://www.discogs.com/sell/cart/?add=2893288156&ev=",
-    desc: "The Christians - The Christians",
-    genre: "Funk/Soul",
-    media: "Near Mint (NM or M-)",
-    sleeve: "Near Mint (NM or M-)",
-    price: "£3.99",
-  },
-  {
     id: 63,
     img: "https://i.discogs.com/e846ybFqfBEYyoXDh9tVDMKzhndsrLpg6o5EcZKU9Gs/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI5MTQy/MzItMTYwMDQyNTgw/MS05MDAxLmpwZWc.jpeg",
     link: "https://www.discogs.com/sell/item/2893286527",
@@ -843,17 +832,6 @@ export const popularProducts = [
     media: "Very Good Plus (VG+)",
     sleeve: "Very Good (VG)",
     price: "£24.99",
-  },
-  {
-    id: 65,
-    img: "https://i.discogs.com/gX5AyslE-PBcJ5llfFohiF1A6sHo1oOdWs5_xGlMVQA/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI3NzI5/LTE2ODcxODc4MDgt/MzQ3Ny5qcGVn.jpeg",
-    link: "https://www.discogs.com/sell/item/2893282249",
-    cart: "https://www.discogs.com/sell/cart/?add=2893282249&ev=",
-    desc: "The Human League - Dare",
-    genre: "Synth Pop",
-    media: "Very Good Plus (VG+)",
-    sleeve: "Very Good (VG)",
-    price: "£5.99",
   },
   {
     id: 66,
@@ -2517,17 +2495,6 @@ export const popularProducts = [
     price: "£20.00",
   },
   {
-    id: 217,
-    img: "https://i.discogs.com/vRbfGEFmtiFzi9qke8m-0EZVbon34Bs3AnhI6G0DAqI/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI3OTU5/NTgtMTMwMTQwMTY4/Ny5qcGVn.jpeg",
-    link: "https://www.discogs.com/sell/item/327632576",
-    cart: "https://www.discogs.com/sell/cart/?add=327632576&ev=",
-    desc: "Various - The Big Folk (LP, Comp)",
-    genre: "Folk",
-    media: "Very Good Plus (VG+)",
-    sleeve: "Very Good Plus (VG+)",
-    price: "£0.99",
-  },
-  {
     id: 218,
     img: "https://i.discogs.com/iOCPDTheBch_cYn7aBjqUqRJcGKnH4ory3vuRe1pCD4/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTYyMzA1/MC0xNDI2Nzg0MDk5/LTIwNTIuanBlZw.jpeg",
     link: "https://www.discogs.com/sell/item/330605259",
@@ -4068,17 +4035,6 @@ export const popularProducts = [
     price: "£6.50",
   },
   {
-    id: 360,
-    img: "https://i.discogs.com/OARRqDTEiAbqePqdBLKR5vlb-4_ij6GGTBBra_95e_g/rs:fit/g:sm/q:90/h:597/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0OTky/NDYtMTQyMzY1Mzgx/Ny05MDI1LmpwZWc.jpeg",
-    link: "https://www.discogs.com/sell/item/1092266022",
-    cart: "https://www.discogs.com/sell/cart/?add=1092266022&ev=",
-    desc: "Lou Reed - New York Superstar (LP, Comp)",
-    genre: "Classic Rock",
-    media: "Very Good Plus (VG+)",
-    sleeve: "Very Good (VG)",
-    price: "£4.99",
-  },
-  {
     id: 361,
     img: "https://i.discogs.com/sbcNp_NqBxlErbT2_oOpJW0RSVdUR01FYCIfIap8ziY/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM3Mzk1/NjMtMTQ1MDQ3MzEy/Ny0xNjMxLmpwZWc.jpeg",
     link: "https://www.discogs.com/sell/item/340090005",
@@ -5122,7 +5078,7 @@ export const popularProducts = [
     media: "Near Mint",
     sleeve: "Very Good Plus(VG+)",
     price: "£18.99",
-  }, 
+  },
   {
     id: 456,
     img: "https://i.discogs.com/gGT0mD-x-RMmBH9RxnTodKAA5bh9CslAz1T65FeCTR8/rs:fit/g:sm/q:90/h:602/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTc5MDMz/MDEtMTQ1MTMyMjk0/My0yMzkwLmpwZWc.jpeg",
@@ -5132,18 +5088,18 @@ export const popularProducts = [
     genre: "Pop Rock",
     media: "Near Mint (NM or M-)",
     sleeve: "Near Mint (NM or M-)",
-    price: "£7.00"
+    price: "£7.00",
   },
   {
     id: 457,
     img: "https://i.discogs.com/2PYp-wxMMR71w2TZdfwpN-DttIyI483AfdqRhqXgf2k/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTg5MDYy/NjctMTQ3MTIwMjk5/NS01Njk1LmpwZWc.jpeg",
     link: "https://www.discogs.com/sell/item/1264821774",
     cart: "https://www.discogs.com/sell/cart/?add=1264821774&ev=",
-    desc: "Fairground Attraction - Perfect (12\", Single, Tap)",
+    desc: 'Fairground Attraction - Perfect (12", Single, Tap)',
     genre: "Pop Rock",
     media: "Near Mint (NM or M-)",
     sleeve: "Very Good Plus (VG+)",
-    price: "£4.50"
+    price: "£4.50",
   },
   {
     id: 458,
@@ -5154,7 +5110,7 @@ export const popularProducts = [
     genre: "Funk / Soul",
     media: "Very Good Plus (VG+)",
     sleeve: "Very Good Plus (VG+)",
-    price: "£11.99"
+    price: "£11.99",
   },
   {
     id: 459,
@@ -5165,7 +5121,7 @@ export const popularProducts = [
     genre: "Stage & Screen",
     media: "Very Good (VG)",
     sleeve: "Very Good Plus (VG+)",
-    price: "£1.29"
+    price: "£1.29",
   },
   {
     id: 460,
@@ -5176,7 +5132,7 @@ export const popularProducts = [
     genre: "Rock & Roll",
     media: "Very Good Plus (VG+)",
     sleeve: "No Cover",
-    price: "£1.99"
+    price: "£1.99",
   },
   {
     id: 461,
@@ -5187,7 +5143,7 @@ export const popularProducts = [
     genre: "Electronic",
     media: "Near Mint (NM or M-)",
     sleeve: "Very Good Plus (VG+)",
-    price: "£4.49"
+    price: "£4.49",
   },
   {
     id: 462,
@@ -5198,7 +5154,7 @@ export const popularProducts = [
     genre: "Rock",
     media: "Very Good (VG)",
     sleeve: "Very Good Plus (VG+)",
-    price: "£11.99"
+    price: "£11.99",
   },
   {
     id: 463,
@@ -5209,7 +5165,7 @@ export const popularProducts = [
     genre: "Jazz",
     media: "Very Good Plus (VG+)",
     sleeve: "Near Mint (NM or M-)",
-    price: "£9.99"
+    price: "£9.99",
   },
   {
     id: 463,
@@ -5220,7 +5176,7 @@ export const popularProducts = [
     genre: "Blues",
     media: "Very Good (VG)",
     sleeve: "Very Good (VG)",
-    price: "£3.50"
+    price: "£3.50",
   },
   {
     id: 464,
@@ -5231,7 +5187,7 @@ export const popularProducts = [
     genre: "Punk",
     media: "Very Good (VG)",
     sleeve: "Very Good (VG)",
-    price: "£4.50"
+    price: "£4.50",
   },
   {
     id: 465,
@@ -5242,7 +5198,7 @@ export const popularProducts = [
     genre: "Hip Hop",
     media: "Near Mint (NM or M-)",
     sleeve: "Generic",
-    price: "£2.90"
+    price: "£2.90",
   },
   {
     id: 466,
@@ -5253,7 +5209,7 @@ export const popularProducts = [
     genre: "Funk & Soul",
     media: "Very Good (VG)",
     sleeve: "Very Good Plus (VG+)",
-    price: "£2.49"
+    price: "£2.49",
   },
   {
     id: 467,
@@ -5264,7 +5220,7 @@ export const popularProducts = [
     genre: "Prog Rock",
     media: "Very Good (VG)",
     sleeve: "Very Good (VG)",
-    price: "£1.99"
+    price: "£1.99",
   },
   {
     id: 468,
@@ -5275,29 +5231,18 @@ export const popularProducts = [
     genre: "Classic",
     media: "Near Mint (NM or M-)",
     sleeve: "Very Good Plus (VG+)",
-    price: "£2.99"
-  },
-  {
-    id: 469,
-    img: "https://i.discogs.com/GImsCPE2F-MB1rXZBOc2-bQdOzQm6e2vbFdddWdLJ2c/rs:fit/g:sm/q:90/h:566/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTkwNTk0/NC0xMTcxNDAyNTUz/LmpwZWc.jpeg",
-    link: "https://www.discogs.com/sell/item/399415809",
-    cart: "https://www.discogs.com/sell/cart/?add=399415809&ev=",
-    desc: "Various - Hotels, Motels And Road Shows ",
-    genre: "Blues",
-    media: "Very Good Plus (VG+)",
-    sleeve: "Very Good (VG)",
-    price: "£2.99"
+    price: "£2.99",
   },
   {
     id: 470,
     img: "https://i.discogs.com/Cjf6fJMrWNypnzx_BxUffinh9FM0cY8ztRDtDYWo9yg/rs:fit/g:sm/q:90/h:595/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQyMTA3/Mi0xMjkxOTE0Nzkz/LmpwZWc.jpeg",
     link: "https://www.discogs.com/sell/item/1273928550",
     cart: "https://www.discogs.com/sell/cart/?add=1273928550&ev=",
-    desc: "Howard Jones - New Song (12\", Single)",
+    desc: 'Howard Jones - New Song (12", Single)',
     genre: "Synth Pop",
     media: "Near Mint (NM or M-)",
     sleeve: "Very Good Plus (VG+)",
-    price: "£2.50"
+    price: "£2.50",
   },
   {
     id: 471,
@@ -5308,7 +5253,7 @@ export const popularProducts = [
     genre: "Classic",
     media: "Very Good Plus (VG+)",
     sleeve: "Very Good Plus (VG+)",
-    price: "£2.98"
+    price: "£2.98",
   },
   {
     id: 472,
@@ -5319,18 +5264,18 @@ export const popularProducts = [
     genre: "Rock & Roll",
     media: "Near Mint (NM or M-)",
     sleeve: "Very Good Plus (VG+)",
-    price: "£2.99"
+    price: "£2.99",
   },
   {
     id: 473,
     img: "https://i.discogs.com/qa8RmySc1lHdXbl93U7xhchRYwuCBIYWInktp53LohI/rs:fit/g:sm/q:90/h:493/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE4NDA5/NzktMTQxMTMwNjc1/Ni04MDcxLmpwZWc.jpeg",
     link: "https://www.discogs.com/sell/item/1269710448",
     cart: "https://www.discogs.com/sell/cart/?add=1269710448&ev=",
-    desc: "Maria McKee - Breathe (12\")",
+    desc: 'Maria McKee - Breathe (12")',
     genre: "Indie Rock",
     media: "Near Mint (NM or M-)",
     sleeve: "Near Mint (NM or M-)",
-    price: "£3.90"
+    price: "£3.90",
   },
   {
     id: 474,
@@ -5341,7 +5286,7 @@ export const popularProducts = [
     genre: "Jazz",
     media: "Near Mint (NM or M-)",
     sleeve: "Very Good (VG)",
-    price: "£5.90"
+    price: "£5.90",
   },
   {
     id: 475,
@@ -5352,7 +5297,7 @@ export const popularProducts = [
     genre: "Country",
     media: "Very Good Plus (VG+)",
     sleeve: "Very Good Plus (VG+)",
-    price: "£2.99"
+    price: "£2.99",
   },
   {
     id: 476,
@@ -5363,18 +5308,18 @@ export const popularProducts = [
     genre: "Folk",
     media: "Near Mint (NM or M-)",
     sleeve: "Very Good (VG)",
-    price: "£10.00"
+    price: "£10.00",
   },
   {
     id: 477,
     img: "https://i.discogs.com/mB8erkXA8B1yVdA1vB6YO052VDxy6m8qD7nPHWI_QPc/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTc1ODUw/MzYtMTQ5MDgwNzA4/Mi03ODA0LmpwZWc.jpeg",
     link: "https://www.discogs.com/sell/item/456752123",
     cart: "https://www.discogs.com/sell/cart/?add=456752123&ev=",
-    desc: "Break Machine - Break Dance Party (12\", Single)",
+    desc: 'Break Machine - Break Dance Party (12", Single)',
     genre: "Electronic",
     media: "Very Good Plus (VG+)",
     sleeve: "Generic",
-    price: "£1.89"
+    price: "£1.89",
   },
   {
     id: 478,
@@ -5385,7 +5330,7 @@ export const popularProducts = [
     genre: "Folk",
     media: "Very Good Plus (VG+)",
     sleeve: "Very Good Plus (VG+)",
-    price: "£4.99"
+    price: "£4.99",
   },
   {
     id: 479,
@@ -5396,7 +5341,7 @@ export const popularProducts = [
     genre: "Pop",
     media: "Very Good Plus (VG+)",
     sleeve: "Very Good (VG)",
-    price: "£2.89"
+    price: "£2.89",
   },
   {
     id: 480,
@@ -5407,7 +5352,7 @@ export const popularProducts = [
     genre: "",
     media: "Very Good (VG)",
     sleeve: "Very Good Plus (VG+)",
-    price: "£1.99"
+    price: "£1.99",
   },
   {
     id: 481,
@@ -5418,7 +5363,7 @@ export const popularProducts = [
     genre: "Prog Rock",
     media: "Very Good Plus (VG+)",
     sleeve: "Very Good Plus (VG+)",
-    price: "£4.99"
+    price: "£4.99",
   },
   {
     id: 482,
@@ -5429,7 +5374,7 @@ export const popularProducts = [
     genre: "Jazz",
     media: "Very Good Plus (VG+)",
     sleeve: "Very Good Plus (VG+)",
-    price: "£3.99"
+    price: "£3.99",
   },
   {
     id: 483,
@@ -5440,30 +5385,30 @@ export const popularProducts = [
     genre: "Folk",
     media: "Near Mint (NM or M-)",
     sleeve: "Very Good Plus (VG+)",
-    price: "£9.49"
+    price: "£9.49",
   },
   {
     id: 484,
     img: "https://i.discogs.com/GB58uylU6JaQuMCcqmZBR0KLoCDhUXlcDr2GDTgsBdc/rs:fit/g:sm/q:90/h:468/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIzMjQy/NDQtMTM3MDc4NDgw/NC0zNzQxLmpwZWc.jpeg",
     link: "https://www.discogs.com/sell/item/392665035",
     cart: "https://www.discogs.com/sell/cart/?add=392665035&ev=",
-    desc: "Georgia Satellites* - Keep Your Hands To Yourself (12\", Ltd)",
+    desc: 'Georgia Satellites* - Keep Your Hands To Yourself (12", Ltd)',
     genre: "Classic Rock",
     media: "Very Good Plus (VG+)",
     sleeve: "Near Mint (NM or M-)",
-    price: "£3.99"
+    price: "£3.99",
   },
   {
     id: 485,
     img: "https://i.discogs.com/2EtSHoFqVgMjkuDy53IJWBMUFDoLZBR4dvhMqbZ2YKU/rs:fit/g:sm/q:90/h:592/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIxNjcw/ODgtMTM1MDczNzk4/MC0zMjExLmpwZWc.jpeg",
     link: "https://www.discogs.com/sell/item/331190819",
     cart: "https://www.discogs.com/sell/cart/?add=331190819&ev=",
-    desc: "Dan Reed Network - Mix It Up (12\", Single, Ltd, Pic, Num)",
+    desc: 'Dan Reed Network - Mix It Up (12", Single, Ltd, Pic, Num)',
     genre: "Electronic",
     media: "Near Mint (NM or M-)",
     sleeve: "Mint (M)",
-    price: "£3.99"
-  },      
+    price: "£3.99",
+  },
   {
     id: 486,
     img: "https://i.discogs.com/1TIbK6AVjKCz441MOUE0Haa5r7pRGHr2J4mgfjVZ_H0/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM4NjU0/ODQtMTM0NzM4MDgx/NC0zNTU5LmpwZWc.jpeg",
@@ -5535,7 +5480,7 @@ export const popularProducts = [
     img: "https://i.discogs.com/8aH_CWBSn14vWJQBCkcEhYYDs2WeLUAisgZiPyDyqvw/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEyMjMw/MTYtMTIzOTEzNzI0/NS5qcGVn.jpeg",
     link: "https://www.discogs.com/sell/item/384072275",
     cart: "https://www.discogs.com/sell/cart/?add=384072275&ev=",
-    desc: "Stevie Wonder - Go Home (12\")",
+    desc: 'Stevie Wonder - Go Home (12")',
     genre: "Funk & Soul",
     media: "Near Mint (NM or M-)",
     sleeve: "Near Mint (NM or M-)",
@@ -5628,5 +5573,5 @@ export const popularProducts = [
     media: "Very Good (VG)",
     sleeve: "Very Good (VG)",
     price: "£5.90",
-  },  
+  },
 ];
