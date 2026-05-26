@@ -1,0 +1,18 @@
+{
+    "navbar": { "home": "START", "records": "PŁYTY", "logout": "WYLOGUJ", "register": "REJESTRACJA", "signin": "ZALOGUJ SIĘ" },
+    "auth": {
+      "title": "Logowanie / Rejestracja",
+      "name": "Imię (tylko do rejestracji):",
+      "namePlaceholder": "Twoje imię",
+      "email": "Email:",
+      "emailPlaceholder": "Twój email",
+      "password": "Hasło:",
+      "passwordPlaceholder": "Twoje hasło",
+      "login": "Zaloguj się",
+      "register": "Zarejestruj się",
+      "loggingIn": "Logowanie...",
+      "success": "Konto stworzone pomyślnie!",
+      "loginError": "Błąd logowania: ",
+      "registerError": "Błąd rejestracji: "
+    }
+  }

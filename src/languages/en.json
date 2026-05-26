@@ -1,0 +1,18 @@
+{
+    "navbar": { "home": "HOME", "records": "RECORDS", "logout": "LOGOUT", "register": "REGISTER", "signin": "SIGN IN" },
+    "auth": {
+      "title": "Login / Register",
+      "name": "Name (registration only):",
+      "namePlaceholder": "Your name",
+      "email": "Email:",
+      "emailPlaceholder": "Your email",
+      "password": "Password:",
+      "passwordPlaceholder": "Your password",
+      "login": "Sign In",
+      "register": "Register",
+      "loggingIn": "Logging in...",
+      "success": "Account created successfully!",
+      "loginError": "Login error: ",
+      "registerError": "Registration error: "
+    }
+  }

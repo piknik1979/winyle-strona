@@ -3,7 +3,8 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
 import { Link } from "react-router-dom";
-import { supabase } from "../supabaseClient"; // Import połączenia z Supabase
+import { supabase } from "../supabaseClient";
+import { useTranslation } from "react-i18next"; // <-- Import hooka
 
 const Container = styled.div`
   height: 60px;
@@ -28,6 +29,8 @@ const Left = styled.div`
 const Language = styled.span`
   font-size: 14px;
   cursor: pointer;
+  font-weight: bold;
+  &:hover { color: #4CAF50; }
   ${mobile({ display: "none" })}
 `;
 
@@ -115,23 +118,31 @@ const CloseButton = styled.div`
 const Navbar = ({ onSearch = () => {}, session }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
+  
+  // Hook do tłumaczeń
+  const { t, i18n } = useTranslation();
+
+  const toggleLanguage = () => {
+    i18n.changeLanguage(i18n.language === 'en' ? 'pl' : 'en');
+  };
 
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
     onSearch(e.target.value);
   };
 
-  // Funkcja obsługująca wylogowanie użytkownika
   const handleLogout = async () => {
     const { error } = await supabase.auth.signOut();
-    if (error) console.error("Błąd podczas wylogowania:", error.message);
+    if (error) console.error("Błąd wylogowania:", error.message);
   };
 
   return (
     <Container>
       <Wrapper>
         <Left>
-          <Language>EN</Language>
+          <Language onClick={toggleLanguage}>
+            {i18n.language.toUpperCase()}
+          </Language>
           <SearchContainer>
             <Input placeholder="Search" value={searchTerm} onChange={handleSearchChange} />
             <Search style={{ color: "gray", fontSize: 16 }} />
@@ -146,27 +157,26 @@ const Navbar = ({ onSearch = () => {}, session }) => {
 
         <Right>
           <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
-            <MenuItem>HOME</MenuItem>
+            <MenuItem>{t("navbar.home")}</MenuItem>
           </Link>
           <Link to="/catalog" style={{ textDecoration: "none", color: "inherit" }}>
-            <MenuItem>RECORDS</MenuItem>
+            <MenuItem>{t("navbar.records")}</MenuItem>
           </Link>
           
-          {/* Widok menu dla urządzeń stacjonarnych (komputer) */}
           {session ? (
             <>
-              <MenuItem style={{ color: "#4CAF50", cursor: "default", fontWeight: "500" }}>
-                Cześć, {session.user.user_metadata?.display_name || session.user.email}!
+              <MenuItem style={{ color: "#4CAF50", cursor: "default" }}>
+                {session.user.user_metadata?.display_name || session.user.email}
               </MenuItem>
-              <MenuItem onClick={handleLogout}>LOGOUT</MenuItem>
+              <MenuItem onClick={handleLogout}>{t("navbar.logout")}</MenuItem>
             </>
           ) : (
             <>
               <Link to="/login" style={{ textDecoration: "none", color: "inherit" }}>
-                <MenuItem>REGISTER</MenuItem>
+                <MenuItem>{t("navbar.register")}</MenuItem>
               </Link>
               <Link to="/login" style={{ textDecoration: "none", color: "inherit" }}>
-                <MenuItem>SIGN IN</MenuItem>
+                <MenuItem>{t("navbar.signin")}</MenuItem>
               </Link>
             </>
           )}
@@ -177,32 +187,27 @@ const Navbar = ({ onSearch = () => {}, session }) => {
         </Hamburger>
       </Wrapper>
 
-      {/* Widok menu dla urządzeń mobilnych (telefon) */}
       <Menu menuOpen={menuOpen}>
-        <CloseButton onClick={() => setMenuOpen(false)}>
-          <CloseIcon />
-        </CloseButton>
+        <CloseButton onClick={() => setMenuOpen(false)}><CloseIcon /></CloseButton>
+        <MenuItemMobile onClick={toggleLanguage} style={{ color: "#4CAF50" }}>
+          LANG: {i18n.language.toUpperCase()}
+        </MenuItemMobile>
         <Link to="/" style={{ textDecoration: "none", color: "inherit" }} onClick={() => setMenuOpen(false)}>
-          <MenuItemMobile>HOME</MenuItemMobile>
+          <MenuItemMobile>{t("navbar.home")}</MenuItemMobile>
         </Link>
         <Link to="/catalog" style={{ textDecoration: "none", color: "inherit" }} onClick={() => setMenuOpen(false)}>
-          <MenuItemMobile>RECORDS</MenuItemMobile>
+          <MenuItemMobile>{t("navbar.records")}</MenuItemMobile>
         </Link>
         
         {session ? (
-          <>
-            <MenuItemMobile style={{ color: "#4CAF50", fontSize: "16px", fontWeight: "500" }}>
-              Cześć, {session.user.user_metadata?.display_name || session.user.email}!
-            </MenuItemMobile>
-            <MenuItemMobile onClick={() => { handleLogout(); setMenuOpen(false); }}>LOGOUT</MenuItemMobile>
-          </>
+          <MenuItemMobile onClick={() => { handleLogout(); setMenuOpen(false); }}>{t("navbar.logout")}</MenuItemMobile>
         ) : (
           <>
             <Link to="/login" style={{ textDecoration: "none", color: "inherit" }} onClick={() => setMenuOpen(false)}>
-              <MenuItemMobile>REGISTER</MenuItemMobile>
+              <MenuItemMobile>{t("navbar.register")}</MenuItemMobile>
             </Link>
             <Link to="/login" style={{ textDecoration: "none", color: "inherit" }} onClick={() => setMenuOpen(false)}>
-              <MenuItemMobile>SIGN IN</MenuItemMobile>
+              <MenuItemMobile>{t("navbar.signin")}</MenuItemMobile>
             </Link>
           </>
         )}
