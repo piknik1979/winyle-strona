@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
 import { Link } from "react-router-dom";
+import { supabase } from "../supabaseClient"; // Import połączenia z Supabase
 
 const Container = styled.div`
   height: 60px;
@@ -111,13 +112,19 @@ const CloseButton = styled.div`
   z-index: 1001;
 `;
 
-const Navbar = ({ onSearch = () => {} }) => {
+const Navbar = ({ onSearch = () => {}, session }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
 
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
     onSearch(e.target.value);
+  };
+
+  // Funkcja obsługująca wylogowanie użytkownika
+  const handleLogout = async () => {
+    const { error } = await supabase.auth.signOut();
+    if (error) console.error("Błąd podczas wylogowania:", error.message);
   };
 
   return (
@@ -144,8 +151,25 @@ const Navbar = ({ onSearch = () => {} }) => {
           <Link to="/catalog" style={{ textDecoration: "none", color: "inherit" }}>
             <MenuItem>RECORDS</MenuItem>
           </Link>
-          <MenuItem>REGISTER</MenuItem>
-          <MenuItem>SIGN IN</MenuItem>
+          
+          {/* Widok menu dla urządzeń stacjonarnych (komputer) */}
+          {session ? (
+            <>
+              <MenuItem style={{ color: "#4CAF50", cursor: "default", fontWeight: "500" }}>
+                Cześć, {session.user.user_metadata?.display_name || session.user.email}!
+              </MenuItem>
+              <MenuItem onClick={handleLogout}>LOGOUT</MenuItem>
+            </>
+          ) : (
+            <>
+              <Link to="/login" style={{ textDecoration: "none", color: "inherit" }}>
+                <MenuItem>REGISTER</MenuItem>
+              </Link>
+              <Link to="/login" style={{ textDecoration: "none", color: "inherit" }}>
+                <MenuItem>SIGN IN</MenuItem>
+              </Link>
+            </>
+          )}
         </Right>
 
         <Hamburger onClick={() => setMenuOpen(true)}>
@@ -153,18 +177,35 @@ const Navbar = ({ onSearch = () => {} }) => {
         </Hamburger>
       </Wrapper>
 
+      {/* Widok menu dla urządzeń mobilnych (telefon) */}
       <Menu menuOpen={menuOpen}>
         <CloseButton onClick={() => setMenuOpen(false)}>
           <CloseIcon />
         </CloseButton>
-        <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+        <Link to="/" style={{ textDecoration: "none", color: "inherit" }} onClick={() => setMenuOpen(false)}>
           <MenuItemMobile>HOME</MenuItemMobile>
         </Link>
-        <Link to="/catalog" style={{ textDecoration: "none", color: "inherit" }}>
+        <Link to="/catalog" style={{ textDecoration: "none", color: "inherit" }} onClick={() => setMenuOpen(false)}>
           <MenuItemMobile>RECORDS</MenuItemMobile>
         </Link>
-        <MenuItemMobile>REGISTER</MenuItemMobile>
-        <MenuItemMobile>SIGN IN</MenuItemMobile>
+        
+        {session ? (
+          <>
+            <MenuItemMobile style={{ color: "#4CAF50", fontSize: "16px", fontWeight: "500" }}>
+              Cześć, {session.user.user_metadata?.display_name || session.user.email}!
+            </MenuItemMobile>
+            <MenuItemMobile onClick={() => { handleLogout(); setMenuOpen(false); }}>LOGOUT</MenuItemMobile>
+          </>
+        ) : (
+          <>
+            <Link to="/login" style={{ textDecoration: "none", color: "inherit" }} onClick={() => setMenuOpen(false)}>
+              <MenuItemMobile>REGISTER</MenuItemMobile>
+            </Link>
+            <Link to="/login" style={{ textDecoration: "none", color: "inherit" }} onClick={() => setMenuOpen(false)}>
+              <MenuItemMobile>SIGN IN</MenuItemMobile>
+            </Link>
+          </>
+        )}
       </Menu>
     </Container>
   );
